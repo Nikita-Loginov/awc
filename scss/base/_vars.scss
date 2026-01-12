@@ -1,0 +1,81 @@
+html {
+  --dark-color-100: #000000;
+  --dark-color-200: #12141a;
+  --dark-color-275: #12141abf;
+  --dark-color-300: #22262e;
+  --dark-color-400: #0c0f14;
+  --dark-color-500: #212329;
+
+  --gray-color-100: #ffffff;
+  --gray-color-115: #ffffff26;
+  --gray-color-200: #f2f3f5;
+  --gray-color-300: #b4b6bf;
+  --gray-color-400: #989ba6;
+  --gray-color-500: #454952;
+
+  --primary-color-100: #ebc246;
+
+  --secondary-color-100: #636899;
+
+  --font-main: "TikTok", sans-serif;
+  --font-second: "Manrope", sans-serif;
+
+  --weight-font-main: 400;
+  --weight-font-md: 500;
+  --weight-font-lg: 600;
+  --weight-font-xl: 700;
+
+  --font-size-3xs: 12px;
+  --font-size-2xs: 14px;
+  --font-size-xs: #{calculate-clamp(12px, 16px, 1023px, 480px)};
+  --font-size-sm: #{calculate-clamp(16px, 18px, 1023px, 480px)};
+  --font-size-base: #{calculate-clamp(22px, 28px, 1023px, 480px)};
+  --font-size-md: #{calculate-clamp(24px, 36px, 1023px, 480px)};
+  --font-size-lg: #{calculate-clamp(28px, 48px, 1023px, 480px)};
+  --font-size-xl: #{calculate-clamp(32px, 64px, 1023px, 480px)};
+  --font-size-2xl: #{calculate-clamp(40px, 96px, 1023px, 480px)};
+  --font-size-3xl: #{calculate-clamp(40px, 120px, 1023px, 480px)};
+
+  --line-height-tighter: 1;
+  --line-height-tight: 1.1;
+  --line-height-base: 1.2;
+  --line-height-relaxed: 1.4;
+  --line-height-loose: 1.5;
+  --line-height-looser: 1.66;
+  --line-height-loosest: 1.75;
+
+  --radius-sm: 4px;
+  --radius-base: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 28px;
+  --radius-5xl: 32px;
+
+  --icon-xs: 12px;
+  --icon-sm: 16px;
+  --icon-base: 18px;
+  --icon-md: 24px;
+  --icon-lg: 28px;
+
+  --container-inline-padding: #{calculate-clamp(16px, 24px, 1024px, 767px)};
+  --container-width: calc(1872px + calc(var(--container-inline-padding) * 2));
+  --container-second-width: calc(
+    1920px + calc(var(--container-inline-padding) * 2)
+  );
+
+  --calback-header-height: 90px;
+
+  --gap-blocks: #{calculate-clamp(80px, 160px, 1024px, 480px)};
+
+  --page-padding-top: calc(
+    var(--header-height, var(--calback-header-height)) + #{calculate-clamp(
+        40px,
+        72px,
+        1023px,
+        480px
+      )}
+  );
+}

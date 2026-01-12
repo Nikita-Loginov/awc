@@ -1,0 +1,12 @@
+.logo {
+  &__img {
+    max-width: 200px;
+    height: 40px;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

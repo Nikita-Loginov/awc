@@ -1,0 +1,52 @@
+.allPages {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start;
+    gap: 10px;
+  }
+
+  &__develop {
+    font-size: calculate-clamp(16px, 40px);
+    line-height: line-height(16px, 16px);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__link {
+    counter-increment: list;
+    font-size: calculate-clamp(16px, 30px);
+    font-weight: 800;
+    line-height: line-height(16px, 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: calculate-clamp(16px, 20px);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__review {
+    font-size: calculate-clamp(16px, 30px);
+    font-weight: 500;
+
+    a {
+        font-weight: 800;   
+    }
+  }
+}
