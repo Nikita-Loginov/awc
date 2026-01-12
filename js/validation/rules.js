@@ -1,14 +1,16 @@
 export const validationRules = {
   name: {
-    required: true,
+    required: false,
     minLength: 2,
+    pattern: /^[A-Za-z\s]+$/,
 
     message: {
-      required: "Введите имя",
-      minLength: "Имя должно быть не короче 2 символов",
+      required: "Enter your name",
+      minLength: "Name must be at least 2 characters long",
+      pattern: "Only English letters are allowed"
     },
 
-    hint: "Например: Иван или John",
+    hint: "For example: Ivan or John",
   },
 
   tel: {
@@ -16,11 +18,11 @@ export const validationRules = {
     type: "phone",
 
     message: {
-      required: "Введите телефон",
-      invalid: "Введите корректный номер телефона",
+      required: "Enter phone number",
+      invalid: "Enter a valid phone number",
     },
 
-    hint: "Формат номера зависит от выбранной страны",
+    hint: "Format depends on the selected country",
   },
 
   email: {
@@ -28,11 +30,11 @@ export const validationRules = {
     pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
 
     message: {
-      required: "Введите email",
-      pattern: "Некорректный email",
+      required: "Enter email",
+      pattern: "Invalid email address",
     },
 
-    hint: "Пример: user@example.com",
+    hint: "Example: user@example.com",
   },
 
   select: {
@@ -40,10 +42,10 @@ export const validationRules = {
     type: "select",
 
     message: {
-      required: "Выберите значение",
+      required: "Select a value",
     },
 
-    hint: "Выберите один из доступных вариантов",
+    hint: "Choose one of the available options",
   },
 
   policy: {
@@ -51,15 +53,15 @@ export const validationRules = {
     type: "checkbox",
 
     message: {
-      required: "Необходимо принять условия",
+      required: "You must accept the terms",
     },
 
-    hint: "Без этого мы не сможем продолжить",
+    hint: "We cannot proceed without this",
   },
 
   message: {
-    required: true,
+    required: false,
 
-    hint: "Опишите ваш запрос в свободной форме",
+    hint: "Describe your request in free form",
   },
 };

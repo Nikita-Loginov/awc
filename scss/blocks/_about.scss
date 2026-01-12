@@ -20,14 +20,11 @@
   }
 
   &__content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 30% 50%;
     gap: 20px;
     align-items: center;
-
-    .textbox {
-        max-width: 50%;
-    }
+    justify-content: space-between;
   }
 
   &__info {

@@ -1,7 +1,8 @@
-import { allCountries, preferredCountries } from "../data/countries.js";
+import { allCountries } from "../data/countries.js";
 
 export function initPhoneMasks(form) {
   const inputs = form.querySelectorAll("input[name='tel']");
+  const preferredCountriesCurrent = allCountries.map((p) => p.code.toLocaleLowerCase())
 
   if (!window.IMask || !window.intlTelInput) {
     console.error("IMask или intlTelInput не загружены");
@@ -15,9 +16,9 @@ export function initPhoneMasks(form) {
 
   inputs.forEach((input) => {
     const iti = window.intlTelInput(input, {
-      initialCountry: "ru",
+      initialCountry: "us",
       onlyCountries: allCountries.map((c) => c.code.toLowerCase()),
-      preferredCountries: preferredCountries.filter((p) =>
+      preferredCountries: preferredCountriesCurrent.filter((p) =>
         allCountries.some((c) => c.code.toLowerCase() === p)
       ),
       separateDialCode: true,

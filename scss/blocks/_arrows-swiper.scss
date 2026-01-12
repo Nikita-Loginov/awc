@@ -1,0 +1,19 @@
+.arrows-swiper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .arrow-swiper {
+    &.next {
+      .icon {
+        rotate: -180deg;
+      }
+    }
+  }
+
+  &:has(.arrow-swiper.prev.swiper-button-disabled):has(
+      .arrow-swiper.next.swiper-button-disabled
+    ) {
+    display: none;
+  }
+}

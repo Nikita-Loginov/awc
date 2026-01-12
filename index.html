@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
   <link rel="stylesheet" href="/css/page.css">
   
   
     
       <link rel="stylesheet" href="./css/main.css" />
+    
+      <link rel="stylesheet" href="./css/lib/swiper.min.css" />
     
   
 </head>
@@ -21,6 +24,22 @@
     <path
       xmlns="http://www.w3.org/2000/svg"
       d="M13.7295 0V12H11.7295V3.41211L1.41406 13.7275L0 12.3135L10.3135 2H1.72949V0H13.7295Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="arrow-angle-icon" viewBox="0 0 10 17">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M8.48535 0L0 8.48535L8.48535 16.9697L9.89941 15.5557L2.8291 8.48438L9.89941 1.41406L8.48535 0Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="shield-icon" viewBox="0 0 15 16">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M7.51825 0L7.862 0.15625L14.362 2.65625L14.9558 2.90625L14.987 3.53125C15.0808 5.09375 14.8308 7.5 13.8308 9.8125C12.7995 12.1562 10.987 14.5 7.89325 15.8438L7.51825 16L7.112 15.8438C4.01825 14.5 2.20575 12.1875 1.1745 9.8125C0.174504 7.5 -0.0754964 5.09375 0.0182536 3.53125L0.0495036 2.90625L0.643254 2.65625L7.14325 0.15625L7.51825 0ZM11.5808 6L10.5183 4.96875L6.51825 8.96875L4.51825 6.96875L3.45575 8L6.51825 11.0625L11.5808 6Z"
       fill="currentColor"
     />
   </symbol>
@@ -358,9 +377,9 @@
         </div>
 
         <section class="services">
-          <div class="container">
+          <div class="container--big container">
             <div class="services__inner">
-              <div class="topBox">
+              <div class="topBox container__inner">
                 <div class="topBox__content with-line">
                   <div class="topBox__info">
                     <p class="h4 text-gray-400">Exclusivity in Every</p>
@@ -369,168 +388,1077 @@
                   </div>
                 </div>
               </div>
+
+              <div class="services__content">
+                <div class="services__content-inner">
+                  <div class="goods">
+                    <div class="card-item overlay">
+                      <div class="card-item__inner">
+                        <div class="card-item__inner-info">
+                          <div class="card-item__header">
+                            <p class="h3">Legal & Finance</p>
+                          </div>
+
+                          <div class="card-item__footer">
+                            <p class="p1 manrope-font">
+                              Comprehensive legal and financial expertise
+                              designed to protect your interests, strengthen
+                              your assets, and deliver absolute confidence in
+                              every decision you make.
+                            </p>
+                          </div>
+                        </div>
+
+                        <ul class="card-item__links list-slash">
+                          <li class="list-slash__link">
+                            <a
+                              href="#link1"
+                              aria-label="Перейти на страницу Legal Services"
+                              title="Legal Services"
+                              class="list-slash__item text-underline"
+                            >
+                              Legal Services
+                            </a>
+                          </li>
+
+                          <li class="list-slash__link">
+                            <a
+                              href="#link2"
+                              aria-label="Перейти на страницу Financial Сonsulting"
+                              title="Financial Сonsulting"
+                              class="list-slash__item text-underline"
+                            >
+                              Financial Сonsulting
+                            </a>
+                          </li>
+
+                          <li class="list-slash__link">
+                            <a
+                              href="#link3"
+                              aria-label="Перейти на страницу Transaction Advisory"
+                              title="Transaction Advisory"
+                              class="list-slash__item text-underline"
+                            >
+                              Transaction Advisory
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="card-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/services/one.webp   1x,
+                              /img/services/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/services/one.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+
+                      <a
+                        href="#link-card"
+                        title="Legal & Finance"
+                        aria-label="Перейти на страницу Legal & Finance"
+                        class="card-item__link-decor"
+                      ></a>
+                    </div>
+
+                    <div class="card-item overlay">
+                      <div class="card-item__inner">
+                        <div class="card-item__inner-info">
+                          <div class="card-item__header">
+                            <p class="h3">Exclusive Cars</p>
+                          </div>
+
+                          <div class="card-item__footer">
+                            <p class="p1 manrope-font">
+                              Experience a distinguished collection of luxury
+                              vehicles designed to deliver exceptional comfort,
+                              powerful performance, and a true sense of prestige
+                              in every moment.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/services/two.webp   1x,
+                              /img/services/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/services/two.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+
+                      <a
+                        href="#link-card-2"
+                        title="Exclusive Cars"
+                        aria-label="Перейти на страницу Exclusive Cars"
+                        class="card-item__link-decor"
+                      ></a>
+                    </div>
+
+                    <div class="card-item overlay">
+                      <div class="card-item__inner">
+                        <div class="card-item__inner-info">
+                          <div class="card-item__header">
+                            <p class="h3">Luxury Real Estate</p>
+                          </div>
+
+                          <div class="card-item__footer">
+                            <p class="p1 manrope-font">
+                              High-end homes that bring together rare
+                              architecture, exceptional finishes, and
+                              unparalleled privacy, offering a distinctive sense
+                              of exclusivity in every detail.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/services/three.webp   1x,
+                              /img/services/three2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/services/three.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+
+                      <a
+                        href="#link-card-3"
+                        title="Luxury Real Estate"
+                        aria-label="Перейти на страницу Luxury Real Estate"
+                        class="card-item__link-decor"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="links-decor container__inner border-decor border-decor--bottom"
+                >
+                  <a
+                    href="#"
+                    title="All Services"
+                    aria-label="Перейти на страницу All Services"
+                    class="link-decor link-decor--big link-decor--border-no-cvet"
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">All Services</p>
+
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-line-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="#"
+                    title="Our Adress"
+                    aria-label="Перейти на страницу Our Adress"
+                    class="link-decor link-decor--big link-decor--border-no-cvet"
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">Let’s Connect</p>
+
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-line-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="swiper-box cars">
+          <div class="container">
+            <div class="swiper-box__inner topBox">
+              <div class="topBox__header">
+                <h2 class="h2">Popular Сars</h2>
+
+                <div class="arrows-swiper">
+                  <button
+                    type="button"
+                    class="arrow-swiper prev button button--noBg button--border button--border-gray-500"
+                  >
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-angle-icon"></use>
+                      </svg>
+                    </span>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="arrow-swiper next button button--noBg button--border button--border-gray-500"
+                  >
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-angle-icon"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-box__block">
+                <div class="swiper swiper--cars">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a
+                        href="#"
+                        aria-label="Перейти к бронированию  Lamborghini Urus "
+                        class="good-item overlay overlay--gradient"
+                      >
+                        <div class="good-item__inner">
+                          <div class="good-item__head">
+                            <div class="good-item__header">
+                              <div class="good-item__items">
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Daily Rental
+                                  </p>
+
+                                  <p class="p1">1 200$</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Horsepower
+                                  </p>
+
+                                  <p class="p1">990 HP</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Year
+                                  </p>
+
+                                  <p class="p1">2024</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <p class="h3 good-item__title">
+                                Lamborghini
+
+                                <span>Urus</span>
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="good-item__footer">
+                            <div class="link-decor link-decor--border-no-cvet">
+                              <div class="link-decor__content">
+                                <p class="p1">Order Now</p>
+
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#arrow-line-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/cars/one.webp   1x,
+                                /img/cars/one2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/cars/one.webp"
+                              alt="фотография машины"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <a
+                        href="#"
+                        aria-label="Перейти к бронированию Porsche 911 GTS"
+                        class="good-item overlay overlay--gradient"
+                      >
+                        <div class="good-item__inner">
+                          <div class="good-item__head">
+                            <div class="good-item__header">
+                              <div class="good-item__items">
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Daily Rental
+                                  </p>
+
+                                  <p class="p1">1 200$</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Horsepower
+                                  </p>
+
+                                  <p class="p1">990 HP</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Year
+                                  </p>
+
+                                  <p class="p1">2024</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <p class="h3 good-item__title">
+                                Porsche
+
+                                <span>911 GTS</span>
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="good-item__footer">
+                            <div class="link-decor link-decor--border-no-cvet">
+                              <div class="link-decor__content">
+                                <p class="p1">Order Now</p>
+
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#arrow-line-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/cars/two.webp   1x,
+                                /img/cars/two2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/cars/two.webp"
+                              alt="фотография машины"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <a
+                        href="#"
+                        aria-label="Перейти к бронированию  Lamborghini Urus "
+                        class="good-item overlay overlay--gradient"
+                      >
+                        <div class="good-item__inner">
+                          <div class="good-item__head">
+                            <div class="good-item__header">
+                              <div class="good-item__items">
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Daily Rental
+                                  </p>
+
+                                  <p class="p1">1 200$</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Horsepower
+                                  </p>
+
+                                  <p class="p1">990 HP</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Year
+                                  </p>
+
+                                  <p class="p1">2024</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <p class="h3 good-item__title">
+                                Lamborghini
+
+                                <span>Urus</span>
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="good-item__footer">
+                            <div class="link-decor link-decor--border-no-cvet">
+                              <div class="link-decor__content">
+                                <p class="p1">Order Now</p>
+
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#arrow-line-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/cars/one.webp   1x,
+                                /img/cars/one2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/cars/one.webp"
+                              alt="фотография машины"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <a
+                        href="#"
+                        aria-label="Перейти к бронированию Porsche 911 GTS"
+                        class="good-item overlay overlay--gradient"
+                      >
+                        <div class="good-item__inner">
+                          <div class="good-item__head">
+                            <div class="good-item__header">
+                              <div class="good-item__items">
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Daily Rental
+                                  </p>
+
+                                  <p class="p1">1 200$</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Horsepower
+                                  </p>
+
+                                  <p class="p1">990 HP</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Year
+                                  </p>
+
+                                  <p class="p1">2024</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <p class="h3 good-item__title">
+                                Porsche
+
+                                <span>911 GTS</span>
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="good-item__footer">
+                            <div class="link-decor link-decor--border-no-cvet">
+                              <div class="link-decor__content">
+                                <p class="p1">Order Now</p>
+
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#arrow-line-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/cars/two.webp   1x,
+                                /img/cars/two2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/cars/two.webp"
+                              alt="фотография машины"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="links-decor border-decor border-decor--bottom">
+                  <a
+                    href="#"
+                    title="All Cars"
+                    aria-label="Перейти на страницу All Cars"
+                    class="link-decor link-decor--big link-decor--border-no-cvet"
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">All Services</p>
+
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-line-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="swiper-box houses">
+          <div class="container">
+            <div class="swiper-box__inner topBox">
+              <div class="topBox__header">
+                <h2 class="h2">Real Estate</h2>
+
+                <div class="arrows-swiper">
+                  <button
+                    type="button"
+                    class="arrow-swiper prev button button--noBg button--border button--border-gray-500"
+                  >
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-angle-icon"></use>
+                      </svg>
+                    </span>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="arrow-swiper next button button--noBg button--border button--border-gray-500"
+                  >
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-angle-icon"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-box__block">
+                <div class="swiper swiper--houses">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a
+                        href="#"
+                        aria-label="Перейти к бронированию Penthouse in The Horizon "
+                        class="good-item overlay overlay--gradient"
+                      >
+                        <div class="good-item__inner">
+                          <div class="good-item__head">
+                            <div class="good-item__header">
+                              <div class="good-item__items">
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Price
+                                  </p>
+
+                                  <p class="p1">240 000$</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Country
+                                  </p>
+
+                                  <p class="p1">Spain</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <p class="h3 good-item__title">
+                                Penthouse
+
+                                <span>in The Horizon</span>
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="good-item__footer">
+                            <div class="link-decor link-decor--border-no-cvet">
+                              <div class="link-decor__content">
+                                <p class="p1">View Now</p>
+
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#arrow-line-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/houses/one.webp   1x,
+                                /img/houses/one2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/houses/one.webp"
+                              alt="фотография отеля"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <a
+                        href="#"
+                        aria-label="Перейти к бронированию Villa di Polisane "
+                        class="good-item overlay overlay--gradient"
+                      >
+                        <div class="good-item__inner">
+                          <div class="good-item__head">
+                            <div class="good-item__header">
+                              <div class="good-item__items">
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Price
+                                  </p>
+
+                                  <p class="p1">240 000$</p>
+                                </div>
+
+                                <div class="good-item__info">
+                                  <p class="p2 text-gray-400 manrope-font">
+                                    Country
+                                  </p>
+
+                                  <p class="p1">Spain</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <p class="h3 good-item__title">
+                                Villa
+
+                                <span>di Polisane</span>
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="good-item__footer">
+                            <div class="link-decor link-decor--border-no-cvet">
+                              <div class="link-decor__content">
+                                <p class="p1">View Now</p>
+
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#arrow-line-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/houses/two.webp   1x,
+                                /img/houses/two2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/houses/two.webp"
+                              alt="фотография отеля"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="links-decor border-decor border-decor--bottom">
+                  <a
+                    href="#"
+                    title="All Cars"
+                    aria-label="Перейти на страницу All Cars"
+                    class="link-decor link-decor--big link-decor--border-no-cvet"
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">All Services</p>
+
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-line-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="features border-decor border-decor--top border-decor--bottom detail-bg detail-bg--decor-top detail-bg--middle section-padding-bottom gap-none"
+        >
+          <div class="container">
+            <div class="features__inner topBox">
+              <div class="topBox">
+                <div class="topBox__content with-line line-top">
+                  <h2 class="h3">The Luxury of Working With Professionals</h2>
+
+                  <div class="textbox">
+                    <p class="p1 text-gray-400 manrope-font">
+                      Experience seamless service, refined expertise, and a
+                      level of attention reserved for those who value true
+                      excellence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="features__content">
+                <ul class="features__items list-number">
+                  <li class="features__item list-number__item">
+                    <div class="card-detail">
+                      <div class="card-detail__inner">
+                        <div class="card-detail__header">
+                          <p class="list-number__number p1 text-gray-400"></p>
+                        </div>
+
+                        <div class="card-detail__content">
+                          <div class="textbox">
+                            <p class="h6">
+                              We have access to properties not available on the
+                              open market
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-detail__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/features/one.webp   1x,
+                              /img/features/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/features/one.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="features__item list-number__item">
+                    <div class="card-detail">
+                      <div class="card-detail__inner">
+                        <div class="card-detail__header">
+                          <p class="list-number__number p1 text-gray-400"></p>
+                        </div>
+
+                        <div class="card-detail__content">
+                          <div class="textbox">
+                            <p class="h6">
+                              We provide a full range of services without any
+                              client involvement
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-detail__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/features/two.webp   1x,
+                              /img/features/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/features/two.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="features__item list-number__item">
+                    <div class="card-detail">
+                      <div class="card-detail__inner">
+                        <div class="card-detail__header">
+                          <p class="list-number__number p1 text-gray-400"></p>
+                        </div>
+
+                        <div class="card-detail__content">
+                          <div class="textbox">
+                            <p class="h6">
+                              We have international reach with local precision
+                              of execution
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-detail__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/features/three.webp   1x,
+                              /img/features/three2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/features/three.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="features__item list-number__item">
+                    <div class="card-detail">
+                      <div class="card-detail__inner">
+                        <div class="card-detail__header">
+                          <p class="list-number__number p1 text-gray-400"></p>
+                        </div>
+
+                        <div class="card-detail__content">
+                          <div class="textbox">
+                            <p class="h6">
+                              We are a service that emphasizes the status and
+                              care for each client
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-detail__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/features/four.webp   1x,
+                              /img/features/four2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/features/four.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="services__content">
-            <div class="container container--big">
-              <div class="services__content-inner">
-                <div class="goods">
-                  <div class="card-item overlay">
-                    <div class="card-item__inner">
-                      <div class="card-item__inner-info">
-                        <div class="card-item__header">
-                          <p class="h3">Legal & Finance</p>
-                        </div>
+          <div class="detail-bg__img">
+            <picture>
+              <source
+                srcset="/img/detail/one.webp 1x, /img/detail/one2x.webp 2x"
+              />
+              <img src="/img/detail/one.webp" alt="фотография" loading="lazy" />
+            </picture>
+          </div>
+        </section>
 
-                        <div class="card-item__footer">
-                          <p class="p1 manrope-font">
-                            Comprehensive legal and financial expertise designed
-                            to protect your interests, strengthen your assets,
-                            and deliver absolute confidence in every decision
-                            you make.
-                          </p>
-                        </div>
-                      </div>
+        <section class="contact border-decor border-decor--bottom">
+          <div class="container">
+            <div class="contact__inner">
+              <div class="contact__info">
+                <h2 class="h3">If you have any questions, contact us</h2>
+              </div>
 
-                      <ul class="card-item__links list-slash">
-                        <li class="list-slash__link">
-                          <a
-                            href="#link1"
-                            aria-label="Перейти на страницу Legal Services"
-                            title="Legal Services"
-                            class="list-slash__item text-underline"
-                          >
-                            Legal Services
-                          </a>
-                        </li>
-
-                        <li class="list-slash__link">
-                          <a
-                            href="#link2"
-                            aria-label="Перейти на страницу Financial Сonsulting"
-                            title="Financial Сonsulting"
-                            class="list-slash__item text-underline"
-                          >
-                            Financial Сonsulting
-                          </a>
-                        </li>
-
-                        <li class="list-slash__link">
-                          <a
-                            href="#link3"
-                            aria-label="Перейти на страницу Transaction Advisory"
-                            title="Transaction Advisory"
-                            class="list-slash__item text-underline"
-                          >
-                            Transaction Advisory
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="card-item__img">
-                      <picture>
-                        <source
-                          srcset="
-                            /img/services/one.webp   1x,
-                            /img/services/one2x.webp 2x
-                          "
-                        />
-                        <img
-                          src="/img/services/one.webp"
-                          alt="фотография"
-                          loading="lazy"
-                        />
-                      </picture>
-                    </div>
-
-                    <a
-                      href="#link-card"
-                      title="Legal & Finance"
-                      aria-label="Перейти на страницу Legal & Finance"
-                      class="card-item__link-decor"
-                    ></a>
-                  </div>
-
-                  <div class="card-item overlay">
-                    <div class="card-item__inner">
-                      <div class="card-item__inner-info">
-                        <div class="card-item__header">
-                          <p class="h3">Exclusive Cars</p>
-                        </div>
-
-                        <div class="card-item__footer">
-                          <p class="p1 manrope-font">
-                            Experience a distinguished collection of luxury vehicles designed to deliver exceptional comfort, powerful performance, and a true sense of prestige in every moment.
-                          </p>
-                        </div>
+              <div class="contact__content">
+                <form novalidate class="contact-form form">
+                  <div class="form__items">
+                    <div class="form__item-box">
+                      <div class="form__item-block">
+                        <p class="h6 text-gray-400">
+                          Leave a request, our manager will contact you shortly
+                          and answer all your questions
+                        </p>
                       </div>
                     </div>
 
-                    <div class="card-item__img">
-                      <picture>
-                        <source
-                          srcset="
-                            /img/services/two.webp   1x,
-                            /img/services/two2x.webp 2x
-                          "
-                        />
-                        <img
-                          src="/img/services/two.webp"
-                          alt="фотография"
-                          loading="lazy"
-                        />
-                      </picture>
-                    </div>
+                    <div class="form__item-box">
+                      <label class="input-box form__item form__item-block">
+                        <div class="input-box__content">
+                          <p class="p2">Name</p>
 
-                    <a
-                      href="#link-card-2"
-                      title="Exclusive Cars"
-                      aria-label="Перейти на страницу Exclusive Cars"
-                      class="card-item__link-decor"
-                    ></a>
-                  </div>
-
-                  <div class="card-item overlay">
-                    <div class="card-item__inner">
-                      <div class="card-item__inner-info">
-                        <div class="card-item__header">
-                          <p class="h3">Luxury Real Estate</p>
+                          <div class="input-box__info">
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="Write our name"
+                            />
+                          </div>
                         </div>
 
-                        <div class="card-item__footer">
-                          <p class="p1 manrope-font">
-                            High-end homes that bring together rare architecture, exceptional finishes, and unparalleled privacy, offering a distinctive sense of exclusivity in every detail.
-                          </p>
+                        <p class="input-box__errors p4 form__errors"></p>
+                      </label>
+                    </div>
+
+                    <div class="form__item-box form__item-box--two">
+                      <label
+                        class="input-box form__item form__item-block input-tel-wrapper"
+                      >
+                        <div class="input-box__content">
+                          <p class="p2">Phone *</p>
+
+                          <div class="input-box__info">
+                            <input
+                              type="tel"
+                              name="tel"
+                              placeholder="+ 1 (___) ___-__-__"
+                              required
+                            />
+                          </div>
                         </div>
-                      </div>
+
+                        <p class="input-box__errors p4 form__errors"></p>
+                      </label>
+
+                      <label
+                        class="input-box form__item form__item-block input-tel-wrapper"
+                      >
+                        <div class="input-box__content">
+                          <p class="p2">E-mail</p>
+
+                          <div class="input-box__info">
+                            <input
+                              type="email"
+                              name="email"
+                              placeholder="_@_._"
+                            />
+                          </div>
+                        </div>
+
+                        <p class="input-box__errors p4 form__errors"></p>
+                      </label>
                     </div>
 
-                    <div class="card-item__img">
-                      <picture>
-                        <source
-                          srcset="
-                            /img/services/three.webp   1x,
-                            /img/services/three2x.webp 2x
-                          "
-                        />
-                        <img
-                          src="/img/services/three.webp"
-                          alt="фотография"
-                          loading="lazy"
-                        />
-                      </picture>
-                    </div>
+                    <div class="form__item-box form__item-box--two">
+                      <label
+                        class="input-box form__item form__item-block input-tel-wrapper"
+                      >
+                        <div class="input-box__content">
+                          <p class="p2">Massage</p>
 
-                    <a
-                      href="#link-card-3"
-                      title="Luxury Real Estate"
-                      aria-label="Перейти на страницу Luxury Real Estate"
-                      class="card-item__link-decor"
-                    ></a>
+                          <div class="input-box__info">
+                            <textarea
+                              type="text"
+                              name="message"
+                              placeholder="write our message"
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <p class="input-box__errors p4 form__errors"></p>
+                      </label>
+                    </div>
                   </div>
-                </div>
+
+                  <div class="form__footer">
+                    <button class="button disabled" type="submit">
+                      <p class="p1">Send</p>
+                    </button>
+
+                    <div class="decor-el text-gray-600">
+                      <span class="icon icon--sm">
+                        <svg>
+                          <use xlink:href="#shield-icon"></use>
+                        </svg>
+                      </span>
+
+                      
+                      <p class="p1">
+                        By clicking the “Send” button, I consent
+                        to the processing of my personal data.
+                      </p>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -543,8 +1471,17 @@
   </div>
 </footer>
 
+<script src="/js/lib/imask.min.js" type="module"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+  defer
+></script>
+
 <script src="/js/page.js" type="module"></script>
 
     </div>
+
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/index.js" type="module"></script>
   </body>
 </html>

@@ -15,7 +15,7 @@
   position: relative;
   padding: 40px 24px;
   aspect-ratio: 4 / 5;
-  max-height:  1000px;
+  // max-height:  1000px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -35,11 +35,11 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    flex:1;
+    flex: 1;
   }
 
   &__inner-info {
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -63,7 +63,7 @@
   &__img {
     position: absolute;
     z-index: 1;
-    inset:0;
+    inset: 0;
     overflow: hidden;
 
     img,
@@ -71,17 +71,56 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: all .3s;
+      transition: all 0.3s;
     }
   }
 
   &__link-decor {
     position: absolute;
     z-index: 3;
-    inset:0;
+    inset: 0;
 
     * {
       display: none;
+    }
+  }
+}
+
+.card-detail {
+  aspect-ratio: 77 / 100;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  padding: 40px 24px;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 34px;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+  }
+
+  &__header,
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
     }
   }
 }

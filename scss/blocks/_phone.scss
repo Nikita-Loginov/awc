@@ -1,0 +1,28 @@
+.input-box {
+  .iti--separate-dial-code .iti__selected-flag {
+    background-color: transparent;
+  }
+
+  .iti__selected-dial-code {
+    display: none;
+  }
+
+  .iti__country-list {
+    background-color: var(--dark-color-200);
+    border: 1px solid var(--dark-color-200);
+    border-radius: var(0);
+    padding: 4px;
+    max-height: 150px;
+    top: 30px;
+    color: var(--gray-color-200);
+    font-size: var(--font-size-sm);
+  }
+
+  .iti__divider {
+    display: none;
+  }
+
+  .iti__divider ~ .iti__country {
+    display: none;
+  }
+}

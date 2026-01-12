@@ -60,19 +60,15 @@
   gap: 4px;
 }
 .about__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: 30% 50%;
   gap: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.about__content .textbox {
-  max-width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .about__info {
   padding-top: 80px;

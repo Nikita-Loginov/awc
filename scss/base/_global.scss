@@ -60,6 +60,10 @@ body {
       margin-bottom: var(--gap-blocks);
     }
 
+    &.gap-none {
+      margin-bottom: 0;
+    }
+
     &.section-padding-bottom {
       padding-bottom: var(--gap-blocks);
     }
@@ -75,6 +79,11 @@ body {
   &--big {
     padding: 0;
     max-width: var(--container-second-width);
+  }
+
+  &__inner {
+    max-width: 100%;
+    padding-inline: var(--container-inline-padding);
   }
 }
 
@@ -148,16 +157,35 @@ body {
     text-align: center;
     align-items: center;
     gap: 40px;
+    max-width: 48%;
+    margin: 0 auto;
+
+    .textbox {
+      max-width: 77%;
+    }
+
+    &:before,
+    &:after {
+      width: 1px;
+      height: 140px;
+      background-color: var(--gray-color-500);
+    }
 
     &.with-line {
       position: relative;
 
       &:after {
         content: "";
-        width: 1px;
-        height: 140px;
-        background-color: var(--gray-color-500);
-        
+      }
+    }
+
+    &.line-top {
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        content:"";
       }
     }
   }
@@ -308,10 +336,27 @@ body .wrapper {
   position: relative;
 
   &:before {
-    content:"";
+    content: "";
     position: absolute;
     z-index: 2;
     inset: 0;
     background-color: #15171b80;
   }
+
+  &--gradient {
+    &:before {
+      background-color: transparent;
+      background-image: linear-gradient(
+        180deg,
+        rgba(21, 23, 27, 0.2) 0%,
+        rgba(21, 23, 27, 0.5) 100%
+      );
+    }
+  }
+}
+
+.decor-el {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }

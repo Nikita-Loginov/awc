@@ -1,0 +1,68 @@
+.list-slash {
+  --gap-items: 8px;
+  --fz-line: var(--font-size-sm);
+  --width-line: 1em;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--gap-items));
+  color: var(--gray-color-200);
+  font-size: var(--fz-line);
+  font-family: var(--font-second);
+
+  & > *:not(:last-child) {
+    position: relative;
+    display: flex;
+    padding-right: calc(var(--gap-items) + var(--width-line));
+
+    &:before {
+      position: absolute;
+      content: "/";
+      color: var(--gray-color-400);
+      font-size: 1em;
+      right: 0;
+      width: 1em;
+      text-align: center;
+    }
+  }
+}
+
+.list-number {
+  list-style: none;
+  counter-reset: counter;
+
+  &__item {
+    counter-increment: counter 1;
+
+    &:nth-child(-n + 9) {
+      .list-number {
+        &__number {
+          &:before {
+            content: "00" counter(counter);
+          }
+        }
+      }
+    }
+
+    &:nth-child(n + 10):nth-child(-n + 99) {
+      .list-number {
+        &__number {
+          &:before {
+            content: "0" counter(counter);
+          }
+        }
+      }
+    }
+
+    &:nth-child(n + 100) {
+      .list-number {
+        &__number {
+          &:before {
+            content: counter(counter);
+          }
+        }
+      }
+    }
+  }
+}

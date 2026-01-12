@@ -30,15 +30,40 @@
 
   &:after {
     position: absolute;
-    content:"";
+    content: "";
     z-index: 2;
-    left: 0;
-    right: 0;
     bottom: 0;
     width: 100%;
     height: 240px;
-    background-image: linear-gradient(180deg, rgba(18, 20, 26, 0) 0%, #12141A 100%);
+    background-image: linear-gradient(
+      180deg,
+      rgba(18, 20, 26, 0) 0%,
+      #12141a 100%
+    );
+  }
 
+  &--decor-top {
+    &:after {
+      inset: 0;
+      background-image: linear-gradient(
+        180deg,
+        #12141a 0%,
+        rgba(18, 20, 26, 0) 100%
+      );
+      height: auto;
+    }
+  }
+
+  &--middle {
+    .detail-bg {
+      &__img {
+        top: var(--gap-blocks);
+      }
+    }
+
+    &:after {
+      top: var(--gap-blocks);
+    }
   }
 
   &--overlay {
