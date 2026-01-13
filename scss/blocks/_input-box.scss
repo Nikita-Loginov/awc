@@ -3,12 +3,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-family: var(--font-second);
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
     color: var(--gray-color-400);
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(16)};
+    }
   }
 
   &__info {
@@ -22,6 +27,7 @@
       color: var(--gray-color-200);
       cursor: pointer;
       width: 100%;
+      font-family: var(--font-main);
 
       &::placeholder {
         color: var(--gray-color-200);
@@ -34,6 +40,10 @@
     textarea {
       min-height: 80px;
       resize: none;
+
+      @media (min-width: $xl-desktop-breakpoint) {
+        min-height: #{vw(80)};
+      }
     }
   }
 
@@ -42,12 +52,17 @@
     color: var(--red-100-color);
     padding: 10px 0 0 ;
     display: none;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      padding: #{vw(10)} 0 0 0;
+    }
   }
 
   &:hover {
     .input-box {
       &__info {
-        input {
+        input,
+        textarea {
           &::placeholder {
             opacity: 1;
           }

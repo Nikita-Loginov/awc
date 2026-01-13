@@ -1,19 +1,41 @@
+.card-box {
+  padding: 40px 24px;
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    padding: #{vw(40)} #{vw(24)};
+  }
+}
+
 .card-info {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  &--row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &__header,
   &__info {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(10)};
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(24)};
   }
 }
 
 .card-item {
   position: relative;
-  padding: 40px 24px;
   aspect-ratio: 4 / 5;
   // max-height:  1000px;
   display: flex;
@@ -21,14 +43,25 @@
   width: 100%;
   min-height: 400px;
 
-  &:hover {
-    .card-item {
-      &__img {
-        img {
-          scale: 1.1;
+  &:has(.card-item__link-decor) {
+    &:hover {
+      .card-item {
+        &__img {
+          img {
+            scale: 1.1;
+          }
         }
       }
     }
+  }
+
+  &--end {
+    .card-item {
+      &__inner-info {
+        justify-content: flex-end;
+      }
+    }
+   
   }
 
   &__inner {
@@ -36,6 +69,10 @@
     flex-direction: column;
     gap: 24px;
     flex: 1;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    }
   }
 
   &__inner-info {
@@ -46,6 +83,10 @@
     gap: 10px;
     position: relative;
     z-index: 3;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(10)};
+    }
   }
 
   &__links {
@@ -57,7 +98,22 @@
   &__footer {
     display: flex;
     flex-direction: column;
+  }
+
+  &__footer {
     gap: 24px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    }
+  }
+
+  &__header {
+    gap: 8px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(8)};
+    }
   }
 
   &__img {
@@ -84,6 +140,8 @@
       display: none;
     }
   }
+
+  
 }
 
 .card-detail {
@@ -92,8 +150,11 @@
   flex-direction: column;
   gap: 24px;
   position: relative;
-  padding: 40px 24px;
   overflow: hidden;
+
+  &--full {
+    aspect-ratio: 27 / 10;
+  }
 
   &__inner {
     display: flex;
@@ -103,6 +164,14 @@
     position: relative;
     z-index: 2;
     flex: 1;
+
+    &--end {
+      justify-content: flex-end;
+    }
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(34)};
+    }
   }
 
   &__header,
@@ -110,6 +179,10 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    }
   }
 
   &__img {
@@ -121,6 +194,7 @@
     svg {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }

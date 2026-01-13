@@ -19,6 +19,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(20)};
+    }
   }
 
   &__info {
@@ -32,12 +36,24 @@
       padding-right: var(--gap-info);
       border-right: 1px solid var(--gray-color-115);
     }
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      --gap-info: #{vw(24)};
+    }
   }
 
   &__details {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(20)};
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    padding: #{vw(24)} 0;
   }
 }
 

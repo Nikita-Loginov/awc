@@ -1,0 +1,78 @@
+.top-about {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(96)};
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 24% calc(100% * 2 / 3);
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(40)};
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    .card-info {
+      min-height: 190px;
+
+      @media (min-width: $xl-desktop-breakpoint) {
+        min-height: #{vw(190)};
+      }
+
+      &:nth-child(odd) {
+        padding-right: 24px;
+        border-right: 1px solid var(--gray-color-120);
+
+        @media (min-width: $xl-desktop-breakpoint) {
+          padding-right: #{vw(24)};
+        }
+      }
+
+      &:nth-child(even) {
+        padding-left: 24px;
+
+        @media (min-width: $xl-desktop-breakpoint) {
+          padding-left: #{vw(24)};
+        }
+      }
+    }
+  }
+
+  &__items-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &:not(:last-child) {
+      .card-info {
+        border-bottom: 1px solid var(--gray-color-120);
+      }
+    }
+  }
+}

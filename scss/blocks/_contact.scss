@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    }
   }
 
   &__info,
@@ -10,9 +14,17 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(40)};
+    }
   }
 
   &__info {
     padding-top: 40px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      padding-top: #{vw(40)};
+    }
   }
 }

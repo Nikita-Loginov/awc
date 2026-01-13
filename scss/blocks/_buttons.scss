@@ -40,4 +40,11 @@
     background-color: var(--dark-color-500);
     color: var(--gray-color-400);
   }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    border-radius: #{vw(30)};
+    min-height: #{vw(60)};
+    padding-block: #{vw(16)};
+    padding-inline: #{vw(40)};
+  }
 }

@@ -1,26 +1,13 @@
 .top {
-  
-
   &__inner {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
-    height: 100%;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-}
-
-.top-box {
-  min-height: calc(100dvh - var(--page-padding-top));
-  display: flex;
-
-  .container {
-    min-height: 100%;
   }
 }

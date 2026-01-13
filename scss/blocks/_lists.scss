@@ -65,4 +65,16 @@
       }
     }
   }
+
+  &--year {
+    counter-reset: counter 2023;
+
+    .list-number {
+      &__number {
+        &:before {
+          content: counter(counter) !important;
+        }
+      }
+    }
+  }
 }

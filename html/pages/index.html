@@ -10,7 +10,7 @@
         <div class="detail-bg detail-bg--overlay">
           <section class="top top-box">
             <div class="container">
-              <div class="top__inner border-decor border-decor--bottom">
+              <div class="top__inner top-box__inner border-decor border-decor--bottom">
                 <div class="top__info">
                   <h1 class="h1">
                     World-Class <br />
@@ -197,7 +197,7 @@
               <div class="services__content">
                 <div class="services__content-inner">
                   <div class="goods">
-                    <div class="card-item overlay">
+                    <div class="card-item overlay card-box">
                       <div class="card-item__inner">
                         <div class="card-item__inner-info">
                           <div class="card-item__header">
@@ -274,7 +274,7 @@
                       ></a>
                     </div>
 
-                    <div class="card-item overlay">
+                    <div class="card-item overlay card-box">
                       <div class="card-item__inner">
                         <div class="card-item__inner-info">
                           <div class="card-item__header">
@@ -316,7 +316,7 @@
                       ></a>
                     </div>
 
-                    <div class="card-item overlay">
+                    <div class="card-item overlay card-box">
                       <div class="card-item__inner">
                         <div class="card-item__inner-info">
                           <div class="card-item__header">
@@ -952,12 +952,12 @@
                 <div class="links-decor border-decor border-decor--bottom">
                   <a
                     href="#"
-                    title="All Cars"
-                    aria-label="Перейти на страницу All Cars"
+                    title="All Real Estate"
+                    aria-label="Перейти на страницу All Real Estate"
                     class="link-decor link-decor--big link-decor--border-no-cvet"
                   >
                     <div class="link-decor__content">
-                      <p class="p1">All Services</p>
+                      <p class="p1">All Real Estate</p>
 
                       <span class="icon">
                         <svg>
@@ -971,303 +971,10 @@
             </div>
           </div>
         </section>
+        
+        @@include('../modules/features.html', {"classAdd" : "border-decor border-decor--top border-decor--bottom detail-bg detail-bg--decor-top detail-bg--middle section-padding-bottom gap-none"})
 
-        <section
-          class="features border-decor border-decor--top border-decor--bottom detail-bg detail-bg--decor-top detail-bg--middle section-padding-bottom gap-none"
-        >
-          <div class="container">
-            <div class="features__inner topBox">
-              <div class="topBox">
-                <div class="topBox__content with-line line-top">
-                  <h2 class="h3">The Luxury of Working With Professionals</h2>
-
-                  <div class="textbox">
-                    <p class="p1 text-gray-400 manrope-font">
-                      Experience seamless service, refined expertise, and a
-                      level of attention reserved for those who value true
-                      excellence.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="features__content">
-                <ul class="features__items list-number">
-                  <li class="features__item list-number__item">
-                    <div class="card-detail">
-                      <div class="card-detail__inner">
-                        <div class="card-detail__header">
-                          <p class="list-number__number p1 text-gray-400"></p>
-                        </div>
-
-                        <div class="card-detail__content">
-                          <div class="textbox">
-                            <p class="h6">
-                              We have access to properties not available on the
-                              open market
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card-detail__img">
-                        <picture>
-                          <source
-                            srcset="
-                              /img/features/one.webp   1x,
-                              /img/features/one2x.webp 2x
-                            "
-                          />
-                          <img
-                            src="/img/features/one.webp"
-                            alt="фотография"
-                            loading="lazy"
-                          />
-                        </picture>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="features__item list-number__item">
-                    <div class="card-detail">
-                      <div class="card-detail__inner">
-                        <div class="card-detail__header">
-                          <p class="list-number__number p1 text-gray-400"></p>
-                        </div>
-
-                        <div class="card-detail__content">
-                          <div class="textbox">
-                            <p class="h6">
-                              We provide a full range of services without any
-                              client involvement
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card-detail__img">
-                        <picture>
-                          <source
-                            srcset="
-                              /img/features/two.webp   1x,
-                              /img/features/two2x.webp 2x
-                            "
-                          />
-                          <img
-                            src="/img/features/two.webp"
-                            alt="фотография"
-                            loading="lazy"
-                          />
-                        </picture>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="features__item list-number__item">
-                    <div class="card-detail">
-                      <div class="card-detail__inner">
-                        <div class="card-detail__header">
-                          <p class="list-number__number p1 text-gray-400"></p>
-                        </div>
-
-                        <div class="card-detail__content">
-                          <div class="textbox">
-                            <p class="h6">
-                              We have international reach with local precision
-                              of execution
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card-detail__img">
-                        <picture>
-                          <source
-                            srcset="
-                              /img/features/three.webp   1x,
-                              /img/features/three2x.webp 2x
-                            "
-                          />
-                          <img
-                            src="/img/features/three.webp"
-                            alt="фотография"
-                            loading="lazy"
-                          />
-                        </picture>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="features__item list-number__item">
-                    <div class="card-detail">
-                      <div class="card-detail__inner">
-                        <div class="card-detail__header">
-                          <p class="list-number__number p1 text-gray-400"></p>
-                        </div>
-
-                        <div class="card-detail__content">
-                          <div class="textbox">
-                            <p class="h6">
-                              We are a service that emphasizes the status and
-                              care for each client
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card-detail__img">
-                        <picture>
-                          <source
-                            srcset="
-                              /img/features/four.webp   1x,
-                              /img/features/four2x.webp 2x
-                            "
-                          />
-                          <img
-                            src="/img/features/four.webp"
-                            alt="фотография"
-                            loading="lazy"
-                          />
-                        </picture>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="detail-bg__img">
-            <picture>
-              <source
-                srcset="/img/detail/one.webp 1x, /img/detail/one2x.webp 2x"
-              />
-              <img src="/img/detail/one.webp" alt="фотография" loading="lazy" />
-            </picture>
-          </div>
-        </section>
-
-        <section class="contact border-decor border-decor--bottom">
-          <div class="container">
-            <div class="contact__inner">
-              <div class="contact__info">
-                <h2 class="h3">If you have any questions, contact us</h2>
-              </div>
-
-              <div class="contact__content">
-                <form novalidate class="contact-form form">
-                  <div class="form__items">
-                    <div class="form__item-box">
-                      <div class="form__item-block">
-                        <p class="h6 text-gray-400">
-                          Leave a request, our manager will contact you shortly
-                          and answer all your questions
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="form__item-box">
-                      <label class="input-box form__item form__item-block">
-                        <div class="input-box__content">
-                          <p class="p2">Name</p>
-
-                          <div class="input-box__info">
-                            <input
-                              type="text"
-                              name="name"
-                              placeholder="Write our name"
-                            />
-                          </div>
-                        </div>
-
-                        <p class="input-box__errors p4 form__errors"></p>
-                      </label>
-                    </div>
-
-                    <div class="form__item-box form__item-box--two">
-                      <label
-                        class="input-box form__item form__item-block input-tel-wrapper"
-                      >
-                        <div class="input-box__content">
-                          <p class="p2">Phone *</p>
-
-                          <div class="input-box__info">
-                            <input
-                              type="tel"
-                              name="tel"
-                              placeholder="+ 1 (___) ___-__-__"
-                              required
-                            />
-                          </div>
-                        </div>
-
-                        <p class="input-box__errors p4 form__errors"></p>
-                      </label>
-
-                      <label
-                        class="input-box form__item form__item-block input-tel-wrapper"
-                      >
-                        <div class="input-box__content">
-                          <p class="p2">E-mail</p>
-
-                          <div class="input-box__info">
-                            <input
-                              type="email"
-                              name="email"
-                              placeholder="_@_._"
-                            />
-                          </div>
-                        </div>
-
-                        <p class="input-box__errors p4 form__errors"></p>
-                      </label>
-                    </div>
-
-                    <div class="form__item-box form__item-box--two">
-                      <label
-                        class="input-box form__item form__item-block input-tel-wrapper"
-                      >
-                        <div class="input-box__content">
-                          <p class="p2">Massage</p>
-
-                          <div class="input-box__info">
-                            <textarea
-                              type="text"
-                              name="message"
-                              placeholder="write our message"
-                            ></textarea>
-                          </div>
-                        </div>
-
-                        <p class="input-box__errors p4 form__errors"></p>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="form__footer">
-                    <button class="button disabled" type="submit">
-                      <p class="p1">Send</p>
-                    </button>
-
-                    <div class="decor-el text-gray-600">
-                      <span class="icon icon--sm">
-                        <svg>
-                          <use xlink:href="#shield-icon"></use>
-                        </svg>
-                      </span>
-
-                      
-                      <p class="p1">
-                        By clicking the “Send” button, I consent
-                        to the processing of my personal data.
-                      </p>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
+        @@include('../modules/contact.html')
       </main>
 
       @@include('../modules/footer.html')

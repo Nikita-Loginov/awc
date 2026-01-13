@@ -3,6 +3,10 @@
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(20)};
+    }
   }
 
   &__details {
@@ -11,12 +15,20 @@
     gap: 120px;
     max-width: calc(100% * 2 / 3);
     width: 100%;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(120)};
+    }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 4px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(4)};
+    }
   }
 
   &__content {
@@ -25,9 +37,17 @@
     gap: 20px;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(20)};
+    }
   }
 
   &__info {
     padding-top: 80px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      padding-top: #{vw(80)};
+    }
   }
 }

@@ -1,0 +1,134 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding: var(--gap-blocks) 0 36px;
+
+  & > *:not(:last-child) {
+    border-bottom: 1px solid var(--gray-color-500);
+    padding-bottom: 36px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      padding-bottom: #{vw(36)};
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(36)};
+    padding: var(--gap-blocks) 0 vw(36);
+  }
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  font-family: var(--font-second);
+  color: var(--gray-color-300);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__lists {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &--column {
+      flex-direction: column;
+      gap: 36px;
+      align-items: center;
+    }
+  }
+
+  .content-line {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  &__img {
+    border-radius: 800px;
+    width: 180px;
+    height: 88px;
+    overflow: hidden;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(120)};
+
+    &__inner {
+      gap: #{vw(120)};
+    }
+
+    &__content {
+      gap: #{vw(20)};
+    }
+
+    &__lists {
+      gap: #{vw(24)};
+    }
+
+    &__list {
+      gap: #{vw(8)};
+    }
+
+    .content-line {
+      max-width: #{vw(300)};
+    }
+
+    &__img {
+      width: #{vw(180)};
+      height: #{vw(88)};
+    }
+
+  
+  }
+}
+
+.footer-copy {
+  color: var(--gray-color-400);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__info,
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

@@ -21,6 +21,10 @@
     position: relative;
     z-index: 3;
     flex: 1;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(20)};
+    } 
   }
 
   &__head {
@@ -29,6 +33,11 @@
     flex-direction: column;
     gap: 24px;
     flex: 1;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      // padding-inline: #{vw(24)};
+      // gap: #{vw(24)};
+    } 
   }
 
   &__header,
@@ -37,6 +46,10 @@
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    } 
   }
 
   &__content {
@@ -56,12 +69,20 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 40px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(40)};
+    } 
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(8)};
+    } 
   }
 
   &__title {
@@ -85,4 +106,8 @@
       object-fit: cover;
     }
   }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    // padding: #{vw(40)} 0 0 0;
+  } 
 }

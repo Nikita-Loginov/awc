@@ -9,6 +9,11 @@
         rotate: -180deg;
       }
     }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
   }
 
   &:has(.arrow-swiper.prev.swiper-button-disabled):has(

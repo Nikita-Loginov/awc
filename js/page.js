@@ -40,5 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-window.addEventListener("resize", serVars);
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    serVars();
+  }, 200);
+});
+
 document.addEventListener("scroll", checkScrollY);

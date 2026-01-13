@@ -2,6 +2,14 @@
   color: var(--gray-color-200);
   transition: all 0.3s;
 
+  &--gray-300 {
+    color: var(--gray-color-300);
+  }
+
+  &--gray-400 {
+    color: var(--gray-color-400);
+  }
+
   &:hover,
   &.active {
     color: var(--primary-color-100);
@@ -24,6 +32,10 @@
 
   &--big {
     --paddint-top-item: 80px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      --paddint-top-item: #{vw(80)};
+    }
   }
 
   &--border-no-cvet {
@@ -36,6 +48,10 @@
     justify-content: space-between;
     gap: 20px;
     transition: all 0.3s;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(20)};
+    }
   }
 
   &__line {
@@ -43,14 +59,21 @@
   }
 
   &:hover {
-   @include hover-link-decor;
+    @include hover-link-decor;
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --paddint-top-item: #{vw(40)};
+    padding: var(--paddint-top-item) #{vw(24)} #{vw(40)};
   }
 }
-
-
 
 .links-decor {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 4px;
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(4)};
+  }
 }

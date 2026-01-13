@@ -40,6 +40,10 @@
       rgba(18, 20, 26, 0) 0%,
       #12141a 100%
     );
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      height: #{vw(240)};
+    }
   }
 
   &--decor-top {
@@ -69,6 +73,21 @@
   &--overlay {
     &:before {
       content: "";
+    }
+  }
+
+  &--about {
+    .detail-bg {
+      &__img {
+        // bottom: calc(var(--gap-blocks) * 2 + 200px);
+        bottom: calc(var(--gap-blocks));
+      }
+    }
+
+    &:after,
+    &:before {
+      // bottom: calc(var(--gap-blocks) * 2 + 200px);
+      bottom: calc(var(--gap-blocks));
     }
   }
 }

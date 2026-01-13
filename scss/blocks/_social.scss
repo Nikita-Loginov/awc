@@ -1,0 +1,9 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(8)};
+  }
+}

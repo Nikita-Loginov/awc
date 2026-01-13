@@ -38,9 +38,38 @@ export const SWIPERS = {
 
     options: {
       ...CARDS_CONFIG.options,
+     
       navigation: {
         nextEl: ".houses .arrow-swiper.next",
         prevEl: ".houses .arrow-swiper.prev",
+      },
+      breakpoints: {
+        ...CARDS_CONFIG.breakpoints,
+      }
+    },
+  },
+  HISTORY: {
+    selector: ".history .swiper--history",
+    breakpoint: 122300000000,
+
+    options: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      breakpoints: {
+        ...CARDS_CONFIG.breakpoints,
+      }
+    },
+  },
+  TEAM: {
+    selector: ".team .swiper--team",
+    breakpoint: 122300000000,
+
+    options: {
+      ...CARDS_CONFIG.options,
+      slidesPerView: 4,
+      navigation: {
+        nextEl: ".team .arrow-swiper.next",
+        prevEl: ".team .arrow-swiper.prev",
       },
       breakpoints: {
         ...CARDS_CONFIG.breakpoints,

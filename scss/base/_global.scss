@@ -23,7 +23,7 @@ body {
 
   &:before {
     content: "";
-    position: absolute;
+    position: fixed;
     inset: 0;
     top: 0;
     z-index: 100;
@@ -81,6 +81,10 @@ body {
     max-width: var(--container-second-width);
   }
 
+  &--paddig-start-only {
+    padding-inline-start: var(--container-inline-padding);
+  }
+
   &__inner {
     max-width: 100%;
     padding-inline: var(--container-inline-padding);
@@ -126,6 +130,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  &--noGap {
+    gap: 0;
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(14)};
+  }
 }
 
 .topBox {
@@ -185,7 +197,16 @@ body {
       }
 
       &:before {
-        content:"";
+        content: "";
+      }
+    }
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(40)};
+
+      &:before,
+      &:after {
+        height: #{vw(140)};
       }
     }
   }
@@ -204,6 +225,14 @@ body {
   &__decors-title {
     text-indent: 624px;
     // transform: translateY(-15px);
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      text-indent: #{vw(624)};
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(80)};
   }
 }
 
@@ -330,6 +359,10 @@ body .wrapper {
 .goods {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    grid-template-columns: repeat(auto-fit, minmax(#{vw(500)}, 1fr));
+  }
 }
 
 .overlay {
@@ -352,6 +385,17 @@ body .wrapper {
         rgba(21, 23, 27, 0.5) 100%
       );
     }
+
+    &-bottom {
+      &:before {
+        background-image: linear-gradient(
+          180deg,
+          rgba(18, 20, 26, 0) 0%,
+          rgba(18, 20, 26, 0.4) 50%,
+          rgba(18, 20, 26, 0.6) 100%
+        );
+      }
+    }
   }
 }
 
@@ -359,4 +403,50 @@ body .wrapper {
   display: flex;
   align-items: flex-start;
   gap: 8px;
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(8)};
+  }
+}
+
+.content-line {
+  position: relative;
+
+  &--absolute-line {
+    &::before {
+      position: absolute;
+      transform: translateY(-100%);
+      top: -40px;
+
+      @media (min-width: $xl-desktop-breakpoint) {
+        top: calc(#{vw(40)} * -1);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    width: 1px;
+    height: 140px;
+    background-color: var(--gray-color-500);
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      height: #{vw(140)};
+    }
+  }
+}
+
+.top-box {
+  min-height: calc(100dvh - var(--page-padding-top));
+  display: flex;
+
+  .container {
+    min-height: 100%;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }

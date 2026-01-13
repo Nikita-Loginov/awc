@@ -24,17 +24,27 @@
   border: 0;
 }
 
-@mixin hover-link-decor {
-  --border-width: 24px;
+@function vw($px) {
+  $result: math.div($px, 1920) * 100 + vw;
 
-  border-color: var(--primary-color-100);
-  color: var(--primary-color-100);
-  padding-top: calc(var(--paddint-top-item) - var(--border-width));
+  @return $result;
 }
 
-$xl-desktop-breakpoint: 1550px;
+$xl-desktop-breakpoint: 1920px;
 $desktop-breakpoint: 1439px;
 $md-desktop-breakpoint: 1279px;
 $lg-breakpoint: 1023px;
 $tablet-breakpoint: 767px;
 $mobile-breakpoint: 479px;
+
+@mixin hover-link-decor {
+  --border-width: 24px;
+
+  border-color: var(--primary-color-100);
+  color: var(--primary-color-100);
+  padding-top: calc((var(--paddint-top-item) - var(--border-width))  );
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --border-width: #{vw(24)};
+  }
+}

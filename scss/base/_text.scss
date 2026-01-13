@@ -56,6 +56,10 @@ h6 {
   line-height: var(--line-height-tighter);
 }
 
+.lh110 {
+  line-height: var(--line-height-tight);
+}
+
 .regular-font {
   font-weight: var(--weight-font-main);
 }
@@ -106,6 +110,15 @@ h6 {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
+ 
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 .text-underline {

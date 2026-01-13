@@ -10,12 +10,18 @@
   .iti__country-list {
     background-color: var(--dark-color-200);
     border: 1px solid var(--dark-color-200);
-    border-radius: var(0);
+    border-radius: 0;
     padding: 4px;
     max-height: 150px;
     top: 30px;
     color: var(--gray-color-200);
     font-size: var(--font-size-sm);
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      padding: #{vw(4)};
+      max-height: #{vw(150)};
+      top: #{vw(30)};
+    }
   }
 
   .iti__divider {

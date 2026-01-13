@@ -5,6 +5,10 @@
     gap: 24px;
     background-color: transparent;
     color: var(--gray-color-300);
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    }
   }
 
   &__burger-box {
@@ -12,7 +16,7 @@
     height: 12px;
     flex-shrink: 0;
     position: relative;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:after,
     &:before {
@@ -25,13 +29,18 @@
     }
 
     &:after {
-      top: 0;
-      transition: rotate .5s, top .5s .5s;
+      top: 2px;
+      transition: rotate 0.5s, top 0.5s 0.5s;
     }
 
     &:before {
-      bottom: 0;
-      transition: rotate .5s, bottom .5s .5s;
+      bottom: 2px;
+      transition: rotate 0.5s, bottom 0.5s 0.5s;
+    }
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      width: #{vw(96)};
+      height: #{vw(12)};
     }
   }
 
@@ -63,6 +72,11 @@
 
     & > *:not(:first-child) {
       border-top: 1px solid var(--gray-color-500);
+    }
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      padding: #{vw(96)} var(--container-inline-padding) 0;
+      gap: #{vw(80)};
     }
   }
 
@@ -104,6 +118,11 @@
           rotate: -45deg;
           transition: bottom 0.5s, rotate 0.5s 0.5s;
         }
+
+        @media (min-width: $xl-desktop-breakpoint) {
+          width: #{vw(24)};
+          height: #{vw(24)};
+        }
       }
     }
   }
@@ -114,21 +133,37 @@
   flex-direction: column;
   gap: 24px;
 
+  @media (min-width: $xl-desktop-breakpoint) {
+    gap: #{vw(24)};
+  }
+
   &__lists {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    }
   }
 
   &__list-box {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(40)};
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(24)};
+    }
   }
 }

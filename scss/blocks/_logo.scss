@@ -9,4 +9,11 @@
       height: 100%;
     }
   }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    &__img {
+      max-width: #{vw(240)};
+      height: #{vw(40)};
+    }
+  }
 }

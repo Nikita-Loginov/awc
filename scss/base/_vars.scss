@@ -8,6 +8,7 @@ html {
 
   --gray-color-100: #ffffff;
   --gray-color-115: #ffffff26;
+  --gray-color-120: #FFFFFF33;
   --gray-color-200: #f2f3f5;
   --gray-color-300: #b4b6bf;
   --gray-color-400: #989ba6;
@@ -82,4 +83,35 @@ html {
         480px
       )}
   );
+}
+
+@media (min-width: $xl-desktop-breakpoint) {
+  :root {
+    --font-size-3xs: #{vw(12)};
+    --font-size-2xs: #{vw(14)};
+    --font-size-xs: #{vw(16)};
+    --font-size-sm: #{vw(18)};
+    --font-size-base: #{vw(28)};
+    --font-size-md: #{vw(36)};
+    --font-size-lg: #{vw(48)};
+    --font-size-xl: #{vw(64)};
+    --font-size-2xl: #{vw(96)};
+    --font-size-3xl: #{vw(120)};
+
+    --icon-xs: #{vw(12)};
+    --icon-sm: #{vw(16)};
+    --icon-base: #{vw(18)};
+    --icon-md: #{vw(24)};
+    --icon-lg: #{vw(28)};
+
+    --container-inline-padding: #{vw(24)};
+    --container-width: #{vw(1872)};
+    --container-second-width: #{vw(1920)};
+
+    --calback-header-height: #{vw(90)};
+
+    --gap-blocks: #{vw(160)};
+
+    --page-padding-top: calc(#{vw(90)} + #{vw(72)});
+  }
 }

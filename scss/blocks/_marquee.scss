@@ -1,0 +1,50 @@
+.marquee {
+  --gap-items: 80px;
+
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap-items);
+  color: var(--gray-color-400);
+
+  &:hover {
+    // .marquee {
+    //   &__items {
+    //     animation-play-state: paused;
+    //   }
+    // }
+  }
+
+  &__items {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap-items);
+    animation: scroll 20s linear infinite;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    &:after {
+      content: "";
+      right: 0;
+      width: 120px;
+      height: 120px;
+      background-repeat: no-repeat;
+      background-image: url(/img/icons/decors/star.svg);
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap-items)));
+  }
+}
