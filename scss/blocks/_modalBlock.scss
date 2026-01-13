@@ -1,0 +1,108 @@
+.modalBlock {
+  --padding-inner: 40px 24px;
+  --gap-inner: 40px;
+  --gap-header: 16px;
+  --close-width-btn: 24px;
+
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.3s 0.3s;
+  background-color: var(--dark-color-275);
+  backdrop-filter: blur(10px);
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+
+    .modalBlock {
+      &__inner {
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  &__inner {
+    max-width: 36%;
+    width: 100%;
+    background-color: var(--dark-color-400);
+    transform: translateX(100%);
+    padding: var(--padding-inner);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-inner);
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: auto;
+    transition: all 0.3s;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-header);
+  }
+
+  &__close {
+    background-color: transparent;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    color: var(--gray-color-300);
+    width: var(--close-width-btn);
+    height: var(--close-width-btn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: var(--gray-color-200);
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --padding-inner: #{vw(40)} #{vw(24)};
+    --gap-inner: #{vw(40)};
+    --gap-header: #{vw(16)};
+    --close-width-btn: #{vw(24)};
+  }
+}
+
+.thxModal {
+  --gap-thx-content: 80px;
+  --gap-thx-info: 60px;
+  --gap-btns: 4px;
+
+  &__content,
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    gap: var(--gap-thx-content);
+    margin: auto 0;
+  }
+
+  &__info {
+    gap: var(--gap-thx-info);
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-btns);
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --gap-thx-content: #{vw(80)};
+    --gap-thx-info: #{vw(60)};
+    --gap-btns: #{vw(4)};
+  }
+}

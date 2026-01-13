@@ -68,6 +68,16 @@ body {
       padding-bottom: var(--gap-blocks);
     }
   }
+
+  &--detail {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(96)};
+    }
+  }
 }
 
 .container {
@@ -351,6 +361,10 @@ body .wrapper {
     border-top: var(--border-decor-width) solid var(--border-decor-color);
   }
 
+  &--gray-500 {
+    --border-decor-color: var(--gray-color-500);
+  }
+
   &--bottom {
     border-bottom: var(--border-decor-width) solid var(--border-decor-color);
   }
@@ -360,8 +374,21 @@ body .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 
+  &--gap {
+    gap: 4px;
+  }
+
+  &--flex {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
     grid-template-columns: repeat(auto-fit, minmax(#{vw(500)}, 1fr));
+
+    &--gap {
+      gap: #{vw(4)};
+    }
   }
 }
 
@@ -403,6 +430,10 @@ body .wrapper {
   display: flex;
   align-items: flex-start;
   gap: 8px;
+
+  &--center {
+    justify-content: center;
+  }
 
   @media (min-width: $xl-desktop-breakpoint) {
     gap: #{vw(8)};
@@ -449,4 +480,43 @@ body .wrapper {
     display: flex;
     flex-direction: column;
   }
+}
+
+.decor-section {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.icon-decor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  background-color: var(--dark-color-600);
+  flex-shrink: 0;
+  color: var(--gray-color-200);
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    width: #{vw(96)};
+    height: #{vw(96)};
+  }
+}
+
+.fixed-block {
+  position: fixed;
+  z-index: 100;
+  left: 24px;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

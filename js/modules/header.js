@@ -1,7 +1,7 @@
 const CONFIG = {
   CLASS_SCROLL_TOP: "scrollTop",
   CLASS_SCROLL_BOTTOM: "scrollBottom",
-  CLASS_SCROLL_VISIBLE: "scrollVisible", // Новый класс
+  CLASS_SCROLL_VISIBLE: "scrollVisible",
   SCROLL_START_MORE: 80,
   SCROLL_THRESHOLD: 5,
 };
@@ -30,7 +30,6 @@ export const checkScrollY = () => {
 
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   
-  // Определяем, виден ли header (скролл меньше SCROLL_START_MORE)
   const isHeaderVisible = scrollTop <= CONFIG.SCROLL_START_MORE;
 
   if (Math.abs(scrollTop - lastScrollTop) < CONFIG.SCROLL_THRESHOLD) return;

@@ -5,14 +5,14 @@ import { initModal, checkStartOpen } from "./modules/modal.js";
 import { initMenu } from "./modules/menu.js";
 import { initFormValidation } from "./modules/validate.js";
 import { onChangeInput } from "./modules/functions.js";
-// import { checkStorage, initStorage } from "./modules/localStorage.js";
+import { checkStorage, initStorage } from "./modules/localStorage.js";
 
 const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
 const handleGlobalEvents = (e) => {
   initModal(e);
   initMenu(e);
-//   initStorage(e);
+  initStorage(e);
 };
 
 const serVars = () => {
@@ -30,7 +30,7 @@ const initValidate = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-//   checkStorage();
+  checkStorage();
   initValidate();
   checkStartOpen();
   serVars();

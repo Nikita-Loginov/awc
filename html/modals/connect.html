@@ -1,0 +1,120 @@
+<div class="modalBlock connectModal">
+  <div class="modalBlock__inner">
+    <div class="modalBlock__header">
+      <p class="h4">Let’s Connect</p>
+
+      <div class="textbox">
+        <p class="p1 text-gray-400">
+          Submit your request and our team will promptly contact you to discuss
+          availability, personalize the details, and arrange your exclusive
+          vehicle.
+        </p>
+      </div>
+    </div>
+
+    <form class="form" novalidate>
+      <div class="form__items">
+        <div class="form__item-box">
+          <label class="input-box form__item form__item-block border-decor border-decor--top border-decor--gray-500">
+            <div class="input-box__content">
+              <p class="p2">Name</p>
+
+              <div class="input-box__info">
+                <input type="text" name="name" placeholder="Write our name" />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">Phone *</p>
+
+              <div class="input-box__info">
+                <input
+                  type="tel"
+                  name="tel"
+                  placeholder="+ 1 (___) ___-__-__"
+                  required
+                />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">E-mail</p>
+
+              <div class="input-box__info">
+                <input type="email" name="email" placeholder="_@_._" />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">Massage</p>
+
+              <div class="input-box__info">
+                <textarea
+                  type="text"
+                  name="message"
+                  placeholder="Write our message"
+                ></textarea>
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+      </div>
+
+      <div class="form__footer form__footer--column">
+        <button class="button modal-open" type="submit" data-modal="thxModal">
+          <p class="p1">Let’s Connect</p>
+        </button>
+
+        <div class="decor-el text-gray-600 decor-el--center">
+          <span class="icon icon--sm">
+            <svg>
+              <use xlink:href="#shield-icon"></use>
+            </svg>
+          </span>
+
+          <p class="p1 manrope-font">
+            By clicking the “Send” button, I consent <br> to the processing of my personal data.
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>

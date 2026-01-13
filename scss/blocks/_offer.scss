@@ -1,0 +1,27 @@
+.offer {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(40)};
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 5px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(4)} #{vw(5)};
+    }
+  }
+
+  &__item {
+    &--big {
+        grid-row: span 2;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head lang="en">
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
@@ -69,6 +69,21 @@
       fill="currentColor"
     />
   </symbol>
+
+  <symbol id="close-icon" viewBox="0 0 13 13">
+    <path
+      d="M12.7275 1.41406L7.77734 6.36426L12.7275 11.3145L11.3135 12.7285L6.36328 7.77832L1.41406 12.7275L0 11.3135L4.94922 6.36426L0 1.41504L1.41406 0.000976562L6.36328 4.9502L11.3135 0L12.7275 1.41406Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="check-icon" viewBox="0 0 28 21">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M28 2.94407L26.5593 4.32215L11.3378 18.7919L9.95973 20.1074L8.58166 18.7919L1.44072 12.0268L0 10.6488L2.75615 7.76734L4.19687 9.14541L9.95973 14.5324L23.8031 1.37808L25.2438 0L28 2.94407Z"
+      fill="currentColor"
+    />
+  </symbol>
 </svg>
 
 
@@ -121,6 +136,7 @@
                           title="Legal Services"
                           aria-label="Перейти на страницу Legal Services"
                           class="link h5"
+                          data-close-menu
                           >Legal Services</a
                         >
                       </li>
@@ -131,6 +147,7 @@
                           title="Financial Consulting"
                           aria-label="Перейти на страницу Financial Consulting"
                           class="link h5"
+                          data-close-menu
                           >Financial Consulting</a
                         >
                       </li>
@@ -141,6 +158,7 @@
                           title="Transaction Advisory"
                           aria-label="Перейти на страницу Transaction Advisory"
                           class="link h5"
+                          data-close-menu
                           >Transaction Advisory</a
                         >
                       </li>
@@ -157,6 +175,7 @@
                           title="Exclusive Cars"
                           aria-label="Перейти на страницу Exclusive Cars"
                           class="link h5"
+                          data-close-menu
                           >Exclusive Cars</a
                         >
                       </li>
@@ -167,6 +186,7 @@
                           title="Luxury Real Estate"
                           aria-label="Перейти на страницу Luxury Real Estate"
                           class="link h5"
+                          data-close-menu
                           >Luxury Real Estate</a
                         >
                       </li>
@@ -183,6 +203,7 @@
                           title="About Us"
                           aria-label="Перейти на страницу About Us"
                           class="link h5"
+                          data-close-menu
                           >About Us</a
                         >
                       </li>
@@ -193,6 +214,7 @@
                           title="Luxury Contact"
                           aria-label="Перейти на страницу Luxury Contact"
                           class="link h5"
+                          data-close-menu
                           >Luxury Contact</a
                         >
                       </li>
@@ -204,22 +226,23 @@
               <div class="menu__info">
                 <div class="links-decor">
                   <button
-                  type="button"
-                  aria-label="Оставить заявку"
-                  class="link-decor link-decor--big link-decor--border-no-cvet"
-                >
-                  <div class="link-decor__content">
-                    <p class="p1">Let’s Connect</p>
+                    type="button"
+                    aria-label="Оставить заявку"
+                    class="link-decor link-decor--big link-decor--border-no-cvet modal-open"
+                    data-modal="connectModal"
+                    data-close-menu
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">Let’s Connect</p>
 
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="#arrow-line-icon"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </button>
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-line-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </button>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -265,7 +288,8 @@
                   <button
                     type="button"
                     aria-label="Оставить заявку"
-                    class="link-decor link-decor--border-no-cvet"
+                    class="link-decor link-decor--border-no-cvet modal-open"
+                    data-modal="connectModal"
                   >
                     <div class="link-decor__content">
                       <p class="p1">Let’s Connect</p>
@@ -429,7 +453,7 @@
                           </div>
 
                           <div class="card-item__footer">
-                            <p class="p1 manrope-font">
+                            <p class="p1 manrope-font text-gray-300">
                               Comprehensive legal and financial expertise
                               designed to protect your interests, strengthen
                               your assets, and deliver absolute confidence in
@@ -441,7 +465,7 @@
                         <ul class="card-item__links list-slash">
                           <li class="list-slash__link">
                             <a
-                              href="#link1"
+                              href="/serv-legal.html"
                               aria-label="Перейти на страницу Legal Services"
                               title="Legal Services"
                               class="list-slash__item text-underline"
@@ -452,7 +476,7 @@
 
                           <li class="list-slash__link">
                             <a
-                              href="#link2"
+                              href="/serv-fin.html"
                               aria-label="Перейти на страницу Financial Сonsulting"
                               title="Financial Сonsulting"
                               class="list-slash__item text-underline"
@@ -463,7 +487,7 @@
 
                           <li class="list-slash__link">
                             <a
-                              href="#link3"
+                              href="/serv-adv.html"
                               aria-label="Перейти на страницу Transaction Advisory"
                               title="Transaction Advisory"
                               class="list-slash__item text-underline"
@@ -491,7 +515,7 @@
                       </div>
 
                       <a
-                        href="#link-card"
+                        href="/serv-legal.html"
                         title="Legal & Finance"
                         aria-label="Перейти на страницу Legal & Finance"
                         class="card-item__link-decor"
@@ -506,7 +530,7 @@
                           </div>
 
                           <div class="card-item__footer">
-                            <p class="p1 manrope-font">
+                            <p class="p1 manrope-font text-gray-300">
                               Experience a distinguished collection of luxury
                               vehicles designed to deliver exceptional comfort,
                               powerful performance, and a true sense of prestige
@@ -548,7 +572,7 @@
                           </div>
 
                           <div class="card-item__footer">
-                            <p class="p1 manrope-font">
+                            <p class="p1 manrope-font text-gray-300">
                               High-end homes that bring together rare
                               architecture, exceptional finishes, and
                               unparalleled privacy, offering a distinctive sense
@@ -588,7 +612,7 @@
                   class="links-decor container__inner border-decor border-decor--bottom"
                 >
                   <a
-                    href="#"
+                    href="/services.html"
                     title="All Services"
                     aria-label="Перейти на страницу All Services"
                     class="link-decor link-decor--big link-decor--border-no-cvet"
@@ -604,11 +628,11 @@
                     </div>
                   </a>
 
-                  <a
-                    href="#"
-                    title="Our Adress"
-                    aria-label="Перейти на страницу Our Adress"
-                    class="link-decor link-decor--big link-decor--border-no-cvet"
+                  <button
+                    type="button"
+                    aria-label="Оставить заявку"
+                    class="link-decor link-decor--big link-decor--border-no-cvet modal-open"
+                    data-modal="connectModal"
                   >
                     <div class="link-decor__content">
                       <p class="p1">Let’s Connect</p>
@@ -619,7 +643,7 @@
                         </svg>
                       </span>
                     </div>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -976,7 +1000,7 @@
 
                 <div class="links-decor border-decor border-decor--bottom">
                   <a
-                    href="#"
+                    href="/services.html"
                     title="All Cars"
                     aria-label="Перейти на страницу All Cars"
                     class="link-decor link-decor--big link-decor--border-no-cvet"
@@ -1369,7 +1393,7 @@
 </section>
 
 
-        <section class="contact border-decor border-decor--bottom">
+        <section class="contact border-decor border-decor--bottom ">
   <div class="container container--big container--paddig-start-only">
     <div class="contact__inner">
       <div class="contact__info">
@@ -1676,6 +1700,213 @@
     </div>
   </div>
 </footer>
+
+<div class="fixed-block">
+  <div
+  class="cookies"
+  data-storage-key="cookies-awc"
+  data-storage-type="localstorage"
+  data-storage-days="30"
+  data-storage-remove="true"
+  data-storage-value="true"
+>
+  <div class="cookies__box">
+    <div class="cookies__content">
+      <div class="textbox">
+        <p class="p1 manrope-font">
+          This site uses cookies to store data. By continuing to use this site,
+          you consent to our use of cookies. For more information, please read
+          our Personal Data Processing Policy.
+        </p>
+      </div>
+    </div>
+
+    <div class="cookies__footer">
+      <div class="cookies__btns">
+        <button
+          class="button"
+          type="button"
+          data-storage-close
+        >
+          <p class="p1">Accept</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="modalBlock connectModal">
+  <div class="modalBlock__inner">
+    <div class="modalBlock__header">
+      <p class="h4">Let’s Connect</p>
+
+      <div class="textbox">
+        <p class="p1 text-gray-400">
+          Submit your request and our team will promptly contact you to discuss
+          availability, personalize the details, and arrange your exclusive
+          vehicle.
+        </p>
+      </div>
+    </div>
+
+    <form class="form" novalidate>
+      <div class="form__items">
+        <div class="form__item-box">
+          <label class="input-box form__item form__item-block border-decor border-decor--top border-decor--gray-500">
+            <div class="input-box__content">
+              <p class="p2">Name</p>
+
+              <div class="input-box__info">
+                <input type="text" name="name" placeholder="Write our name" />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">Phone *</p>
+
+              <div class="input-box__info">
+                <input
+                  type="tel"
+                  name="tel"
+                  placeholder="+ 1 (___) ___-__-__"
+                  required
+                />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">E-mail</p>
+
+              <div class="input-box__info">
+                <input type="email" name="email" placeholder="_@_._" />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">Massage</p>
+
+              <div class="input-box__info">
+                <textarea
+                  type="text"
+                  name="message"
+                  placeholder="Write our message"
+                ></textarea>
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+      </div>
+
+      <div class="form__footer form__footer--column">
+        <button class="button modal-open" type="submit" data-modal="thxModal">
+          <p class="p1">Let’s Connect</p>
+        </button>
+
+        <div class="decor-el text-gray-600 decor-el--center">
+          <span class="icon icon--sm">
+            <svg>
+              <use xlink:href="#shield-icon"></use>
+            </svg>
+          </span>
+
+          <p class="p1 manrope-font">
+            By clicking the “Send” button, I consent <br> to the processing of my personal data.
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+<div class="modalBlock thxModal">
+  <div class="modalBlock__inner">
+    <div class="thxModal__content">
+      <div class="thxModal__info">
+        <div class="icon-decor">
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#check-icon"></use>
+            </svg>
+          </span>
+        </div>
+
+        <div class="modalBlock__headaer">
+          <p class="h4">Your application has been accepted</p>
+
+          <div class="textbox">
+            <p class="p1 text-gray-400">
+              Our manager will contact you shortly and answer all your
+              questions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="thxModal__btns">
+        <button
+          class="button modal-close"
+          type="button"
+          aria-label="Закрыть модальное окно"
+        >
+          <p class="p1">Close modal</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
 
 <script src="/js/lib/imask.min.js" type="module"></script>
 <script

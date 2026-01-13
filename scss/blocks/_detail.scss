@@ -1,0 +1,38 @@
+.detail {
+  --inner-gap: 96px;
+  --content-gap: 40px;
+  --info-gap: 24px;
+
+  &__inner,
+  &__content,
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__inner {
+    gap: var(--inner-gap);
+  }
+
+  &__content {
+    gap: var(--content-gap);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__info {
+    gap: var(--info-gap);
+    max-width: 20%;
+  }
+
+  &__items {
+    max-width: calc(100% * 2 / 3);
+    width: 100%;
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --inner-gap: #{vw(96)};
+    --content-gap: #{vw(40)};
+    --info-gap: #{vw(24)};
+  }
+}
