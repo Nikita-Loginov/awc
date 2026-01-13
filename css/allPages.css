@@ -9,8 +9,7 @@
   gap: 10px;
 }
 .allPages__develop {
-  font-size: clamp(16px, 6.8202764977px + 2.2119815668vw, 40px);
-  line-height: line-height(16px, 16px);
+  font-size: var(--font-size-base);
 }
 .allPages__list {
   display: -webkit-box;
@@ -24,7 +23,7 @@
 }
 .allPages__link {
   counter-increment: list;
-  font-size: clamp(16px, 10.6451612903px + 1.2903225806vw, 30px);
+  font-size: var(--font-size-base);
   font-weight: 800;
   line-height: line-height(16px, 16px);
   display: -webkit-box;
@@ -49,12 +48,12 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
-  font-size: clamp(16px, 14.4700460829px + 0.3686635945vw, 20px);
+  font-size: var(--font-size-base);
   font-weight: 400;
   text-transform: uppercase;
 }
 .allPages__review {
-  font-size: clamp(16px, 10.6451612903px + 1.2903225806vw, 30px);
+  font-size: var(--font-size-base);
   font-weight: 500;
 }
 .allPages__review a {

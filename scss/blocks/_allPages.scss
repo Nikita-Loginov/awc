@@ -7,8 +7,7 @@
   }
 
   &__develop {
-    font-size: calculate-clamp(16px, 40px);
-    line-height: line-height(16px, 16px);
+    font-size: var(--font-size-base);
   }
 
   &__list {
@@ -19,7 +18,7 @@
 
   &__link {
     counter-increment: list;
-    font-size: calculate-clamp(16px, 30px);
+    font-size: var(--font-size-base);
     font-weight: 800;
     line-height: line-height(16px, 16px);
     display: flex;
@@ -36,13 +35,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-size: calculate-clamp(16px, 20px);
+    font-size: var(--font-size-base);
     font-weight: 400;
     text-transform: uppercase;
   }
 
   &__review {
-    font-size: calculate-clamp(16px, 30px);
+    font-size: var(--font-size-base);
     font-weight: 500;
 
     a {
