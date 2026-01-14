@@ -7,7 +7,7 @@ export const validationRules = {
     message: {
       required: "Enter your name",
       minLength: "Name must be at least 2 characters long",
-      pattern: "Only English letters are allowed"
+      pattern: "Only English letters are allowed",
     },
 
     hint: "For example: Ivan or John",
@@ -39,13 +39,40 @@ export const validationRules = {
 
   select: {
     required: true,
-    type: "select",
+    type: "dropdown",
 
     message: {
       required: "Select a value",
     },
 
     hint: "Choose one of the available options",
+  },
+
+  brand: {
+    required: true,
+    type: "dropdown",
+
+    message: {
+      required: "Select at least one brand",
+    },
+  },
+
+  date: {
+    required: true,
+    type: "dropdown",
+  
+    message: {
+      required: "Select a date",
+    },
+  },
+
+  price: {
+    required: true,
+    type: "dropdown",
+
+    message: {
+      required: "Select price range",
+    },
   },
 
   policy: {

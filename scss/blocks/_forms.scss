@@ -36,8 +36,16 @@
     align-items: center;
     margin-top: auto;
 
+    &--small {
+      gap: 24px;
+    }
+
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(48)};
+
+      &--small {
+        gap: #{vw(24)};
+      }
     }
 
     &--column {
@@ -48,6 +56,16 @@
 
       @media (min-width: $xl-desktop-breakpoint) {
         gap: #{vw(24)};
+      }
+    }
+  }
+
+  &__item {
+    &.error {
+      .form {
+        &__errors {
+          display: flex;
+        }
       }
     }
   }

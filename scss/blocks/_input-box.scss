@@ -5,11 +5,22 @@
   width: 100%;
   font-family: var(--font-second);
 
+  &--border {
+    border-bottom: 1px solid var(--gray-color-500);
+    padding-bottom: 16px;
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      padding-bottom: #{vw(16)};
+    }
+  }
+  
   &__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
     color: var(--gray-color-400);
+    background-color: transparent;
+    cursor: pointer;
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(16)};
@@ -18,6 +29,9 @@
 
   &__info {
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 
     input,
     textarea {
@@ -56,6 +70,13 @@
     @media (min-width: $xl-desktop-breakpoint) {
       padding: #{vw(10)} 0 0 0;
     }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   &:hover {

@@ -4,17 +4,26 @@ import { classAction } from "../modules/classActions.js";
 
 export const validateFormField = (formItem) => {
   const field = formItem.querySelector(
-    "input, textarea, select, .selected-option"
+    "input, textarea, select, .selected-option, .dropdown"
   );
+
+  const isDropdown = field.classList.contains("dropdown");
+
   const errorBox = formItem.querySelector(".form__errors");
 
   if (!field) return true;
 
-  const rules = validationRules[field.name];
-  if (!rules) return true;
+  const rules = isDropdown ? validationRules[field.dataset.name] : validationRules[field.name];
 
-  const value = field.value?.trim() || "";
-  const isRequired = field.required === true;
+  if (!rules) return true; 
+
+  const value = isDropdown
+    ? field.dataset.value || field.dataset.selected ||""
+    : field.value?.trim() || "";
+ 
+   
+  const isRequired = isDropdown ? rules.required : field.required === true;
+
 
   let valid = true;
   let message = "";
@@ -41,6 +50,7 @@ export const validateFormField = (formItem) => {
       phone: () => validators.phone(field),
       select: () => validators.select(field),
       checkbox: () => validators.checkbox(field),
+      dropdown: () => validators.dropdown(field),
     };
 
     const validator = typeValidators[rules.type];

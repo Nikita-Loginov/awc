@@ -1,6 +1,7 @@
 .link {
   color: var(--gray-color-200);
   transition: all 0.3s;
+  background-color: transparent;
 
   &--gray-300 {
     color: var(--gray-color-300);
@@ -8,6 +9,10 @@
 
   &--gray-400 {
     color: var(--gray-color-400);
+  }
+
+  &--primary-100 {
+    color: var(--primary-color-100)
   }
 
   &:hover,

@@ -1,0 +1,316 @@
+<div class="modalBlock rentCarModal rentBoxModal openFinish">
+  <form class="modalBlock__inner form">
+    <div class="modalBlock__inner-box">
+      <div class="modalBlock__header">
+        <p class="h4">Rent a Car</p>
+      </div>
+
+      <div class="rentBoxModal__content">
+        <div class="rentBoxModal__top">
+          <div class="good-mini overlay overlay--gradient">
+            <div class="good-mini__inner">
+              <div class="good-mini__header">
+                <div class="good-mini__info">
+                  <p class="h6 good-mini__title">
+                    Lamborghini <span class="text-gray-300">Urus</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="good-mini__content">
+                <div class="good-mini__items">
+                  <div class="good-mini__item">
+                    <p class="p1">1 200$ / day</p>
+                  </div>
+
+                  <div class="good-mini__item">
+                    <p class="p1">990 HP</p>
+                  </div>
+
+                  <div class="good-mini__item">
+                    <p class="p1">2024 year</p>
+                  </div>
+                </div>
+
+                <div class="good-mini__info">
+                  <button class="link link--primary-100 text-underline">
+                    Сhange car
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="good-mini__img-box">
+              <picture>
+                <source
+                  srcset="/img/cars/one.webp 1x, /img/cars/one2x.webp 2x"
+                />
+                <img src="/img/cars/one.webp" alt="фотография" loading="lazy" />
+              </picture>
+            </div>
+          </div>
+
+          <div class="rentBoxModal__status">
+            <div class="swiper swiper--status" data-initial-slide="0">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item active">
+                    <p class="p1">01 - Driver data</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item">
+                    <p class="p1">02 - Rent option</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item">
+                    <p class="p1">03 - Add-ons</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rentBoxModal__info">
+          <div class="form__items">
+            <div class="form__item-box">
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--select dropdown--dark-bg-200"
+                  data-name="select"
+                  data-placeholder="Choose place of rent"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <div class="dropdown__block">
+                      <p class="p2 manrope-font text-gray-400">
+                        Place of rent and return
+                      </p>
+
+                      <p
+                        class="p2 manrope-font link link--primary-100 text-underline"
+                      >
+                        Return location
+                      </p>
+                    </div>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content">
+                    <div class="dropdown__info">
+                      <ul class="dropdown__list">
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Sofia Airport - Terminal 1 (SOF)"
+                        >
+                          Sofia Airport - Terminal 1 (SOF)
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Sofia Airport - Terminal 2 (SOF)"
+                        >
+                          Sofia Airport - Terminal 2 (SOF)
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Varna Airport (VAR)"
+                        >
+                          Varna Airport (VAR)
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Varna Airport (VAR)"
+                        >
+                          Bourgas Airport (BOJ)
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__item-box form__item-box--two">
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  data-placeholder="Choose date"
+                  data-name="date"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p1">Pick up date</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content date-popup">
+                    <div
+                      class="date-popup__content date-calendar"
+                      data-calendar
+                      data-inline="true"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  data-placeholder="Choose date"
+                  data-name="date"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p1">Return date</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content date-popup">
+                    <div
+                      class="date-popup__content date-calendar"
+                      data-calendar
+                      data-inline="true"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__item-box form__item-box--two">
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  data-placeholder="Choose time"
+                  data-name="date"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p1">Pick up time</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content date-popup">
+                    <div
+                      class="date-popup__content date-calendar"
+                      data-calendar
+                      data-inline="true"
+                      data-time="true"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  data-placeholder="Choose time"
+                  data-name="date"
+                
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p1">Return time</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content date-popup">
+                    <div
+                      class="date-popup__content date-calendar"
+                      data-calendar
+                      data-inline="true"
+                      data-time="true"
+                      data-min-date="true"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rentBoxModal__footer">
+      <div class="rentBoxModal__btns">
+        <button
+          class="button button--noBg button--border button--border-gray-500 modal-close"
+        >
+          <p class="p1">Previous Step</p>
+        </button>
+
+        <button class="button" type="submit">
+          <p class="p1">Next Step</p>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>

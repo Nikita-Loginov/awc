@@ -1,0 +1,16 @@
+.price-popup {
+  --gap-items-price-popup: 16px;
+  --gap-content-price-popup: 10px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-content-price-popup);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-items-price-popup);
+  }
+}

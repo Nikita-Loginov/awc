@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Cars", "links" :
+  ["./css/catalogy.css", "./css/lib/swiper.min.css",
+  "https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail">
+        <div class="top-detail">
+          <div class="container">
+            <div class="top-detail__inner">
+              <div class="top-detail__head">
+                <h1 class="h1">Exclusive Cars</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="catalogy">
+            <div class="container">
+              <div class="catalogy__inner">
+                <div class="catalogy__content">
+                  <div class="filter">
+                    <div class="filter__item">
+                      <div
+                        class="dropdown dropdown--price"
+                        data-price-template="from {min} to {max} $"
+                      >
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Daily Rental</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content price-popup">
+                          <div class="price-popup__content">
+                            <div class="price-popup__items">
+                              <div class="input-box input-box--border">
+                                <label class="input-box__content">
+                                  <p class="p3">from</p>
+
+                                  <div class="input-box__info">
+                                    <input
+                                      placeholder="0"
+                                      type="text"
+                                      name="price_min"
+                                      min="0"
+                                      value="43"
+                                      max="10000"
+                                      data-type="price_min"
+                                      data-input-number
+                                    />
+
+                                    <p class="p1">$</p>
+                                  </div>
+                                </label>
+                              </div>
+
+                              <div class="input-box input-box--border">
+                                <label class="input-box__content">
+                                  <p class="p3">to</p>
+
+                                  <div class="input-box__info">
+                                    <input
+                                      placeholder="1 600 $"
+                                      type="text"
+                                      name="price_max"
+                                      min="0"
+                                      value="100"
+                                      max="10000"
+                                      data-type="price_max"
+                                      data-input-number
+                                    />
+
+                                    <p class="p1">$</p>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div
+                        class="dropdown dropdown--checks"
+                        data-placeholder="Choose a brand car"
+                      >
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Brand</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__info">
+                            <div class="dropdown__items">
+                              <label class="check">
+                                <div class="check__box">
+                                  <input
+                                    type="checkbox"
+                                    name="brand"
+                                    value="lamborghini"
+                                    data-label="Lamborghini"
+                                  />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <p class="p1 text-gray-300">Lamborghini</p>
+                                </div>
+                              </label>
+
+                              <label class="check">
+                                <div class="check__box">
+                                  <input
+                                    type="checkbox"
+                                    name="brand"
+                                    value="porsche"
+                                    data-label="Porsche"
+                                  />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <p class="p1 text-gray-300">Porsche</p>
+                                </div>
+                              </label>
+
+                              <label class="check">
+                                <div class="check__box">
+                                  <input
+                                    type="checkbox"
+                                    name="brand"
+                                    value="BMW"
+                                    data-label="BMW"
+                                  />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <p class="p1 text-gray-300">BMW</p>
+                                </div>
+                              </label>
+
+                              <label class="check">
+                                <div class="check__box">
+                                  <input
+                                    type="checkbox"
+                                    name="brand"
+                                    value="mercedes-benz"
+                                    data-label="Mercedes-Benz"
+                                  />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <p class="p1 text-gray-300">Mercedes-Benz</p>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select">
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Horsepower</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__info">
+                            <ul class="dropdown__list">
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="All"
+                              >
+                                All
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-active
+                                data-value="75-100 HP"
+                              >
+                                75-100 HP
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="110-200 HP "
+                              >
+                                110-200 HP
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="250-500+ HP"
+                              >
+                                250-500+ HP
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value=" 500-1,000+ HP"
+                              >
+                                500-1,000+ HP
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="1000-1,500+ HP"
+                              >
+                                1000-1,500+ HP
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select">
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Year</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__info">
+                            <ul class="dropdown__list">
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="All"
+                                data-active
+                              >
+                                All
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2020"
+                              >
+                                2020
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2021"
+                              >
+                                2021
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2022"
+                              >
+                                2022
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2023"
+                              >
+                                2023
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2024"
+                              >
+                                2024
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2025"
+                              >
+                                2025
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2026"
+                              >
+                                2026
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="goods goods--gap goods--two">
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Lamborghini
+
+                              <span>Urus</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Order Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/one.webp   1x,
+                              /img/cars/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/one.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Porsche
+
+                              <span>911 GTS</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Porsche</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/two.webp   1x,
+                              /img/cars/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/two.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Lamborghini
+
+                              <span>Urus</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Order Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/one.webp   1x,
+                              /img/cars/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/one.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Porsche
+
+                              <span>911 GTS</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Porsche</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/two.webp   1x,
+                              /img/cars/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/two.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Lamborghini
+
+                              <span>Urus</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Order Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/one.webp   1x,
+                              /img/cars/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/one.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Porsche
+
+                              <span>911 GTS</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Porsche</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/two.webp   1x,
+                              /img/cars/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/two.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="links-decor border-decor border-decor--bottom">
+                  <button
+                    aria-label="Показать больше товаров"
+                    class="link-decor link-decor--big link-decor--border-no-cvet"
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">Show More</p>
+
+                      <span class="icon">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="decor-section">
+            <div class="container">
+              <div
+                class="decor-section__inner topBox border-decor border-decor--bottom"
+              >
+                <h2 class="h2">See Also</h2>
+
+                <div class="decor-section__info">
+                  <div class="goods goods--gap">
+                    <div class="card-item card-item--auto overlay card-box">
+                      <div class="card-item__inner">
+                        <div
+                          class="card-item__inner-info card-item__inner-info--center card-item__inner-info--max-width"
+                        >
+                          <div class="card-item__header">
+                            <p class="h3">Luxury Real Estate</p>
+                          </div>
+
+                          <div class="card-item__footer">
+                            <p class="p1 manrope-font text-gray-300">
+                              High-end homes that bring together rare
+                              architecture, exceptional finishes, and
+                              unparalleled privacy, offering a distinctive sense
+                              of exclusivity in every detail.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/services/seven.webp   1x,
+                              /img/services/seven2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/services/seven.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+
+                      <a
+                        href="/real-estate.html"
+                        title="Legal Services"
+                        aria-label="Перейти на страницу Legal Services"
+                        class="card-item__link-decor"
+                      ></a>
+                    </div>
+                  </div>
+
+                  <div class="links-decor">
+                    <a
+                      href="#"
+                      title="All Services"
+                      aria-label="Перейти на страницу All Services"
+                      class="link-decor link-decor--big link-decor--border-no-cvet"
+                    >
+                      <div class="link-decor__content">
+                        <p class="p1">All Services</p>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- prettier-ignore -->
+
+          @@include('../modules/contact.html')
+        </div>
+      </main>
+
+      @@include('../modules/footer.html') @@include('../modals/rentCar.html')
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/catalogy.js" type="module"></script>
+  </body>
+</html>

@@ -42,9 +42,35 @@ $mobile-breakpoint: 479px;
 
   border-color: var(--primary-color-100);
   color: var(--primary-color-100);
-  padding-top: calc((var(--paddint-top-item) - var(--border-width))  );
+  padding-top: calc((var(--paddint-top-item) - var(--border-width)));
 
   @media (min-width: $xl-desktop-breakpoint) {
     --border-width: #{vw(24)};
+  }
+}
+
+@mixin custom-scrolbar {
+  // scrollbar-width: thin;
+  // scrollbar-color: var(--primary-color-100 var(--gray-color-530);
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--gray-color-530);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    
+    background-color: var(--primary-color-100);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dark-color-600);
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
   }
 }

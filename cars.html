@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cars</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+  <link rel="stylesheet" href="/css/page.css">
+  
+  
+    
+      <link rel="stylesheet" href="./css/catalogy.css" />
+    
+      <link rel="stylesheet" href="./css/lib/swiper.min.css" />
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css" />
+    
+  
+</head>
+
+  <body>
+    <div class="wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol id="arrow-line-icon" viewBox="0 0 14 14">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M13.7295 0V12H11.7295V3.41211L1.41406 13.7275L0 12.3135L10.3135 2H1.72949V0H13.7295Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="arrow-angle-icon" viewBox="0 0 10 17">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M8.48535 0L0 8.48535L8.48535 16.9697L9.89941 15.5557L2.8291 8.48438L9.89941 1.41406L8.48535 0Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="shield-icon" viewBox="0 0 15 16">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M7.51825 0L7.862 0.15625L14.362 2.65625L14.9558 2.90625L14.987 3.53125C15.0808 5.09375 14.8308 7.5 13.8308 9.8125C12.7995 12.1562 10.987 14.5 7.89325 15.8438L7.51825 16L7.112 15.8438C4.01825 14.5 2.20575 12.1875 1.1745 9.8125C0.174504 7.5 -0.0754964 5.09375 0.0182536 3.53125L0.0495036 2.90625L0.643254 2.65625L7.14325 0.15625L7.51825 0ZM11.5808 6L10.5183 4.96875L6.51825 8.96875L4.51825 6.96875L3.45575 8L6.51825 11.0625L11.5808 6Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="telegram-icon" viewBox="0 0 18 15">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M13.788 14.834C14.0295 15.005 14.3407 15.0478 14.6182 14.9428C14.8957 14.837 15.0997 14.6 15.1612 14.3128C15.8129 11.2499 17.3939 3.49728 17.9871 0.711095C18.0321 0.5011 17.9571 0.282855 17.7921 0.142608C17.6271 0.00236116 17.3984 -0.038138 17.1944 0.0376103C14.0497 1.20158 4.3652 4.83525 0.406789 6.29997C0.155545 6.39297 -0.00795143 6.63446 0.000298384 6.8992C0.00929818 7.1647 0.187794 7.39494 0.445038 7.47219C2.22025 8.00318 4.55044 8.74191 4.55044 8.74191C4.55044 8.74191 5.63942 12.0306 6.20716 13.703C6.27841 13.913 6.44265 14.078 6.6594 14.135C6.87539 14.1913 7.10639 14.132 7.26763 13.9798C8.17961 13.1188 9.58958 11.7876 9.58958 11.7876C9.58958 11.7876 12.2685 13.7518 13.788 14.834ZM5.53067 8.32642L6.78989 12.4798L7.06964 9.84964C7.06964 9.84964 11.9348 5.46149 14.7082 2.96029C14.7892 2.8868 14.8005 2.7638 14.733 2.67755C14.6662 2.5913 14.5432 2.57105 14.451 2.62955C11.2365 4.68225 5.53067 8.32642 5.53067 8.32642Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="whats-icon" viewBox="0 0 16 16">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M0 16L1.13003 11.8913C0.432722 10.6887 0.066315 9.32533 0.0669848 7.92733C0.0689944 3.55667 3.64264 0 8.03349 0C10.1643 0.000666667 12.1644 0.826667 13.6689 2.32533C15.1727 3.824 16.0007 5.816 16 7.93467C15.998 12.306 12.4243 15.8627 8.03349 15.8627C6.70049 15.862 5.38692 15.5293 4.22339 14.8973L0 16ZM4.41899 13.462C5.54166 14.1253 6.61341 14.5227 8.03081 14.5233C11.6801 14.5233 14.6529 11.5673 14.6549 7.93333C14.6563 4.292 11.6976 1.34 8.03617 1.33867C4.38416 1.33867 1.41338 4.29467 1.41204 7.928C1.41137 9.41133 1.84811 10.522 2.5816 11.684L1.91242 14.116L4.41899 13.462ZM12.0466 9.81933C11.997 9.73667 11.8644 9.68733 11.6647 9.588C11.4658 9.48867 10.4871 9.00933 10.3043 8.94333C10.1221 8.87733 9.98945 8.844 9.85615 9.04267C9.72352 9.24067 9.34171 9.68733 9.22582 9.81933C9.10994 9.95133 8.99338 9.968 8.79444 9.86867C8.59549 9.76933 7.95378 9.56067 7.1935 8.88533C6.60203 8.36 6.20213 7.71133 6.08624 7.51267C5.97036 7.31467 6.07418 7.20733 6.17332 7.10867C6.26308 7.02 6.37227 6.87733 6.47207 6.76133C6.57322 6.64667 6.60604 6.564 6.67303 6.43133C6.73934 6.29933 6.70652 6.18333 6.65628 6.084C6.60604 5.98533 6.20815 5.01 6.0427 4.61333C5.8806 4.22733 5.71649 4.27933 5.59457 4.27333L5.21276 4.26667C5.08013 4.26667 4.86444 4.316 4.68224 4.51467C4.50004 4.71333 3.9856 5.192 3.9856 6.16733C3.9856 7.14267 4.69899 8.08467 4.79812 8.21667C4.89793 8.34867 6.20146 10.35 8.19827 11.208C8.6732 11.412 9.04429 11.534 9.333 11.6253C9.80993 11.776 10.244 11.7547 10.587 11.704C10.9694 11.6473 11.7645 11.2247 11.9307 10.762C12.0968 10.2987 12.0968 9.902 12.0466 9.81933Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="email-icon" viewBox="0 0 16 12">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M1.5 0H14.5C15.3125 0 16 0.6875 16 1.5C16 2 15.75 2.4375 15.375 2.71875L8.59375 7.8125C8.21875 8.09375 7.75 8.09375 7.375 7.8125L0.59375 2.71875C0.21875 2.4375 0 2 0 1.5C0 0.6875 0.65625 0 1.5 0ZM0 3.5L6.78125 8.625C7.5 9.15625 8.46875 9.15625 9.1875 8.625L16 3.5V10C16 11.125 15.0938 12 14 12H2C0.875 12 0 11.125 0 10V3.5Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="close-icon" viewBox="0 0 13 13">
+    <path
+      d="M12.7275 1.41406L7.77734 6.36426L12.7275 11.3145L11.3135 12.7285L6.36328 7.77832L1.41406 12.7275L0 11.3135L4.94922 6.36426L0 1.41504L1.41406 0.000976562L6.36328 4.9502L11.3135 0L12.7275 1.41406Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="check-icon" viewBox="0 0 28 21">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M28 2.94407L26.5593 4.32215L11.3378 18.7919L9.95973 20.1074L8.58166 18.7919L1.44072 12.0268L0 10.6488L2.75615 7.76734L4.19687 9.14541L9.95973 14.5324L23.8031 1.37808L25.2438 0L28 2.94407Z"
+      fill="currentColor"
+    />
+  </symbol>
+</svg>
+
+
+<header class="header header-scroll">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__info">
+        <a
+          href="/"
+          aria-label="Перейти главную страницу"
+          title="AWC"
+          class="logo"
+        >
+          <div class="logo__img">
+            <img src="/img/logos/main.svg" alt="логотипа AWC" />
+          </div>
+        </a>
+
+        <p class="p3 manrope-font">
+          Premium Legal & Financial <br />
+          Solutions Worldwide
+        </p>
+      </div>
+
+      <div class="header__details">
+        <div class="menu">
+          <button
+            class="menu__burger"
+            type="button"
+            aria-label="Открыть/закрыть меню"
+          >
+            <div class="menu__burger-text">
+              <p class="p2">Menu</p>
+            </div>
+
+            <div class="menu__burger-box"></div>
+          </button>
+
+          <div class="menu__content">
+            <div class="menu__content-inner">
+              <div class="menu-top">
+                <div class="menu-top__lists">
+                  <div class="menu-top__list-box">
+                    <p class="p1">Legal & Finance</p>
+
+                    <ul class="menu-top__list">
+                      <li class="menu-top__link">
+                        <a
+                          href="#"
+                          title="Legal Services"
+                          aria-label="Перейти на страницу Legal Services"
+                          class="link h5"
+                          data-close-menu
+                          >Legal Services</a
+                        >
+                      </li>
+
+                      <li class="menu-top__link">
+                        <a
+                          href="#"
+                          title="Financial Consulting"
+                          aria-label="Перейти на страницу Financial Consulting"
+                          class="link h5"
+                          data-close-menu
+                          >Financial Consulting</a
+                        >
+                      </li>
+
+                      <li class="menu-top__link">
+                        <a
+                          href="#"
+                          title="Transaction Advisory"
+                          aria-label="Перейти на страницу Transaction Advisory"
+                          class="link h5"
+                          data-close-menu
+                          >Transaction Advisory</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="menu-top__list-box">
+                    <p class="p1">Rent</p>
+
+                    <ul class="menu-top__list">
+                      <li class="menu-top__link">
+                        <a
+                          href="#"
+                          title="Exclusive Cars"
+                          aria-label="Перейти на страницу Exclusive Cars"
+                          class="link h5"
+                          data-close-menu
+                          >Exclusive Cars</a
+                        >
+                      </li>
+
+                      <li class="menu-top__link">
+                        <a
+                          href="#"
+                          title="Luxury Real Estate"
+                          aria-label="Перейти на страницу Luxury Real Estate"
+                          class="link h5"
+                          data-close-menu
+                          >Luxury Real Estate</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="menu-top__list-box">
+                    <p class="p1">Company</p>
+
+                    <ul class="menu-top__list">
+                      <li class="menu-top__link">
+                        <a
+                          href="#"
+                          title="About Us"
+                          aria-label="Перейти на страницу About Us"
+                          class="link h5"
+                          data-close-menu
+                          >About Us</a
+                        >
+                      </li>
+
+                      <li class="menu-top__link">
+                        <a
+                          href="#"
+                          title="Luxury Contact"
+                          aria-label="Перейти на страницу Luxury Contact"
+                          class="link h5"
+                          data-close-menu
+                          >Luxury Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu__info">
+                <div class="links-decor">
+                  <button
+                    type="button"
+                    aria-label="Оставить заявку"
+                    class="link-decor link-decor--big link-decor--border-no-cvet modal-open"
+                    data-modal="connectModal"
+                    data-close-menu
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">Let’s Connect</p>
+
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-line-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <main class="main main--detail">
+        <div class="top-detail">
+          <div class="container">
+            <div class="top-detail__inner">
+              <div class="top-detail__head">
+                <h1 class="h1">Exclusive Cars</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="catalogy">
+            <div class="container">
+              <div class="catalogy__inner">
+                <div class="catalogy__content">
+                  <div class="filter">
+                    <div class="filter__item">
+                      <div
+                        class="dropdown dropdown--price"
+                        data-price-template="from {min} to {max} $"
+                      >
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Daily Rental</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content price-popup">
+                          <div class="price-popup__content">
+                            <div class="price-popup__items">
+                              <div class="input-box input-box--border">
+                                <label class="input-box__content">
+                                  <p class="p3">from</p>
+
+                                  <div class="input-box__info">
+                                    <input
+                                      placeholder="0"
+                                      type="text"
+                                      name="price_min"
+                                      min="0"
+                                      value="43"
+                                      max="10000"
+                                      data-type="price_min"
+                                      data-input-number
+                                    />
+
+                                    <p class="p1">$</p>
+                                  </div>
+                                </label>
+                              </div>
+
+                              <div class="input-box input-box--border">
+                                <label class="input-box__content">
+                                  <p class="p3">to</p>
+
+                                  <div class="input-box__info">
+                                    <input
+                                      placeholder="1 600 $"
+                                      type="text"
+                                      name="price_max"
+                                      min="0"
+                                      value="100"
+                                      max="10000"
+                                      data-type="price_max"
+                                      data-input-number
+                                    />
+
+                                    <p class="p1">$</p>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div
+                        class="dropdown dropdown--checks"
+                        data-placeholder="Choose a brand car"
+                      >
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Brand</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__info">
+                            <div class="dropdown__items">
+                              <label class="check">
+                                <div class="check__box">
+                                  <input
+                                    type="checkbox"
+                                    name="brand"
+                                    value="lamborghini"
+                                    data-label="Lamborghini"
+                                  />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <p class="p1 text-gray-300">Lamborghini</p>
+                                </div>
+                              </label>
+
+                              <label class="check">
+                                <div class="check__box">
+                                  <input
+                                    type="checkbox"
+                                    name="brand"
+                                    value="porsche"
+                                    data-label="Porsche"
+                                  />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <p class="p1 text-gray-300">Porsche</p>
+                                </div>
+                              </label>
+
+                              <label class="check">
+                                <div class="check__box">
+                                  <input
+                                    type="checkbox"
+                                    name="brand"
+                                    value="BMW"
+                                    data-label="BMW"
+                                  />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <p class="p1 text-gray-300">BMW</p>
+                                </div>
+                              </label>
+
+                              <label class="check">
+                                <div class="check__box">
+                                  <input
+                                    type="checkbox"
+                                    name="brand"
+                                    value="mercedes-benz"
+                                    data-label="Mercedes-Benz"
+                                  />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <p class="p1 text-gray-300">Mercedes-Benz</p>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select">
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Horsepower</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__info">
+                            <ul class="dropdown__list">
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="All"
+                              >
+                                All
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-active
+                                data-value="75-100 HP"
+                              >
+                                75-100 HP
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="110-200 HP "
+                              >
+                                110-200 HP
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="250-500+ HP"
+                              >
+                                250-500+ HP
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value=" 500-1,000+ HP"
+                              >
+                                500-1,000+ HP
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="1000-1,500+ HP"
+                              >
+                                1000-1,500+ HP
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select">
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Year</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__info">
+                            <ul class="dropdown__list">
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="All"
+                                data-active
+                              >
+                                All
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2020"
+                              >
+                                2020
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2021"
+                              >
+                                2021
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2022"
+                              >
+                                2022
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2023"
+                              >
+                                2023
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2024"
+                              >
+                                2024
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2025"
+                              >
+                                2025
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="2026"
+                              >
+                                2026
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="goods goods--gap goods--two">
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Lamborghini
+
+                              <span>Urus</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Order Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/one.webp   1x,
+                              /img/cars/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/one.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Porsche
+
+                              <span>911 GTS</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Porsche</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/two.webp   1x,
+                              /img/cars/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/two.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Lamborghini
+
+                              <span>Urus</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Order Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/one.webp   1x,
+                              /img/cars/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/one.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Porsche
+
+                              <span>911 GTS</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Porsche</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/two.webp   1x,
+                              /img/cars/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/two.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Lamborghini
+
+                              <span>Urus</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Order Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/one.webp   1x,
+                              /img/cars/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/one.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
+                      data-modal="rentCarModal"
+                      class="good-item overlay overlay--gradient"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Daily Rental
+                                </p>
+
+                                <p class="p1">1 200$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Horsepower
+                                </p>
+
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Year
+                                </p>
+
+                                <p class="p1">2024</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Porsche
+
+                              <span>911 GTS</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">Porsche</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/cars/two.webp   1x,
+                              /img/cars/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/cars/two.webp"
+                            alt="фотография машины"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="links-decor border-decor border-decor--bottom">
+                  <button
+                    aria-label="Показать больше товаров"
+                    class="link-decor link-decor--big link-decor--border-no-cvet"
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">Show More</p>
+
+                      <span class="icon">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="decor-section">
+            <div class="container">
+              <div
+                class="decor-section__inner topBox border-decor border-decor--bottom"
+              >
+                <h2 class="h2">See Also</h2>
+
+                <div class="decor-section__info">
+                  <div class="goods goods--gap">
+                    <div class="card-item card-item--auto overlay card-box">
+                      <div class="card-item__inner">
+                        <div
+                          class="card-item__inner-info card-item__inner-info--center card-item__inner-info--max-width"
+                        >
+                          <div class="card-item__header">
+                            <p class="h3">Luxury Real Estate</p>
+                          </div>
+
+                          <div class="card-item__footer">
+                            <p class="p1 manrope-font text-gray-300">
+                              High-end homes that bring together rare
+                              architecture, exceptional finishes, and
+                              unparalleled privacy, offering a distinctive sense
+                              of exclusivity in every detail.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/services/seven.webp   1x,
+                              /img/services/seven2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/services/seven.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+
+                      <a
+                        href="/real-estate.html"
+                        title="Legal Services"
+                        aria-label="Перейти на страницу Legal Services"
+                        class="card-item__link-decor"
+                      ></a>
+                    </div>
+                  </div>
+
+                  <div class="links-decor">
+                    <a
+                      href="#"
+                      title="All Services"
+                      aria-label="Перейти на страницу All Services"
+                      class="link-decor link-decor--big link-decor--border-no-cvet"
+                    >
+                      <div class="link-decor__content">
+                        <p class="p1">All Services</p>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- prettier-ignore -->
+
+          <section class="contact border-decor border-decor--bottom ">
+  <div class="container container--big container--paddig-start-only">
+    <div class="contact__inner">
+      <div class="contact__info">
+        <h2 class="h3">If you have any questions, contact us</h2>
+      </div>
+
+      <div class="contact__content">
+        <form novalidate class="contact-form form">
+          <div class="form__items">
+            <div class="form__item-box">
+              <div class="form__item-block">
+                <p class="h6 text-gray-400">
+                  Leave a request, our manager will contact you shortly and
+                  answer all your questions
+                </p>
+              </div>
+            </div>
+
+            <div class="form__item-box">
+              <label class="input-box form__item form__item-block">
+                <div class="input-box__content">
+                  <p class="p2">Name</p>
+
+                  <div class="input-box__info">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Write our name"
+                    />
+                  </div>
+                </div>
+
+                <p class="input-box__errors p4 form__errors"></p>
+              </label>
+            </div>
+
+            <div class="form__item-box form__item-box--two">
+              <label
+                class="input-box form__item form__item-block input-tel-wrapper"
+              >
+                <div class="input-box__content">
+                  <p class="p2">Phone *</p>
+
+                  <div class="input-box__info">
+                    <input
+                      type="tel"
+                      name="tel"
+                      placeholder="+ 1 (___) ___-__-__"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <p class="input-box__errors p4 form__errors"></p>
+              </label>
+
+              <label
+                class="input-box form__item form__item-block input-tel-wrapper"
+              >
+                <div class="input-box__content">
+                  <p class="p2">E-mail</p>
+
+                  <div class="input-box__info">
+                    <input type="email" name="email" placeholder="_@_._" />
+                  </div>
+                </div>
+
+                <p class="input-box__errors p4 form__errors"></p>
+              </label>
+            </div>
+
+            <div class="form__item-box">
+              <label
+                class="input-box form__item form__item-block input-tel-wrapper"
+              >
+                <div class="input-box__content">
+                  <p class="p2">Massage</p>
+
+                  <div class="input-box__info">
+                    <textarea
+                      type="text"
+                      name="message"
+                      placeholder="Write our message"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <p class="input-box__errors p4 form__errors"></p>
+              </label>
+            </div>
+          </div>
+
+          <div class="form__footer">
+            <button class="button disabled" type="submit">
+              <p class="p1">Send</p>
+            </button>
+
+            <div class="decor-el text-gray-600">
+              <span class="icon icon--sm">
+                <svg>
+                  <use xlink:href="#shield-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p1 manrope-font">
+                By clicking the “Send” button, I consent to the processing of my
+                personal data.
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+        </div>
+      </main>
+
+      <footer class="footer">
+  <div class="footer-top">
+    <div class="marquee">
+      <div class="marquee__items">
+        <p class="marquee__item h2">Luxurious</p>
+
+        <p class="marquee__item h2">Pristine</p>
+
+        <p class="marquee__item h2">Exquisite</p>
+
+        <p class="marquee__item h2">Luxurious</p>
+
+        <p class="marquee__item h2">Pristine</p>
+
+        <p class="marquee__item h2">Exquisite</p>
+      </div>
+
+      <div class="marquee__items" aria-hidden="true">
+        <p class="marquee__item h2">Luxurious</p>
+
+        <p class="marquee__item h2">Pristine</p>
+
+        <p class="marquee__item h2">Exquisite</p>
+
+        <p class="marquee__item h2">Luxurious</p>
+
+        <p class="marquee__item h2">Pristine</p>
+
+        <p class="marquee__item h2">Exquisite</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-top__inner">
+        <div class="footer-top__content">
+          <div class="footer-top__info">
+            <a
+              href="/"
+              aria-label="Перейти главную страницу"
+              title="AWC"
+              class="logo"
+            >
+              <div class="logo__img">
+                <img src="/img/logos/main.svg" alt="логотипа AWC" />
+              </div>
+            </a>
+          </div>
+
+          <div class="footer-top__info">
+            <p class="p2 text-right text-capitalize">
+              Premium Legal & financial <br />
+              Solutions Worldwide
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-top__lists">
+          <ul class="footer-top__list">
+            <li class="footer-top__link">
+              <a
+                href="tel:+11234567890"
+                title="+1 (123) 456-7890"
+                aria-label="Позвонить по номеру +1 (123) 456-7890"
+                class="footer-top__item p1 link link--gray-300"
+              >
+                +1 (123) 456-7890
+              </a>
+            </li>
+
+            <li class="footer-top__link">
+              <ul class="social">
+                <li class="social__link">
+                  <a
+                    href="https://t.me/quelazex"
+                    aria-label="Написать нам в телеграмм"
+                    title="Написать в Telegram @quelazex"
+                    class="social__item link link--gray-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="icon icon--md">
+                      <svg>
+                        <use xlink:href="#telegram-icon"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="social__link">
+                  <a
+                    href="https://wa.me/"
+                    aria-label="Написать нам в вацап"
+                    title="Написать в WhatsApp"
+                    class="social__item link link--gray-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="icon icon--md">
+                      <svg>
+                        <use xlink:href="#whats-icon"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="footer-top__list">
+            <li class="footer-top__link">
+              <div
+                class="footer-top__item footer-top__item--column content-line content-line--absolute-line"
+              >
+                <div class="footer-top__img">
+                  <picture>
+                    <source
+                      srcset="
+                        /img/footer/one.webp   1x,
+                        /img/footer/one2x.webp 2x
+                      "
+                    />
+                    <img
+                      src="/img/footer/one.webp"
+                      alt="фотография карты"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+
+                <a
+                  href="https://yandex.ru/maps/org/jumeirah_beach_hotel/153432675213/?ll=55.190740%2C25.141597&z=17"
+                  title="19 Jumeirah Beach Road, Umm Suqeim, UAE."
+                  aria-label="Перейти по адресу 19 Jumeirah Beach Road, Umm Suqeim, UAE."
+                  target="_blank"
+                  class="footer-top__item p1 link link--gray-300"
+                >
+                  19 Jumeirah Beach Road, Umm Suqeim, UAE.
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="footer-top__list">
+            <li class="footer-top__link">
+              <a
+                href="mailto:info@mail.com"
+                title="info@mail.com"
+                aria-label="Написать письмо по адресу info@mail.com"
+                class="footer-top__item p1 link link--gray-300"
+              >
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="#email-icon"></use>
+                  </svg>
+                </span>
+
+                <span class="text-underline">info@mail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    <div class="container">
+      <div class="footer-copy__inner">
+        <div class="footer-copy__info">
+          <p class="p2">© 2025. All Rights Reserved.</p>
+        </div>
+
+        <ul class="footer-copy__list">
+          <li class="footer-copy__link">
+            <a
+              href="#"
+              aria-label="Перейти на страницу Privacy Policy"
+              class="footer-copy__item text-underline p2 link link--gray-400"
+              title="Privacy Policy"
+            >
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="fixed-block">
+  <div
+  class="cookies"
+  data-storage-key="cookies-awc"
+  data-storage-type="localstorage"
+  data-storage-days="30"
+  data-storage-remove="true"
+  data-storage-value="true"
+>
+  <div class="cookies__box">
+    <div class="cookies__content">
+      <div class="textbox">
+        <p class="p1 manrope-font">
+          This site uses cookies to store data. By continuing to use this site,
+          you consent to our use of cookies. For more information, please read
+          our Personal Data Processing Policy.
+        </p>
+      </div>
+    </div>
+
+    <div class="cookies__footer">
+      <div class="cookies__btns">
+        <button
+          class="button"
+          type="button"
+          data-storage-close
+        >
+          <p class="p1">Accept</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="modalBlock connectModal">
+  <div class="modalBlock__inner">
+    <div class="modalBlock__header">
+      <p class="h4">Let’s Connect</p>
+
+      <div class="textbox">
+        <p class="p1 text-gray-400">
+          Submit your request and our team will promptly contact you to discuss
+          availability, personalize the details, and arrange your exclusive
+          vehicle.
+        </p>
+      </div>
+    </div>
+
+    <form class="form" novalidate>
+      <div class="form__items">
+        <div class="form__item-box">
+          <label class="input-box form__item form__item-block border-decor border-decor--top border-decor--gray-500">
+            <div class="input-box__content">
+              <p class="p2">Name</p>
+
+              <div class="input-box__info">
+                <input type="text" name="name" placeholder="Write our name" />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">Phone *</p>
+
+              <div class="input-box__info">
+                <input
+                  type="tel"
+                  name="tel"
+                  placeholder="+ 1 (___) ___-__-__"
+                  required
+                />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">E-mail</p>
+
+              <div class="input-box__info">
+                <input type="email" name="email" placeholder="_@_._" />
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+
+        <div class="form__item-box">
+          <label
+            class="input-box form__item form__item-block input-tel-wrapper"
+          >
+            <div class="input-box__content">
+              <p class="p2">Massage</p>
+
+              <div class="input-box__info">
+                <textarea
+                  type="text"
+                  name="message"
+                  placeholder="Write our message"
+                ></textarea>
+              </div>
+            </div>
+
+            <p class="input-box__errors p4 form__errors"></p>
+          </label>
+        </div>
+      </div>
+
+      <div class="form__footer form__footer--column">
+        <button class="button modal-open" type="submit" data-modal="thxModal">
+          <p class="p1">Let’s Connect</p>
+        </button>
+
+        <div class="decor-el text-gray-600 decor-el--center">
+          <span class="icon icon--sm">
+            <svg>
+              <use xlink:href="#shield-icon"></use>
+            </svg>
+          </span>
+
+          <p class="p1 manrope-font">
+            By clicking the “Send” button, I consent <br> to the processing of my personal data.
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+<div class="modalBlock thxModal">
+  <div class="modalBlock__inner">
+    <div class="thxModal__content">
+      <div class="thxModal__info">
+        <div class="icon-decor">
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#check-icon"></use>
+            </svg>
+          </span>
+        </div>
+
+        <div class="modalBlock__headaer">
+          <p class="h4">Your application has been accepted</p>
+
+          <div class="textbox">
+            <p class="p1 text-gray-400">
+              Our manager will contact you shortly and answer all your
+              questions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="thxModal__btns">
+        <button
+          class="button modal-close"
+          type="button"
+          aria-label="Закрыть модальное окно"
+        >
+          <p class="p1">Close modal</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+
+<script src="/js/lib/imask.min.js" type="module"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+  defer
+></script>
+
+<script src="/js/page.js" type="module"></script>
+ <div class="modalBlock rentCarModal rentBoxModal openFinish">
+  <form class="modalBlock__inner form">
+    <div class="modalBlock__inner-box">
+      <div class="modalBlock__header">
+        <p class="h4">Rent a Car</p>
+      </div>
+
+      <div class="rentBoxModal__content">
+        <div class="rentBoxModal__top">
+          <div class="good-mini overlay overlay--gradient">
+            <div class="good-mini__inner">
+              <div class="good-mini__header">
+                <div class="good-mini__info">
+                  <p class="h6 good-mini__title">
+                    Lamborghini <span class="text-gray-300">Urus</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="good-mini__content">
+                <div class="good-mini__items">
+                  <div class="good-mini__item">
+                    <p class="p1">1 200$ / day</p>
+                  </div>
+
+                  <div class="good-mini__item">
+                    <p class="p1">990 HP</p>
+                  </div>
+
+                  <div class="good-mini__item">
+                    <p class="p1">2024 year</p>
+                  </div>
+                </div>
+
+                <div class="good-mini__info">
+                  <button class="link link--primary-100 text-underline">
+                    Сhange car
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="good-mini__img-box">
+              <picture>
+                <source
+                  srcset="/img/cars/one.webp 1x, /img/cars/one2x.webp 2x"
+                />
+                <img src="/img/cars/one.webp" alt="фотография" loading="lazy" />
+              </picture>
+            </div>
+          </div>
+
+          <div class="rentBoxModal__status">
+            <div class="swiper swiper--status" data-initial-slide="0">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item active">
+                    <p class="p1">01 - Driver data</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item">
+                    <p class="p1">02 - Rent option</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item">
+                    <p class="p1">03 - Add-ons</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rentBoxModal__info">
+          <div class="form__items">
+            <div class="form__item-box">
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--select dropdown--dark-bg-200"
+                  data-name="select"
+                  data-placeholder="Choose place of rent"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <div class="dropdown__block">
+                      <p class="p2 manrope-font text-gray-400">
+                        Place of rent and return
+                      </p>
+
+                      <p
+                        class="p2 manrope-font link link--primary-100 text-underline"
+                      >
+                        Return location
+                      </p>
+                    </div>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content">
+                    <div class="dropdown__info">
+                      <ul class="dropdown__list">
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Sofia Airport - Terminal 1 (SOF)"
+                        >
+                          Sofia Airport - Terminal 1 (SOF)
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Sofia Airport - Terminal 2 (SOF)"
+                        >
+                          Sofia Airport - Terminal 2 (SOF)
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Varna Airport (VAR)"
+                        >
+                          Varna Airport (VAR)
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Varna Airport (VAR)"
+                        >
+                          Bourgas Airport (BOJ)
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__item-box form__item-box--two">
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  data-placeholder="Choose date"
+                  data-name="date"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p1">Pick up date</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content date-popup">
+                    <div
+                      class="date-popup__content date-calendar"
+                      data-calendar
+                      data-inline="true"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  data-placeholder="Choose date"
+                  data-name="date"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p1">Return date</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content date-popup">
+                    <div
+                      class="date-popup__content date-calendar"
+                      data-calendar
+                      data-inline="true"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__item-box form__item-box--two">
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  data-placeholder="Choose time"
+                  data-name="date"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p1">Pick up time</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content date-popup">
+                    <div
+                      class="date-popup__content date-calendar"
+                      data-calendar
+                      data-inline="true"
+                      data-time="true"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__item">
+                <div
+                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  data-placeholder="Choose time"
+                  data-name="date"
+                
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p1">Return time</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content date-popup">
+                    <div
+                      class="date-popup__content date-calendar"
+                      data-calendar
+                      data-inline="true"
+                      data-time="true"
+                      data-min-date="true"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rentBoxModal__footer">
+      <div class="rentBoxModal__btns">
+        <button
+          class="button button--noBg button--border button--border-gray-500 modal-close"
+        >
+          <p class="p1">Previous Step</p>
+        </button>
+
+        <button class="button" type="submit">
+          <p class="p1">Next Step</p>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/catalogy.js" type="module"></script>
+  </body>
+</html>

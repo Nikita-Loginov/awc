@@ -1,0 +1,51 @@
+.date-calendar {
+  .air-datepicker {
+    --adp-background-color: var(--bg-dropdown-inner);
+    --adp-border-color-inline: var(--bg-dropdown-inner);
+    --adp-day-name-color: var(--gray-color-200);
+    --adp-cell-background-color-selected: transparent;
+    --adp-nav-color-secondary: var(--gray-color-300);
+    --adp-color-disabled: var(--gray-color-400);
+    --adp-width: 100%;
+  }
+
+  .air-datepicker-cell.-disabled- {
+    pointer-events: none;
+  }
+
+  .air-datepicker-cell.-selected- {
+    color: var(--primary-color-100);
+  }
+
+  .air-datepicker-cell.-focus-,
+  .air-datepicker-nav--title:hover,
+  .air-datepicker-nav--action:hover {
+    color: var(--dark-color-200);
+    --adp-nav-color-secondary: var(--dark-color-200);
+    --adp-nav-arrow-color: var(--dark-color-200);
+  }
+
+  .air-datepicker-body.-days-,
+  .air-datepicker-body.-months-,
+  .air-datepicker-body--cells.-years- {
+    color: var(--gray-color-200);
+  }
+
+  &[data-time="true"] {
+    .air-datepicker--navigation,
+    .air-datepicker--content {
+      display: none;
+    }
+  }
+
+  .air-datepicker-nav {
+    color: var(--gray-color-300);
+  }
+
+}
+
+.date-popup {
+  .air-datepicker--buttons, .air-datepicker--time {
+    border: none;
+  }
+}

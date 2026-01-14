@@ -21,7 +21,7 @@ const onChange = (e) => {
   updateSubmit(e.target.closest("form"));
 };
 
-const updateSubmit = (form) => {
+export const updateSubmit = (form) => {
   const btn = form.querySelector('[type="submit"]');
   if (!btn) return;
 
@@ -58,7 +58,7 @@ const onSubmit = (e) => {
 
   form.querySelectorAll(".form__item").forEach((item) => {
     const field = item.querySelector(
-      "input, textarea, select, .selected-option"
+      "input, textarea, select, .selected-option, .dropdown"
     );
     const errorBox = item.querySelector(".form__errors");
     if (errorBox) errorBox.textContent = "";

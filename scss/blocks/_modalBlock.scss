@@ -11,14 +11,13 @@
   visibility: hidden;
   display: flex;
   justify-content: flex-end;
-  transition: all 0.3s 0.3s;
+  transition: all 0.3s;
   background-color: var(--dark-color-275);
   backdrop-filter: blur(10px);
 
   &.open {
     opacity: 1;
     visibility: visible;
-    transition: all 0.3s;
 
     .modalBlock {
       &__inner {
@@ -66,6 +65,13 @@
     }
   }
 
+  &__inner-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-inner);
+    height: 100%;
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
     --padding-inner: #{vw(40)} #{vw(24)};
     --gap-inner: #{vw(40)};
@@ -104,5 +110,86 @@
     --gap-thx-content: #{vw(80)};
     --gap-thx-info: #{vw(60)};
     --gap-btns: #{vw(4)};
+  }
+}
+
+.rentBoxModal {
+  --padding-inline-rent-inner: 24px;
+  --padding-rent-footer: 40px var(--padding-inline-rent-inner);
+  --gap-rent-footer: 24px;
+  --gap-rent-btns: 24px;
+
+  &__status {
+    padding: 40px 20px;
+    margin: 0 auto;
+    color: var(--gray-color-400);
+
+    .swiper {
+      .swiper-slide {
+        width: fit-content;
+
+        &:not(:last-child) {
+          .rentBoxModal__status-item {
+            &:after {
+              content: "";
+              width: 41px;
+              height: 1px;
+              background-color: var(--gray-color-500);
+            }
+          }
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &.active {
+        color: var(--primary-color-100);
+      }
+    }
+  }
+
+  .modalBlock {
+    &__inner {
+      max-height: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      padding-inline: 0;
+      padding-bottom: 0;
+      gap: 0;
+    }
+
+    &__inner-box {
+      height: 80%;
+      padding-inline: var(--padding-inline-rent-inner);
+    }
+  }
+
+  &__content {
+    max-height: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+  }
+
+  &__footer {
+    padding: var(--padding-rent-footer);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-rent-footer);
+    border-top: 1px solid var(--gray-color-500);
+    background-color: var(--dark-color-400);
+    margin-top: auto;
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-rent-btns);
+    
   }
 }

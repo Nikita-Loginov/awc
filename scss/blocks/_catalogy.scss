@@ -1,0 +1,17 @@
+.catalogy {
+  --gap-inner-catalog: 4px;
+
+  &__inner,
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__inner {
+    gap: var(--gap-inner-catalog);
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --gap-inner-catalog: #{vw(4)};
+  }
+}

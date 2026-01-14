@@ -383,8 +383,21 @@ body .wrapper {
     flex-direction: column;
   }
 
+  &--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
     grid-template-columns: repeat(auto-fit, minmax(#{vw(500)}, 1fr));
+
+    &--two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+    }
 
     &--gap {
       gap: #{vw(4)};
@@ -519,4 +532,8 @@ body .wrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.custom-scrolbar {
+  @include custom-scrolbar;
 }

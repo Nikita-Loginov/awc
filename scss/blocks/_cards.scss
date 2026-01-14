@@ -132,8 +132,22 @@
     position: relative;
     z-index: 3;
 
+    &--center {
+     align-items: center;
+     text-align: center;
+     margin: 0 auto;
+    }
+
+    &--max-width {
+      max-width: 400px;
+    }
+
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(10)};
+
+      &--max-width {
+        max-width: #{vw(400)};
+      }
     }
   }
 

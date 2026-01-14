@@ -8,10 +8,17 @@
 
   max-width: 80%;
   margin: 0 auto;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
 
   &__box {
     display: grid;
-    grid-template-columns: var(--proccent-content-cookies) calc(100% - var(--proccent-content-cookies) - var(--gap-box-cookies));
+    grid-template-columns: var(--proccent-content-cookies) calc(
+        100% - var(--proccent-content-cookies) - var(--gap-box-cookies)
+      );
     gap: var(--gap-box-cookies);
     align-items: center;
     justify-content: space-between;
@@ -29,5 +36,10 @@
     .button {
       width: 100%;
     }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --padding-cookies: #{vw(40)} #{vw(24)};
+    --gap-box-cookies: #{vw(24)};
   }
 }

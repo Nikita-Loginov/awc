@@ -1,6 +1,6 @@
 import { getHeightHeader, checkScrollY } from "./modules/header.js";
 import { setVar } from "./utils/setVar.js";
-// import { toggleDropdown, firstActiveText } from "./modules/dropdown.js";
+import { toggleDropdown, firstActiveText } from "./modules/dropdown.js";
 import { initModal, checkStartOpen } from "./modules/modal.js";
 import { initMenu } from "./modules/menu.js";
 import { initFormValidation } from "./modules/validate.js";
@@ -13,6 +13,7 @@ const handleGlobalEvents = (e) => {
   initModal(e);
   initMenu(e);
   initStorage(e);
+  toggleDropdown(e);
 };
 
 const serVars = () => {
@@ -34,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initValidate();
   checkStartOpen();
   serVars();
+  firstActiveText();
+
 
   document.addEventListener("click", handleGlobalEvents);
   document.addEventListener("input", onChangeInput);

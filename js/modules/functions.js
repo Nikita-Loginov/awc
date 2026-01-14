@@ -1,4 +1,8 @@
 import { handleNumberInput } from "../utils/handleNumberInput.js";
+import {
+  updatePriceDropdownText,
+  updateChecksDropdownText,
+} from "./dropdown.js";
 
 export const getPositionsElementsScroll = (options) => {
   const { elementScroll, elementStatic, className = "scroll" } = options;
@@ -100,6 +104,21 @@ export const onChangeInput = (e) => {
 
   if (input.type === "number" || input.closest("[data-input-number]")) {
     handleNumberInput(input);
+  }
+
+  if (input.hasAttribute("data-input-number")) {
+    const dropdown = input.closest(".dropdown--price");
+
+    if (dropdown) {
+      updatePriceDropdownText(dropdown);
+    }
+  }
+
+  if (input.matches('input[type="checkbox"], input[type="radio"]')) {
+    const dropdown = input.closest(".dropdown--checks");
+    if (dropdown) {
+      updateChecksDropdownText(dropdown);
+    }
   }
 };
 

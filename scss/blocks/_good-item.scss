@@ -6,6 +6,7 @@
   gap: 10px;
   min-height: 300px;
   padding: 40px 0 0 0;
+  color: var(--gray-color-200);
 
   &:hover {
     .link-decor {
@@ -78,6 +79,7 @@
   &__info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
 
     @media (min-width: $xl-desktop-breakpoint) {
@@ -88,6 +90,7 @@
   &__title {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     span {
       color: var(--gray-color-300);

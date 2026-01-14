@@ -1,0 +1,11 @@
+.filter {
+  --gap-inner-filter: 4px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-inner-filter);
+
+  &__item {
+    width: 100%;
+  }
+}
