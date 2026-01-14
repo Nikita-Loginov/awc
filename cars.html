@@ -86,6 +86,22 @@
       fill="currentColor"
     />
   </symbol>
+
+  <symbol id="info-icon" viewBox="0 0 2 10">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M0.132 9.072V2.724H1.86V9.072H0.132ZM1.008 1.932C0.712 1.932 0.468 1.84 0.276 1.656C0.092 1.464 0 1.232 0 0.96C0 0.68 0.092 0.452 0.276 0.276C0.468 0.092 0.712 0 1.008 0C1.304 0 1.544 0.092 1.728 0.276C1.912 0.452 2.004 0.68 2.004 0.96C2.004 1.232 1.912 1.464 1.728 1.656C1.544 1.84 1.304 1.932 1.008 1.932Z"
+      fill="currentColor"
+    />
+  </symbol>
+
+  <symbol id="person-icon" viewBox="0 0 24 24">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M11.4375 7.5C11.4375 6.51562 10.875 5.60156 10.0312 5.07422C9.15234 4.58203 8.0625 4.58203 7.21875 5.07422C6.33984 5.60156 5.8125 6.51562 5.8125 7.5C5.8125 8.51953 6.33984 9.43359 7.21875 9.96094C8.0625 10.4531 9.15234 10.4531 10.0312 9.96094C10.875 9.43359 11.4375 8.51953 11.4375 7.5ZM3.03516 19.3125H14.2148L12.9844 15.375H4.23047L3.03516 19.3125ZM14.25 13.6875L15.9727 19.3125L16.5 21H0.75L1.24219 19.3125L3 13.6875H14.25ZM8.625 3C10.207 3 11.6836 3.87891 12.4922 5.25C13.3008 6.65625 13.3008 8.37891 12.4922 9.75C11.6836 11.1562 10.207 12 8.625 12C7.00781 12 5.53125 11.1562 4.72266 9.75C3.91406 8.37891 3.91406 6.65625 4.72266 5.25C5.53125 3.87891 7.00781 3 8.625 3ZM18.4688 14.8125V11.7188H15.375V10.0312H18.4688V6.9375H20.1562V10.0312H23.25V11.7188H20.1562V14.8125H18.4688Z"
+      fill="currentColor"
+    />
+  </symbol>
 </svg>
 
 
@@ -596,9 +612,9 @@
                   <div class="goods goods--gap goods--two">
                     <button
                       type="button"
-                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
-                      data-modal="rentCarModal"
-                      class="good-item overlay overlay--gradient"
+                      aria-label="Перейти к бронированию  Lamborghini Urus"
+                      data-modal="rentCarOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
                     >
                       <div class="good-item__inner">
                         <div class="good-item__head">
@@ -673,9 +689,9 @@
 
                     <button
                       type="button"
-                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
-                      data-modal="rentCarModal"
-                      class="good-item overlay overlay--gradient"
+                      aria-label="Перейти к бронированию  Lamborghini Urus"
+                      data-modal="rentCarOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
                     >
                       <div class="good-item__inner">
                         <div class="good-item__head">
@@ -750,9 +766,9 @@
 
                     <button
                       type="button"
-                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
-                      data-modal="rentCarModal"
-                      class="good-item overlay overlay--gradient"
+                      aria-label="Перейти к бронированию  Lamborghini Urus"
+                      data-modal="rentCarOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
                     >
                       <div class="good-item__inner">
                         <div class="good-item__head">
@@ -827,9 +843,9 @@
 
                     <button
                       type="button"
-                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
-                      data-modal="rentCarModal"
-                      class="good-item overlay overlay--gradient"
+                      aria-label="Перейти к бронированию  Lamborghini Urus"
+                      data-modal="rentCarOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
                     >
                       <div class="good-item__inner">
                         <div class="good-item__head">
@@ -904,9 +920,9 @@
 
                     <button
                       type="button"
-                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
-                      data-modal="rentCarModal"
-                      class="good-item overlay overlay--gradient"
+                      aria-label="Перейти к бронированию  Lamborghini Urus"
+                      data-modal="rentCarOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
                     >
                       <div class="good-item__inner">
                         <div class="good-item__head">
@@ -981,9 +997,9 @@
 
                     <button
                       type="button"
-                      aria-label="Перейти к бронированию  Lamborghini Urus modal-open"
-                      data-modal="rentCarModal"
-                      class="good-item overlay overlay--gradient"
+                      aria-label="Перейти к бронированию  Lamborghini Urus"
+                      data-modal="rentCarOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
                     >
                       <div class="good-item__inner">
                         <div class="good-item__head">
@@ -1680,7 +1696,7 @@
 ></script>
 
 <script src="/js/page.js" type="module"></script>
- <div class="modalBlock rentCarModal rentBoxModal openFinish">
+ <div class="modalBlock rentCarOneStepModal rentBoxModal">
   <form class="modalBlock__inner form">
     <div class="modalBlock__inner-box">
       <div class="modalBlock__header">
@@ -1757,9 +1773,20 @@
           </div>
         </div>
 
-        <div class="rentBoxModal__info">
+        <div
+          class="rentBoxModal__info rentBoxModal__info--noPadding"
+          data-block="location-rent"
+        >
+          <button
+            type="button"
+            class="p2 manrope-font link link--primary-100 text-underline location-rent-btn"
+            data-block="location-rent__btn"
+          >
+            Return location
+          </button>
+
           <div class="form__items">
-            <div class="form__item-box">
+            <div class="form__item-box" data-block="location-rent__box">
               <div class="form__item">
                 <div
                   class="dropdown dropdown--select dropdown--dark-bg-200"
@@ -1770,12 +1797,6 @@
                     <div class="dropdown__block">
                       <p class="p2 manrope-font text-gray-400">
                         Place of rent and return
-                      </p>
-
-                      <p
-                        class="p2 manrope-font link link--primary-100 text-underline"
-                      >
-                        Return location
                       </p>
                     </div>
 
@@ -1934,7 +1955,6 @@
                   class="dropdown dropdown--date dropdown--dark-bg-200"
                   data-placeholder="Choose time"
                   data-name="date"
-                
                 >
                   <button class="dropdown__btn" type="button">
                     <p class="p1">Return time</p>
@@ -1973,13 +1993,916 @@
       <div class="rentBoxModal__btns">
         <button
           class="button button--noBg button--border button--border-gray-500 modal-close"
+          type="button"
         >
           <p class="p1">Previous Step</p>
         </button>
 
-        <button class="button" type="submit">
+        <button
+          class="button modal-open"
+          type="submit"
+          data-modal="rentCarTwoStepModal"
+        >
           <p class="p1">Next Step</p>
         </button>
+      </div>
+    </div>
+  </form>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+      <div class="modalBlock rentCarTwoStepModal rentBoxModal">
+  <form class="modalBlock__inner form">
+    <div class="modalBlock__inner-box">
+      <div class="modalBlock__header">
+        <p class="h4">Rent a Car</p>
+      </div>
+
+      <div class="rentBoxModal__content">
+        <div class="rentBoxModal__top">
+          <div class="good-mini overlay overlay--gradient">
+            <div class="good-mini__inner">
+              <div class="good-mini__header">
+                <div class="good-mini__info">
+                  <p class="h6 good-mini__title">
+                    Lamborghini <span class="text-gray-300">Urus</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="good-mini__content">
+                <div class="good-mini__items">
+                  <div class="good-mini__item">
+                    <p class="p1">1 200$ / day</p>
+                  </div>
+
+                  <div class="good-mini__item">
+                    <p class="p1">990 HP</p>
+                  </div>
+
+                  <div class="good-mini__item">
+                    <p class="p1">2024 year</p>
+                  </div>
+                </div>
+
+                <div class="good-mini__info">
+                  <button class="link link--primary-100 text-underline">
+                    Сhange car
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="good-mini__img-box">
+              <picture>
+                <source
+                  srcset="/img/cars/one.webp 1x, /img/cars/one2x.webp 2x"
+                />
+                <img src="/img/cars/one.webp" alt="фотография" loading="lazy" />
+              </picture>
+            </div>
+          </div>
+
+          <div class="rentBoxModal__status">
+            <div class="swiper swiper--status" data-initial-slide="1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item">
+                    <p class="p1">01 - Driver data</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item active">
+                    <p class="p1">02 - Rent option</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item">
+                    <p class="p1">03 - Add-ons</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rentBoxModal__info rentBoxModal__info--noPadding">
+          <div class="rentBoxModal__item">
+            <p class="p2 text-gray-400 main__sections">Booking option</p>
+
+            <div class="rentBoxModal__items">
+              <label class="check check--start check--radio">
+                <div class="check__box">
+                  <input type="radio" name="booking" checked />
+
+                  <span class="check__box-custom"></span>
+                </div>
+
+                <div class="check__content">
+                  <div class="check__info">
+                    <p class="p1">Best price</p>
+
+                    <p class="p1 text-gray-400">
+                      Pay now, cancel and rebook for a fee
+                    </p>
+                  </div>
+
+                  <div class="check__info">
+                    <p class="p1 manrope-font">Included</p>
+                  </div>
+                </div>
+              </label>
+
+              <label class="check check--start check--radio">
+                <div class="check__box">
+                  <input type="radio" name="booking" />
+
+                  <span class="check__box-custom"></span>
+                </div>
+
+                <div class="check__content">
+                  <div class="check__info">
+                    <p class="p1">Stay flexible</p>
+
+                    <p class="p1 text-gray-400">
+                      Pay at pickup, free cancellation and rebooking any time
+                      before pickup time
+                    </p>
+                  </div>
+
+                  <div class="check__info check__info--end no-wrap">
+                    <p class="p1 manrope-font">+ 200$ / day</p>
+
+                    <div class="badge">
+                      <p class="p3">Popular</p>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="rentBoxModal__item">
+            <p class="p2 text-gray-400 main__sections">Mileage</p>
+
+            <div class="rentBoxModal__items">
+              <label class="check check--start check--radio">
+                <div class="check__box">
+                  <input type="radio" name="mileage" checked />
+
+                  <span class="check__box-custom"></span>
+                </div>
+
+                <div class="check__content">
+                  <div class="check__info">
+                    <p class="p1">1,200 km</p>
+
+                    <p class="p1 text-gray-400">
+                      + 200$ / for every additional km
+                    </p>
+                  </div>
+
+                  <div class="check__info no-wrap">
+                    <p class="p1 manrope-font">Included</p>
+                  </div>
+                </div>
+              </label>
+
+              <label class="check check--start check--radio">
+                <div class="check__box">
+                  <input type="radio" name="mileage" />
+
+                  <span class="check__box-custom"></span>
+                </div>
+
+                <div class="check__content">
+                  <div class="check__info">
+                    <p class="p1">Unlimited kilometers</p>
+
+                    <p class="p1 text-gray-400">
+                      All kilometers are included in the price
+                    </p>
+                  </div>
+
+                  <div class="check__info check__info--end no-wrap">
+                    <p class="p1 manrope-font">+ 200$ / day</p>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="rentBoxModal__item">
+            <p class="p2 text-gray-400 main__sections">Protection package</p>
+
+            <div class="rentBoxModal__items">
+              <label class="check check--start check--radio">
+                <div class="check__box">
+                  <input type="radio" name="package" checked />
+
+                  <span class="check__box-custom"></span>
+                </div>
+
+                <div class="check__content">
+                  <div class="check__info">
+                    <p class="p1">No extra protection</p>
+
+                    <p class="p1 text-gray-400">
+                      Deductible: up to full vehicle value
+                    </p>
+                  </div>
+
+                  <div class="check__info no-wrap">
+                    <p class="p1 manrope-font">Included</p>
+                  </div>
+                </div>
+              </label>
+
+              <label class="check check--start check--radio">
+                <div class="check__box">
+                  <input type="radio" name="package" />
+
+                  <span class="check__box-custom"></span>
+                </div>
+
+                <div class="check__content">
+                  <div class="check__info">
+                    <div class="check__block">
+                      <p class="p1">Basic Protection</p>
+
+                      <div class="list-popup">
+                        <div class="list-popup__btn">
+                          <div class="info-icon">
+                            <span>
+                              <svg>
+                                <use xlink:href="#info-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="list-popup__content">
+                          <div class="list-popup__info">
+                            <p class="p2 text-gray-400 medium-font">
+                              Included in basic protection:
+                            </p>
+
+                            <ul class="list-icons">
+                              <li class="list-icons__link">
+                                <span class="icon accent-color">
+                                  <svg>
+                                    <use xlink:href="#check-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">
+                                  Loss damage waiver for collision damages,
+                                  scratches, bumps and theft
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="list-popup__info">
+                            <p class="p2 text-gray-400 medium-font">
+                              But not included:
+                            </p>
+
+                            <ul class="list-icons">
+                              <li class="list-icons__link">
+                                <span class="icon icon--sm text-gray-300">
+                                  <svg>
+                                    <use xlink:href="#close-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2 text-gray-300">
+                                  Interior Protection
+                                </p>
+                              </li>
+
+                              <li class="list-icons__link">
+                                <span class="icon icon--sm text-gray-300">
+                                  <svg>
+                                    <use xlink:href="#close-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2 text-gray-300">
+                                  Tire and Windshield Protection
+                                </p>
+                              </li>
+
+                              <li class="list-icons__link">
+                                <span class="icon icon--sm text-gray-300">
+                                  <svg>
+                                    <use xlink:href="#close-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2 text-gray-300">
+                                  Mobility service
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="p1 text-gray-400">Deductible: up to €1,400.00</p>
+                  </div>
+
+                  <div class="check__info check__info--end no-wrap">
+                    <p class="p1 manrope-font">+ 50$ / day</p>
+                  </div>
+                </div>
+              </label>
+
+              <label class="check check--start check--radio">
+                <div class="check__box">
+                  <input type="radio" name="package" />
+
+                  <span class="check__box-custom"></span>
+                </div>
+
+                <div class="check__content">
+                  <div class="check__info">
+                    <div class="check__block">
+                      <p class="p1">Smart Protection</p>
+
+                      <div class="list-popup">
+                        <div class="list-popup__btn">
+                          <div class="info-icon">
+                            <span>
+                              <svg>
+                                <use xlink:href="#info-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="list-popup__content">
+                          <div class="list-popup__info">
+                            <p class="p2 text-gray-400 medium-font">
+                              Included in basic protection:
+                            </p>
+
+                            <ul class="list-icons">
+                              <li class="list-icons__link">
+                                <span class="icon accent-color">
+                                  <svg>
+                                    <use xlink:href="#check-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">
+                                  Loss damage waiver for collision damages,
+                                  scratches, bumps and theft
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="list-popup__info">
+                            <p class="p2 text-gray-400 medium-font">
+                              But not included:
+                            </p>
+
+                            <ul class="list-icons">
+
+                              <li class="list-icons__link">
+                                <span class="icon icon--sm text-gray-300">
+                                  <svg>
+                                    <use xlink:href="#close-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2 text-gray-300">
+                                  Tire and Windshield Protection
+                                </p>
+                              </li>
+
+                              <li class="list-icons__link">
+                                <span class="icon icon--sm text-gray-300">
+                                  <svg>
+                                    <use xlink:href="#close-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2 text-gray-300">
+                                  Mobility service
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="p1 text-gray-400">No deductible</p>
+                  </div>
+
+                  <div class="check__info check__info--end no-wrap">
+                    <p class="p1 manrope-font">+ 70$ / day</p>
+
+                    <div class="badge">
+                      <p class="p2">- 30% online discount</p>
+                    </div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="check check--start check--radio">
+                <div class="check__box">
+                  <input type="radio" name="package" />
+
+                  <span class="check__box-custom"></span>
+                </div>
+
+                <div class="check__content">
+                  <div class="check__info">
+                    <div class="check__block">
+                      <p class="p1">All Inclusive Protection</p>
+
+                      <div class="list-popup">
+                        <div class="list-popup__btn">
+                          <div class="info-icon">
+                            <span>
+                              <svg>
+                                <use xlink:href="#info-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="list-popup__content">
+                          <div class="list-popup__info">
+                            <p class="p2 text-gray-400 medium-font">
+                              Included in basic protection:
+                            </p>
+
+                            <ul class="list-icons">
+                            </ul>
+                          </div>
+
+                          <div class="list-popup__info">
+                            <p class="p2 text-gray-400 medium-font">
+                              But not included:
+                            </p>
+
+                            <ul class="list-icons">
+
+                              <li class="list-icons__link">
+                                <span class="icon icon--sm text-gray-300">
+                                  <svg>
+                                    <use xlink:href="#close-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2 text-gray-300">
+                                  Tire and Windshield Protection
+                                </p>
+                              </li>
+
+                              <li class="list-icons__link">
+                                <span class="icon icon--sm text-gray-300">
+                                  <svg>
+                                    <use xlink:href="#close-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2 text-gray-300">
+                                  Mobility service
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="p1 text-gray-400">No deductible</p>
+                  </div>
+
+                  <div class="check__info check__info--end no-wrap">
+                    <p class="p1 manrope-font">+ 100$ / day</p>
+
+                    <div class="badge">
+                      <p class="p2">- 42% online discount</p>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rentBoxModal__footer">
+      <div class="rentBoxModal__btns">
+        <button
+          class="button button--noBg button--border button--border-gray-500 modal-open"
+          data-modal="rentCarOneStepModal"
+          type="button"
+        >
+          <p class="p1">Previous Step</p>
+        </button>
+
+        <button class="button modal-open" type="submit" data-modal="rentCarThreeStepModal">
+          <p class="p1">Next Step</p>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close "
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+      <div class="modalBlock rentCarThreeStepModal rentBoxModal">
+  <form class="modalBlock__inner form">
+    <div class="modalBlock__inner-box">
+      <div class="modalBlock__header">
+        <p class="h4">Rent a Car</p>
+      </div>
+
+      <div class="rentBoxModal__content">
+        <div class="rentBoxModal__top">
+          <div class="good-mini overlay overlay--gradient">
+            <div class="good-mini__inner">
+              <div class="good-mini__header">
+                <div class="good-mini__info">
+                  <p class="h6 good-mini__title">
+                    Lamborghini <span class="text-gray-300">Urus</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="good-mini__content">
+                <div class="good-mini__items">
+                  <div class="good-mini__item">
+                    <p class="p1">1 200$ / day</p>
+                  </div>
+
+                  <div class="good-mini__item">
+                    <p class="p1">990 HP</p>
+                  </div>
+
+                  <div class="good-mini__item">
+                    <p class="p1">2024 year</p>
+                  </div>
+                </div>
+
+                <div class="good-mini__info">
+                  <button class="link link--primary-100 text-underline">
+                    Сhange car
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="good-mini__img-box">
+              <picture>
+                <source
+                  srcset="/img/cars/one.webp 1x, /img/cars/one2x.webp 2x"
+                />
+                <img src="/img/cars/one.webp" alt="фотография" loading="lazy" />
+              </picture>
+            </div>
+          </div>
+
+          <div class="rentBoxModal__status">
+            <div class="swiper swiper--status" data-initial-slide="2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item">
+                    <p class="p1">01 - Driver data</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item">
+                    <p class="p1">02 - Rent option</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="rentBoxModal__status-item active">
+                    <p class="p1">03 - Add-ons</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rentBoxModal__info">
+          <div class="rentBoxModal__checks">
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">Additional driver</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" />
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">GPS and Apple CarPlay</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" checked/>
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">Additional driver</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" />
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">Additional driver</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" />
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">GPS and Apple CarPlay</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" checked/>
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">Additional driver</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" />
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">Additional driver</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" />
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">GPS and Apple CarPlay</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" checked/>
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">Additional driver</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" />
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+
+            <label class="switch">
+              <div class="switch__content">
+                <div class="switch__info">
+                  <span class="icon icon--md accent-color">
+                    <svg>
+                      <use xlink:href="#person-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="switch__content-box">
+                  <p class="p1">Additional driver</p>
+
+                  <div class="badge badge--dark-bg-300">
+                    <p class="p3">+ 200$ / day</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="switch__box">
+                <input type="checkbox" name="add-services" />
+
+                <div class="switch__box-block"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rentBoxModal__footer">
+      <div class="rentBoxModal__btns">
+        <button
+          class="button button--noBg button--border button--border-gray-500 modal-open"
+          data-modal="rentCarTwoStepModal"
+        >
+          <p class="p1">Previous Step</p>
+        </button>
+
+        <a
+          href="/rental.html"
+          class="button"
+          aria-label="Перейти на страницу оплаты"
+          title="Book a Rental"
+        >
+          <p class="p1">Book a Rental</p>
+        </a>
       </div>
     </div>
   </form>

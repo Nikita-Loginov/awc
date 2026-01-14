@@ -4,9 +4,15 @@ import {
 } from "./modules/dropdown.js";
 import { initDatePickers } from "./modules/calendar.js";
 
+import { toggleLocation } from "./modules/rent.js";
+
 import { MOUSE_WHEEL_CONFIG } from "./swiper/index.js";
 
 import { initSwiper } from "./modules/functions.js";
+
+const handleGlobalEvents = (e) => {
+  toggleLocation(e);
+};
 
 const initStatusSwipers = () => {
   const statusSwipers = document.querySelectorAll(".swiper--status");
@@ -18,7 +24,7 @@ const initStatusSwipers = () => {
       slidesPerView: "auto",
       spaceBetween: 16,
       mousewheel: MOUSE_WHEEL_CONFIG,
-      initialSlide
+      initialSlide,
     });
   });
 };
@@ -27,5 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPriceDropdownText();
   initChecksDropdownText();
   initStatusSwipers();
-  initDatePickers()
+  initDatePickers();
+
+  document.addEventListener("click", handleGlobalEvents);
 });

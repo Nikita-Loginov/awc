@@ -537,3 +537,31 @@ body .wrapper {
 .custom-scrolbar {
   @include custom-scrolbar;
 }
+
+.info-icon {
+  --width-info-icon: 20px;
+  --width-icon-info-icon: 2px;
+  --height-icon-info-icon: 10px;
+
+  width: var(--width-info-icon);
+  height: var(--width-info-icon);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-color-400);
+  border-radius: 50%;
+  color: var(--gray-color-300);
+  
+  img,
+  svg {
+    width: var(--width-icon-info-icon);
+    height: var(--height-icon-info-icon);
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --width-info-icon: #{vw(20)};
+    --width-icon-info-icon: #{vw(2)};
+    --height-icon-info-icon: #{vw(10)};
+  }
+}

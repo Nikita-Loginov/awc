@@ -282,6 +282,54 @@ export const updateDateDropdownValue = (calendarEl, date) => {
   }
 };
 
+export const initSingleSelectDropdown = (dropdown) => {
+  if (!dropdown) return;
+
+  let selected = dropdown.querySelector(".dropdown__item[data-active]");
+
+  if (!selected) {
+    selected = dropdown.querySelector(".dropdown__item.active");
+  }
+
+  if (!selected) {
+    const placeholder = dropdown.dataset.placeholder;
+
+    const toggleBtn = dropdown.querySelector(".dropdown__btn");
+
+    const activeBox = toggleBtn.querySelector(".dropdown__active");
+
+    if (activeBox) {
+      activeBox.textContent = placeholder || "";
+    }
+
+    return;
+  }
+
+  const text = selected.textContent.trim();
+  const value = selected.getAttribute("data-value") || text;
+
+  dropdown.setAttribute("data-selected", value);
+
+  const toggleBtn = dropdown.querySelector(".dropdown__btn");
+
+  if (toggleBtn) {
+    toggleBtn.setAttribute("data-value", value);
+    toggleBtn.setAttribute("data-text", text);
+
+    const textElement = toggleBtn.querySelector(".dropdown__text");
+    if (textElement) {
+      textElement.textContent = text;
+    }
+
+    selected.classList.add("active");
+  }
+
+  const activeBox = dropdown.querySelector(".dropdown__active");
+
+  if (activeBox) {
+    activeBox.textContent = text;
+  }
+};
 
 export const firstActiveText = () => {
   const dropdownSelects = document.querySelectorAll(
@@ -289,50 +337,7 @@ export const firstActiveText = () => {
   );
 
   dropdownSelects.forEach((dropdown) => {
-    let selected = dropdown.querySelector(".dropdown__item[data-active]");
-
-    if (!selected) {
-      selected = dropdown.querySelector(".dropdown__item.active");
-    }
-
-    if (!selected) {
-      const placeholder = dropdown.dataset.placeholder;
-
-      const toggleBtn = dropdown.querySelector(".dropdown__btn");
-
-      const activeBox = toggleBtn.querySelector(".dropdown__active");
-
-      if (activeBox) {
-        activeBox.textContent = placeholder || '';
-      }
-
-      return;
-    }
-
-    const text = selected.textContent.trim();
-    const value = selected.getAttribute("data-value") || text;
-
-    dropdown.setAttribute("data-selected", value);
-
-    const toggleBtn = dropdown.querySelector(".dropdown__btn");
-
-    if (toggleBtn) {
-      toggleBtn.setAttribute("data-value", value);
-      toggleBtn.setAttribute("data-text", text);
-
-      const textElement = toggleBtn.querySelector(".dropdown__text");
-      if (textElement) {
-        textElement.textContent = text;
-      }
-
-      selected.classList.add("active");
-    }
-
-    const activeBox = dropdown.querySelector(".dropdown__active");
-
-    if (activeBox) {
-      activeBox.textContent = text;
-    }
+    initSingleSelectDropdown(dropdown)
   });
 };
 

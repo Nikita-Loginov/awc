@@ -78,3 +78,98 @@
     }
   }
 }
+
+.list-icons {
+  --gap-info-list-icons: 4px;
+  --gap-link-list-icons: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-info-list-icons);
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap-link-list-icons);
+
+    .icon {
+      transform: translateY(2px);
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --gap-info-list-icons: #{vw(4)};
+    --gap-link-list-icons: #{vw(8)};
+  }
+}
+
+.list-popup {
+  --padding-inner-list-popup: 24px;
+  --gap-info-list-popup: 8px;
+  --gap-innner-list-popup: 16px;
+  --top-list-popup: 22px;
+  --width-content-list-popup: 360px;
+  --triangle-width-list-popup: 24px;
+  --triangle-height-list-popup: 18px;
+
+  position: relative;
+  cursor: pointer;
+  font-family: var(--font-second);
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .list-popup {
+      &__content {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 10;
+    padding: var(--padding-inner-list-popup);
+    background-color: var(--dark-color-200);
+    gap: var(--gap-innner-list-popup);
+    display: flex;
+    flex-direction: column;
+    bottom: calc(100% + var(--top-list-popup));
+    width: var(--width-content-list-popup);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: calc(-1 * var(--triangle-height-list-popup));
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: calc(var(--triangle-width-list-popup) / 2) solid transparent;
+      border-right: calc(var(--triangle-width-list-popup) / 2) solid transparent;
+      border-top: var(--triangle-height-list-popup) solid var(--dark-color-200);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-info-list-popup);
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --padding-inner-list-popup: #{vw(24)};
+    --gap-info-list-popup: #{vw(8)};
+    --gap-innner-list-popup: #{vw(16)};
+    --top-list-popup: #{vw(22)};
+    --width-content-list-popup: #{vw(360)};
+    --triangle-width-list-popup: #{vw(24)};
+    --triangle-height-list-popup: #{vw(18)};
+  }
+}

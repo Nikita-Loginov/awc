@@ -1,0 +1,120 @@
+.switch {
+  --switch-gap: 20px;
+  --switch-box-width: 60px;
+  --switch-box-height: 32px;
+  --switch-block-size: 24px;
+  --switch-padding: 4px;
+  --switch-content-gap: 16px;
+  --switch-info-gap: 8px;
+  --switch-box-block-gap: 8px;
+  --switch-animation-distance: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--switch-gap);
+  cursor: pointer;
+
+  &:hover {
+    .switch {
+      &__box-block {
+        animation: left-right 0.5s;
+      }
+    }
+  }
+
+  .switch {
+    &__box input:checked {
+      & + .switch__box-block {
+        margin-left: auto;
+        margin-right: 0;
+        background-color: var(--primary-color-100);
+      }
+    }
+
+    &__box {
+      &:has(input:checked) {
+        background-color: var(--dark-color-300);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: var(--switch-content-gap);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--switch-info-gap);
+  }
+
+  &__content-box {
+    display: flex;
+    align-items: center;
+    gap: var(--switch-box-block-gap);
+  }
+
+  &__box {
+    background-color: var(--gray-color-400);
+    min-height: var(--switch-box-height);
+    padding: var(--switch-padding);
+    border-radius: 444px;
+    width: var(--switch-box-width);
+    flex-shrink: 0;
+
+    input {
+      @include visually-hidden;
+    }
+  }
+
+  &__box-block {
+    width: var(--switch-block-size);
+    height: var(--switch-block-size);
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: var(--dark-color-300);
+    margin-right: auto;
+    transition: all 0.3s;
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --switch-gap: #{vw(20)};
+    --switch-box-width: #{vw(60)};
+    --switch-box-height: #{vw(32)};
+    --switch-block-size: #{vw(24)};
+    --switch-padding: #{vw(4)};
+    --switch-content-gap: #{vw(16)};
+    --switch-info-gap: #{vw(8)};
+    --switch-box-block-gap: #{vw(8)};
+    --switch-animation-distance: #{vw(2)};
+  }
+}
+
+@keyframes left-right {
+  0% {
+    transform: translateX(calc(-1 * var(--switch-animation-distance)));
+  }
+
+  20% {
+    transform: translateX(var(--switch-animation-distance));
+  }
+
+  40% {
+    transform: translateX(calc(-1 * var(--switch-animation-distance)));
+  }
+
+  60% {
+    transform: translateX(var(--switch-animation-distance));
+  }
+
+  80% {
+    transform: translateX(calc(-1 * var(--switch-animation-distance)));
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}

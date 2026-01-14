@@ -1,4 +1,4 @@
-<div class="modalBlock rentCarModal rentBoxModal openFinish">
+<div class="modalBlock rentCarOneStepModal rentBoxModal">
   <form class="modalBlock__inner form">
     <div class="modalBlock__inner-box">
       <div class="modalBlock__header">
@@ -75,9 +75,20 @@
           </div>
         </div>
 
-        <div class="rentBoxModal__info">
+        <div
+          class="rentBoxModal__info rentBoxModal__info--noPadding"
+          data-block="location-rent"
+        >
+          <button
+            type="button"
+            class="p2 manrope-font link link--primary-100 text-underline location-rent-btn"
+            data-block="location-rent__btn"
+          >
+            Return location
+          </button>
+
           <div class="form__items">
-            <div class="form__item-box">
+            <div class="form__item-box" data-block="location-rent__box">
               <div class="form__item">
                 <div
                   class="dropdown dropdown--select dropdown--dark-bg-200"
@@ -88,12 +99,6 @@
                     <div class="dropdown__block">
                       <p class="p2 manrope-font text-gray-400">
                         Place of rent and return
-                      </p>
-
-                      <p
-                        class="p2 manrope-font link link--primary-100 text-underline"
-                      >
-                        Return location
                       </p>
                     </div>
 
@@ -252,7 +257,6 @@
                   class="dropdown dropdown--date dropdown--dark-bg-200"
                   data-placeholder="Choose time"
                   data-name="date"
-                
                 >
                   <button class="dropdown__btn" type="button">
                     <p class="p1">Return time</p>
@@ -291,11 +295,16 @@
       <div class="rentBoxModal__btns">
         <button
           class="button button--noBg button--border button--border-gray-500 modal-close"
+          type="button"
         >
           <p class="p1">Previous Step</p>
         </button>
 
-        <button class="button" type="submit">
+        <button
+          class="button modal-open"
+          type="submit"
+          data-modal="rentCarTwoStepModal"
+        >
           <p class="p1">Next Step</p>
         </button>
       </div>

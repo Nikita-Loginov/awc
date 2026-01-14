@@ -1,0 +1,30 @@
+.badge {
+  --gap-badge: 10px;
+  --border-radius-badge: 88px;
+  --min-height-badge: 24px;
+  --padding-badge: 2px 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-second);
+  font-weight: var(--weight-font-lg);
+  background-color: var(--primary-color-100);
+  color: var(--dark-color-200);
+  border-radius: 88px;
+  min-height: 24px;
+  padding: 2px 8px;
+
+  &--dark-bg-300 {
+    background-color: var(--dark-color-300);
+    color: var(--gray-color-400);
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --gap-badge: #{vw(10)};
+    --border-radius-badge: #{vw(88)};
+    --min-height-badge: #{vw(24)};
+    --padding-badge: #{vw(2)} #{vw(8)};
+  }
+}

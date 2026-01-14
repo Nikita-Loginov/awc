@@ -3,11 +3,31 @@
   --width-decor-check: 16px;
   --width-check: 28px;
   --gap-content-check: 8px;
+  --gap-info-check: 8px;
+  --gap-block-check: 8px;
 
   display: flex;
   align-items: center;
   gap: var(--gap-box-inner);
   cursor: pointer;
+
+  &--start {
+    align-items: flex-start;
+  }
+
+  &--radio {
+    .check {
+      &__box-custom {
+        border-radius: 50%;
+
+        &:after {
+          background-image: none;
+          background-color: var(--primary-color-100);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 
   &__box {
     input {
@@ -49,7 +69,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     gap: var(--gap-content-chec);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-info-check);
+    align-items: flex-start;
+
+    &--end {
+      align-items: flex-end;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-block-check);
   }
 
   @media (min-width: $xl-desktop-breakpoint) {
@@ -57,5 +95,7 @@
     --width-decor-check: #{vw(16)};
     --width-check: #{vw(28)};
     --gap-content-check: #{vw(8)};
+    --gap-info-check: #{vw(8)};
+    --gap-block-check: #{vw(8)};
   }
 }

@@ -115,9 +115,15 @@
 
 .rentBoxModal {
   --padding-inline-rent-inner: 24px;
-  --padding-rent-footer: 40px var(--padding-inline-rent-inner);
+  --padding-block-footer: 40px;
+  --padding-rent-footer: var(--padding-block-footer)
+    var(--padding-inline-rent-inner);
   --gap-rent-footer: 24px;
   --gap-rent-btns: 24px;
+  --gap-rent-item: 24px;
+  --padding-rent-item: 40px 24px;
+  --gap-rent-items: 24px;
+  --gap-rent-checks: 16px;
 
   &__status {
     padding: 40px 20px;
@@ -163,7 +169,9 @@
     }
 
     &__inner-box {
-      height: 80%;
+      height: calc(
+        100% - (var(--gap-inner) * 2) - (var(--padding-block-footer) * 2)
+      );
       padding-inline: var(--padding-inline-rent-inner);
     }
   }
@@ -173,7 +181,6 @@
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    
   }
 
   &__footer {
@@ -186,10 +193,57 @@
     margin-top: auto;
   }
 
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-rent-item);
+    padding: var(--padding-rent-item);
+    border-bottom: 1px solid var(--gray-color-500);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-rent-items);
+  }
+
+  &__info {
+    padding: var(--padding-rent-item);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &--noPadding {
+      padding: 0;
+    }
+
+    .location-rent-btn {
+      text-align: right;
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+
+  &__checks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-rent-checks);
+  }
+
   &__btns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-rent-btns);
-    
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --padding-inline-rent-inner: #{vw(24)};
+    --padding-block-footer: #{vw(40)};
+    --gap-rent-footer: #{vw(24)};
+    --gap-rent-btns: #{vw(24)};
+    --gap-rent-item: #{vw(24)};
+    --padding-rent-item: #{vw(40)} #{vw(24)};
+    --gap-rent-items: #{vw(24)};
+    --gap-rent-checks: #{vw(16)};
   }
 }
