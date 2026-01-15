@@ -1,0 +1,204 @@
+<div class="modalBlock rentEstateOneStepModal rentBoxModal">
+  <form class="modalBlock__inner form">
+    <div class="modalBlock__inner-box">
+      <div class="modalBlock__header">
+        <p class="h4">Rent a Real Estate</p>
+
+        <div class="textbox">
+          <p class="p1 manrope-font">
+            Submit your request and our team will promptly contact you to
+            discuss availability, personalize the details, and arrange your
+            exclusive vehicle.
+          </p>
+        </div>
+      </div>
+
+      <div class="rentBoxModal__content">
+        <div class="rentBoxModal__top">
+          <div class="good-mini overlay overlay--gradient">
+            <div class="good-mini__inner">
+              <div class="good-mini__header">
+                <div class="good-mini__info">
+                  <p class="h6 good-mini__title text-gray-200">
+                    Penthouse <span class="text-gray-300">in The Horizon</span>
+                  </p>
+                </div>
+
+                <div class="good-mini__item" style="text-align: right">
+                  <p class="p4 text-gray-260">Price</p>
+
+                  <p class="p1 text-gray-200">240 000$</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="good-mini__img-box">
+              <picture>
+                <source
+                  srcset="/img/houses/one.webp 1x, /img/houses/one2x.webp 2x"
+                />
+                <img
+                  src="/img/houses/one.webp"
+                  alt="фотография"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div class="rentBoxModal__info rentBoxModal__info--noPadding">
+          <div class="form__items">
+            <div class="form__item-box">
+              <label class="input-box form__item form__item-block">
+                <div class="input-box__content">
+                  <p class="p2">Name</p>
+
+                  <div class="input-box__info">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Write our name"
+                    />
+                  </div>
+                </div>
+
+                <p class="input-box__errors p4 form__errors"></p>
+              </label>
+            </div>
+
+            <div class="form__item-box form__item-box--two">
+              <div class="form__item form__item-block">
+                <div
+                  class="dropdown dropdown--big dropdown--select dropdown--noBorder"
+                  data-placeholder="Choose a region"
+                  data-name="select"
+                >
+                  <button class="dropdown__btn" type="button">
+                    <p class="p2 text-gray-400">Region *</p>
+
+                    <div class="dropdown__block">
+                      <div class="dropdown__active dropdown__text p2"></div>
+
+                      <span class="icon icon--xs arrow">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="form__errors dropdown__errors"></div>
+                  </button>
+
+                  <div class="dropdown__content">
+                    <div class="dropdown__info">
+                      <ul class="dropdown__list">
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="United States"
+                        >
+                          United States
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Канада"
+                        >
+                          Канада
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Мексика"
+                        >
+                          Мексика
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Бразилия"
+                        >
+                          Бразилия
+                        </li>
+
+                        <li
+                          class="dropdown__item dropdown-item-close"
+                          data-value="Аргентина"
+                        >
+                          Аргентина
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <label class="input-box form__item form__item-block">
+                <div class="input-box__content">
+                  <p class="p2">E-mail</p>
+
+                  <div class="input-box__info">
+                    <input type="email" name="email" placeholder="_@_._" />
+                  </div>
+                </div>
+
+                <p class="input-box__errors p4 form__errors"></p>
+              </label>
+            </div>
+
+            <div class="form__item-box">
+              <label class="input-box form__item form__item-block">
+                <div class="input-box__content">
+                  <p class="p2">Message</p>
+
+                  <div class="input-box__info">
+                    <textarea
+                      type="text"
+                      name="message"
+                      placeholder="Write our message"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <p class="input-box__errors p4 form__errors"></p>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rentBoxModal__footer">
+      <div class="form__footer form__footer--column">
+        <button class="button modal-open" type="submit" data-modal="thxModal">
+          <p class="p1">View Now</p>
+        </button>
+
+        <div class="decor-el text-gray-600 decor-el--center">
+          <span class="icon icon--sm">
+            <svg>
+              <use xlink:href="#shield-icon"></use>
+            </svg>
+          </span>
+
+          <p class="p1 manrope-font">
+            By clicking the “Send” button, I consent <br />
+            to the processing of my personal data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <button
+    type="button"
+    class="modalBlock__close modal-close"
+    aria-label="Закрыть мдальное окно"
+  >
+    <span class="icon icon--xs">
+      <svg>
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>

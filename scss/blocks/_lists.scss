@@ -77,6 +77,32 @@
       }
     }
   }
+
+  &--default {
+    .list-number {
+      &__item {
+        &:nth-child(-n + 9) {
+          .list-number {
+            &__number {
+              &:before {
+                content: "0" counter(counter) !important;
+              }
+            }
+          }
+        }
+
+        &:nth-child(n + 10) {
+          .list-number {
+            &__number {
+              &:before {
+                content: counter(counter) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .list-icons {
@@ -141,10 +167,10 @@
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: calc(-1 * var(--triangle-height-list-popup));
       left: 50%;
@@ -171,5 +197,60 @@
     --width-content-list-popup: #{vw(360)};
     --triangle-width-list-popup: #{vw(24)};
     --triangle-height-list-popup: #{vw(18)};
+  }
+}
+
+.list-simple {
+  --list-simple-gap: 8px;
+  --list-item-gap: 8px;
+  --list-info-gap: 8px;
+  --list-info-item-gap: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--list-simple-gap);
+  font-family: var(--font-second);
+
+  &--big {
+    --list-simple-gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: var(--list-item-gap);
+
+    &--space-between {
+      justify-content: space-between;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: var(--list-info-gap);
+    flex-wrap: wrap;
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--list-info-item-gap);
+  }
+
+  &__mean {
+    color: var(--gray-color-400);
+    font-size: var(--font-size-xs);
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --list-simple-gap: #{vw(8)};
+    --list-item-gap: #{vw(8)};
+    --list-info-gap: #{vw(8)};
+    --list-info-item-gap: #{vw(8)};
+
+    &--big {
+      --list-simple-gap: #{vw(16)};
+    }
   }
 }

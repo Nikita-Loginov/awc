@@ -11,6 +11,7 @@ html {
   --gray-color-115: #ffffff26;
   --gray-color-120: #ffffff33;
   --gray-color-200: #f2f3f5;
+  --gray-color-260: #f2f3f599;
   --gray-color-300: #b4b6bf;
   --gray-color-400: #989ba6;
   --gray-color-500: #454952;
@@ -42,6 +43,7 @@ html {
   --font-size-xl: #{calculate-clamp(32px, 64px, 1023px, 480px)};
   --font-size-2xl: #{calculate-clamp(40px, 96px, 1023px, 480px)};
   --font-size-3xl: #{calculate-clamp(40px, 120px, 1023px, 480px)};
+  --font-size-4xl: #{calculate-clamp(108px, 180px, 1023px, 480px)};
 
   --line-height-tighter: 1;
   --line-height-tight: 1.1;
@@ -99,6 +101,7 @@ html {
     --font-size-xl: #{vw(64)};
     --font-size-2xl: #{vw(96)};
     --font-size-3xl: #{vw(120)};
+    --font-size-4xl: #{vw(180)};
 
     --icon-xs: #{vw(12)};
     --icon-sm: #{vw(16)};

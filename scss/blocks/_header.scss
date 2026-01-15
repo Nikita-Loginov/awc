@@ -45,15 +45,27 @@
   &__details {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 100px;
 
     @media (min-width: $xl-desktop-breakpoint) {
-      gap: #{vw(20)};
+      gap: #{vw(100)};
     }
+  }
+
+  .dropdown-lang {
+    display: none;
   }
 
   @media (min-width: $xl-desktop-breakpoint) {
     padding: #{vw(24)} 0;
+  }
+}
+
+body.open-menu {
+  .header {
+    .dropdown-lang {
+      display: flex;
+    }
   }
 }
 

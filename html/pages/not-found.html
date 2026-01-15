@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "404", "links" :
+  ["./css/notFound.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main">
+        <section class="notFound">
+          <div class="container">
+            <div class="notFound__inner">
+              <div class="notFound__content">
+                <div class="notFound__info">
+                  <p class="h3 text-gray-400">Not Found ;(</p>
+
+                  <h1 class="h1-big">404</h1>
+                </div>
+
+                <div class="notFound__details">
+                  <div class="textbox">
+                    <p class="p1">
+                      The page you're looking for doesn't exist or isn't
+                      accessible. Please return to the home page or use the site
+                      navigation.
+                    </p>
+                  </div>
+
+                  <a
+                    href="/"
+                    aria-label="Перейти на главную страницу"
+                    title="Back To Home"
+                    class="button"
+                  >
+                    Back To Home
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="notFound__img-box">
+            <picture>
+              <source srcset="/img/notFound/one.webp 1x, /img/notFound/one2x.webp 2x" />
+              <img src="/img/notFound/one.webp" alt="фотография" loading="lazy" />
+            </picture>
+          </div>
+        </section>
+      </main>
+
+      @@include('../modules/footer.html', {"hidden" : "true"})
+    </div>
+  </body>
+</html>

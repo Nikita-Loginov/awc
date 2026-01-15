@@ -1,6 +1,8 @@
 .form {
   --padding-item: 40px 24px;
   --border-color: var(--gray-color-500);
+  --checks-items: 24px;
+  --info-form: 24px;
 
   display: flex;
   flex-direction: column;
@@ -25,6 +27,10 @@
 
     &:not(:last-child) {
       border-right: 1px solid var(--border-color);
+    }
+
+    &:has(.dropdown) {
+      padding: 0;
     }
   }
 
@@ -60,6 +66,18 @@
     }
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--info-form);
+  }
+
+  &__checks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--checks-items);
+  }
+
   &__item {
     &.error {
       .form {
@@ -70,8 +88,16 @@
     }
   }
 
+  &__box {
+    padding: var(--padding-item);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
     --padding-item: #{vw(40)} #{vw(24)};
+    --checks-items: #{vw(24)};
+    --info-form: #{vw(24)};
   }
 }
 

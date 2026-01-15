@@ -1,0 +1,21 @@
+.privacy {
+  --privacy-list-gap: 80px;
+  --privacy-list-item-gap: 24px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--privacy-list-gap);
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--privacy-list-item-gap);
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --privacy-list-gap: #{vw(80)};
+    --privacy-list-item-gap: #{vw(24)};
+  }
+}

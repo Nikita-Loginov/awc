@@ -1,0 +1,92 @@
+.rental {
+  --rental-grid-column-main: 58%;
+  --rental-grid-column-side: 35%;
+  --rental-grid-gap: 20px;
+  --rental-info-gap: 80px;
+  --rental-list-gap: 80px;
+  --rental-item-gap: 40px;
+  --rental-item-head-gap: 20px;
+  --rental-item-head-padding-left: 24px;
+  --rental-item-title-gap: 16px;
+  --rental-banners-gap: 32px;
+  --rental-banners-sticky-top: 10px;
+  --rental-banners-sticky-top-scroll: calc(var(--header-height, 80px) + 10px);
+
+  &__inner {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: var(--rental-grid-column-main) var(
+        --rental-grid-column-side
+      );
+    gap: var(--rental-grid-gap);
+  }
+
+  &__info,
+  &__list,
+  &__item,
+  &__item-head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    gap: var(--rental-info-gap);
+  }
+
+  &__list {
+    gap: var(--rental-list-gap);
+  }
+
+  &__item {
+    gap: var(--rental-item-gap);
+  }
+
+  &__item-head {
+    gap: var(--rental-item-head-gap);
+    padding-left: var(--rental-item-head-padding-left);
+  }
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+    gap: var(--rental-item-title-gap);
+  }
+
+  &__banners {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rental-banners-gap);
+  }
+
+  &__banners-sticky {
+    
+    
+    transition: all 0.3s;
+
+    @media (min-height: 700px) {
+      position: sticky;
+      top: var(--rental-banners-sticky-top);
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --rental-grid-gap: #{vw(20)};
+    --rental-info-gap: #{vw(80)};
+    --rental-list-gap: #{vw(80)};
+    --rental-item-gap: #{vw(40)};
+    --rental-item-head-gap: #{vw(20)};
+    --rental-item-head-padding-left: #{vw(24)};
+    --rental-item-title-gap: #{vw(16)};
+    --rental-banners-gap: #{vw(32)};
+    --rental-banners-sticky-top: #{vw(10)};
+    --rental-banners-sticky-top-scroll: calc(
+      var(--header-height, #{vw(80)}) + #{vw(10)}
+    );
+  }
+}
+
+body.scrollTop .rental {
+  &__banners-sticky {
+    top: var(--rental-banners-sticky-top-scroll);
+  }
+}

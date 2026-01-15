@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Luxury Real Estate", "links" :
+  ["./css/catalogy.css", "./css/lib/swiper.min.css",
+  "https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail">
+        <div class="top-detail">
+          <div class="container">
+            <div class="top-detail__inner">
+              <div class="top-detail__head">
+                <h1 class="h1">Luxury Real Estate</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="catalogy">
+            <div class="container">
+              <div class="catalogy__inner">
+                <div class="catalogy__content">
+                  <div class="filter filter--three">
+                    <div class="filter__item">
+                      <div
+                        class="dropdown dropdown--price"
+                        data-price-template="from {min} to {max} $"
+                      >
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Price</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content price-popup">
+                          <div class="price-popup__content">
+                            <div class="price-popup__items">
+                              <div class="input-box input-box--border">
+                                <label class="input-box__content">
+                                  <p class="p3">from</p>
+
+                                  <div class="input-box__info">
+                                    <input
+                                      placeholder="0"
+                                      type="text"
+                                      name="price_min"
+                                      min="0"
+                                      value="43"
+                                      max="10000"
+                                      data-type="price_min"
+                                      data-input-number
+                                    />
+
+                                    <p class="p1">$</p>
+                                  </div>
+                                </label>
+                              </div>
+
+                              <div class="input-box input-box--border">
+                                <label class="input-box__content">
+                                  <p class="p3">to</p>
+
+                                  <div class="input-box__info">
+                                    <input
+                                      placeholder="1 600 $"
+                                      type="text"
+                                      name="price_max"
+                                      min="0"
+                                      value="100"
+                                      max="10000"
+                                      data-type="price_max"
+                                      data-input-number
+                                    />
+
+                                    <p class="p1">$</p>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select">
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Country</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__info">
+                            <ul class="dropdown__list">
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="All"
+                                data-active
+                              >
+                                All
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="Spain"
+                              >
+                                Spain
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="Russia"
+                              >
+                                Russia
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select">
+                        <button class="dropdown__btn" type="button">
+                          <p class="p1">Type</p>
+
+                          <div class="dropdown__block">
+                            <div
+                              class="dropdown__active dropdown__text p2"
+                            ></div>
+
+                            <span class="icon icon--xs arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <div class="dropdown__info">
+                            <ul class="dropdown__list">
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="All"
+                                data-active
+                              >
+                                All
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="Villa"
+                              >
+                                Villa
+                              </li>
+
+                              <li
+                                class="dropdown__item dropdown-item-close"
+                                data-value="Penthouse"
+                              >
+                                Penthouse
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="goods goods--gap goods--two">
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию Penthouse in The Horizon"
+                      data-modal="rentEstateOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Price
+                                </p>
+
+                                <p class="p1">240 000$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Country
+                                </p>
+
+                                <p class="p1">Spain</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Penthouse
+
+                              <span>in The Horizon</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">View Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/houses/one.webp   1x,
+                              /img/houses/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/houses/one.webp"
+                            alt="фотография отеля"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию Penthouse in The Horizon"
+                      data-modal="rentEstateOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Price
+                                </p>
+
+                                <p class="p1">240 000$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Country
+                                </p>
+
+                                <p class="p1">Spain</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Penthouse
+
+                              <span>in The Horizon</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">View Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/houses/one.webp   1x,
+                              /img/houses/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/houses/one.webp"
+                            alt="фотография отеля"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию Penthouse in The Horizon"
+                      data-modal="rentEstateOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Price
+                                </p>
+
+                                <p class="p1">240 000$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Country
+                                </p>
+
+                                <p class="p1">Spain</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Penthouse
+
+                              <span>in The Horizon</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">View Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/houses/one.webp   1x,
+                              /img/houses/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/houses/one.webp"
+                            alt="фотография отеля"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию Penthouse in The Horizon"
+                      data-modal="rentEstateOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Price
+                                </p>
+
+                                <p class="p1">240 000$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Country
+                                </p>
+
+                                <p class="p1">Spain</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Penthouse
+
+                              <span>in The Horizon</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">View Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/houses/one.webp   1x,
+                              /img/houses/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/houses/one.webp"
+                            alt="фотография отеля"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию Penthouse in The Horizon"
+                      data-modal="rentEstateOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Price
+                                </p>
+
+                                <p class="p1">240 000$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Country
+                                </p>
+
+                                <p class="p1">Spain</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Penthouse
+
+                              <span>in The Horizon</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">View Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/houses/one.webp   1x,
+                              /img/houses/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/houses/one.webp"
+                            alt="фотография отеля"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Перейти к бронированию Penthouse in The Horizon"
+                      data-modal="rentEstateOneStepModal"
+                      class="good-item overlay overlay--gradient modal-open"
+                    >
+                      <div class="good-item__inner">
+                        <div class="good-item__head">
+                          <div class="good-item__header">
+                            <div class="good-item__items">
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Price
+                                </p>
+
+                                <p class="p1">240 000$</p>
+                              </div>
+
+                              <div class="good-item__info">
+                                <p class="p2 text-gray-400 manrope-font">
+                                  Country
+                                </p>
+
+                                <p class="p1">Spain</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <p class="h3 good-item__title">
+                              Penthouse
+
+                              <span>in The Horizon</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="good-item__footer">
+                          <div class="link-decor link-decor--border-no-cvet">
+                            <div class="link-decor__content">
+                              <p class="p1">View Now</p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="good-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/houses/one.webp   1x,
+                              /img/houses/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/houses/one.webp"
+                            alt="фотография отеля"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                    </button>
+                    
+                  </div>
+                </div>
+
+                <div class="links-decor border-decor border-decor--bottom">
+                  <button
+                    aria-label="Показать больше товаров"
+                    class="link-decor link-decor--big link-decor--border-no-cvet"
+                  >
+                    <div class="link-decor__content">
+                      <p class="p1">Show More</p>
+
+                      <span class="icon">
+                        <svg style="rotate: -90deg">
+                          <use xlink:href="#arrow-angle-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="decor-section">
+            <div class="container">
+              <div
+                class="decor-section__inner topBox border-decor border-decor--bottom"
+              >
+                <h2 class="h2">Exclusive Cars</h2>
+
+                <div class="decor-section__info">
+                  <div class="goods goods--gap">
+                    <div class="card-item card-item--auto overlay card-box">
+                      <div class="card-item__inner">
+                        <div
+                          class="card-item__inner-info card-item__inner-info--center card-item__inner-info--max-width"
+                        >
+                          <div class="card-item__header">
+                            <p class="h3">Luxury Real Estate</p>
+                          </div>
+
+                          <div class="card-item__footer">
+                            <p class="p1 manrope-font text-gray-300">
+                              Experience a distinguished collection of luxury
+                              vehicles designed to deliver exceptional comfort,
+                              powerful performance, and a true sense of prestige
+                              in every moment.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/services/eight.webp   1x,
+                              /img/services/eight2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/services/eight.webp"
+                            alt="фотография"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+
+                      <a
+                        href="/cars.html"
+                        title="Exclusive Cars"
+                        aria-label="Перейти на страницу Exclusive Cars"
+                        class="card-item__link-decor"
+                      ></a>
+                    </div>
+                  </div>
+
+                  <div class="links-decor">
+                    <a
+                      href="#"
+                      title="All Services"
+                      aria-label="Перейти на страницу All Services"
+                      class="link-decor link-decor--big link-decor--border-no-cvet"
+                    >
+                      <div class="link-decor__content">
+                        <p class="p1">All Services</p>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- prettier-ignore -->
+
+          @@include('../modules/contact.html', {"classAdd" : "border-decor--top"})
+        </div>
+      </main>
+
+      @@include('../modules/footer.html')
+      @@include('../modals/rentEstateOneStep.html')
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/catalogy.js" type="module"></script>
+  </body>
+</html>

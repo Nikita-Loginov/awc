@@ -3,6 +3,10 @@
   transition: all 0.3s;
   background-color: transparent;
 
+  &--gray-200 {
+    color: var(--gray-color-200);
+  }
+
   &--gray-300 {
     color: var(--gray-color-300);
   }

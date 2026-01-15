@@ -6,6 +6,7 @@ import { initMenu } from "./modules/menu.js";
 import { initFormValidation } from "./modules/validate.js";
 import { onChangeInput } from "./modules/functions.js";
 import { checkStorage, initStorage } from "./modules/localStorage.js";
+import { toggleAccordeonItems, initAccordeonActiveItems } from "./modules/accordeon.js";
 
 const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
@@ -14,6 +15,7 @@ const handleGlobalEvents = (e) => {
   initMenu(e);
   initStorage(e);
   toggleDropdown(e);
+  toggleAccordeonItems(e);
 };
 
 const serVars = () => {

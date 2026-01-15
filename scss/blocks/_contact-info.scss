@@ -1,0 +1,57 @@
+.contact-info {
+  --contact-info-inner-gap: 10px;
+  --contact-info-list-gap: 0;
+  --contact-info-list-border-width: 1px;
+  --contact-info-list-columns: 3;
+  --contact-info-link-gap: 16px;
+  --contact-info-link-padding: 10px;
+  --contact-info-link-min-height: 160px;
+  --contact-info-info-gap: 40px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--contact-info-inner-gap);
+  }
+
+  &__list {
+    border-top: var(--contact-info-list-border-width) solid
+      var(--gray-color-500);
+    border-bottom: var(--contact-info-list-border-width) solid
+      var(--gray-color-500);
+    display: grid;
+    grid-template-columns: repeat(var(--contact-info-list-columns), 1fr);
+    font-family: var(--font-second);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--contact-info-link-gap);
+    align-items: center;
+    padding: var(--contact-info-link-padding);
+    justify-content: center;
+    text-align: center;
+    min-height: var(--contact-info-link-min-height);
+
+    &:not(:last-child) {
+      border-right: var(--contact-info-list-border-width) solid
+        var(--gray-color-500);
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: var(--contact-info-info-gap);
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --contact-info-inner-gap: #{vw(10)};
+    --contact-info-list-border-width: #{vw(1)};
+    --contact-info-link-gap: #{vw(16)};
+    --contact-info-link-padding: #{vw(10)};
+    --contact-info-link-min-height: #{vw(160)};
+    --contact-info-info-gap: #{vw(40)};
+  }
+}

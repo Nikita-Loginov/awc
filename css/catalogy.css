@@ -21,10 +21,14 @@
 
 .filter {
   --gap-inner-filter: 4px;
+  --grid-template-columns-filter: repeat(4, 1fr);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: var(--grid-template-columns-filter);
   gap: var(--gap-inner-filter);
 }
 .filter__item {
   width: 100%;
+}
+.filter--three {
+  --grid-template-columns-filter: repeat(3, 1fr);
 }

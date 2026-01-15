@@ -5,6 +5,12 @@ h1 {
   letter-spacing: -0.02em;
 }
 
+.h1-big {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-tighter);
+  letter-spacing: -0.02em;
+}
+
 .h2,
 h2 {
   font-size: var(--font-size-2xl);
@@ -52,6 +58,10 @@ h6 {
   font-size: var(--font-size-2xs);
 }
 
+.p4 {
+  font-size: var(--font-size-3xs);
+}
+
 .lh1 {
   line-height: var(--line-height-tighter);
 }
@@ -86,6 +96,10 @@ h6 {
 
 .text-gray-200 {
   color: var(--gray-color-200);
+}
+
+.text-gray-260 {
+  color: var(--gray-color-260);
 }
 
 .text-gray-300 {
@@ -135,4 +149,8 @@ h6 {
 
 .manrope-font {
   font-family: var(--font-second);
+}
+
+.tiktok-font {
+  font-family: var(--font-main);
 }

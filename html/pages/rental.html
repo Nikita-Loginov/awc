@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Book a Rental ", "links" :
+  ["./css/rental.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail">
+        <div class="top-detail">
+          <div class="container">
+            <div class="top-detail__inner">
+              <div class="top-detail__head">
+                <h1 class="h1">Book a Rental</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="rental">
+            <div class="container">
+              <form class="rental__inner form" novalidate>
+                <div class="rental__info">
+                  <ul class="rental__list list-number list-number--default">
+                    <li class="rental__item list-number__item">
+                      <div class="rental__item-head">
+                        <p class="h5 rental__item-title">
+                          <span
+                            class="list-number__number text-gray-400"
+                          ></span>
+                          Who Will Drive?
+                        </p>
+                      </div>
+
+                      <div class="form__inputs">
+                        <div class="form__item-box">
+                          <label
+                            class="input-box form__item form__item-block border-decor border-decor--top border-decor--gray-500"
+                          >
+                            <div class="input-box__content">
+                              <p class="p2">Company</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="text"
+                                  name="company"
+                                  placeholder="Write our company"
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+                        </div>
+
+                        <div class="form__item-box form__item-box--two">
+                          <label class="input-box form__item form__item-block">
+                            <div class="input-box__content">
+                              <p class="p2">First name *</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="text"
+                                  name="name"
+                                  placeholder="Write our first name"
+                                  required
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+
+                          <label class="input-box form__item form__item-block">
+                            <div class="input-box__content">
+                              <p class="p2">Last name *</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="text"
+                                  name="name"
+                                  placeholder="Write our last name"
+                                  required
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+                        </div>
+
+                        <div class="form__item-box form__item-box--two">
+                          <label
+                            class="input-box form__item form__item-block input-tel-wrapper"
+                          >
+                            <div class="input-box__content">
+                              <p class="p2">Phone *</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="tel"
+                                  name="tel"
+                                  placeholder="+ 1 (___) ___-__-__"
+                                  required
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+
+                          <label class="input-box form__item form__item-block">
+                            <div class="input-box__content">
+                              <p class="p2">E-mail</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="email"
+                                  name="email"
+                                  placeholder="_@_._"
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="rental__item list-number__item">
+                      <div class="rental__item-head">
+                        <p class="h5 rental__item-title">
+                          <span
+                            class="list-number__number text-gray-400"
+                          ></span>
+                          How Would You Like to Pay?
+                        </p>
+                      </div>
+
+                      <div class="form__inputs">
+                        <div class="form__box">
+                          <div class="form__info">
+                            <p class="p2 manrope-font text-gray-400">
+                              Payment methods
+                            </p>
+
+                            <div class="form__checks">
+                              <label class="check check--start check--radio">
+                                <div class="check__box">
+                                  <input type="radio" name="payment" checked />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <div class="check__info">
+                                    <p class="p1">Credit or debit card</p>
+
+                                    <p class="p1 text-gray-400 manrope-font">
+                                      The renter needs to be the card holder.
+                                    </p>
+                                  </div>
+
+                                  <div class="check__info no-wrap">
+                                    <div class="check__imgs">
+                                      <div class="check__img">
+                                        <span>
+                                          <svg>
+                                            <use xlink:href="#visa-icon"></use>
+                                          </svg>
+                                        </span>
+                                      </div>
+
+                                      <div class="check__img">
+                                        <span>
+                                          <svg>
+                                            <use
+                                              xlink:href="#paypal-icon"
+                                            ></use>
+                                          </svg>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </label>
+
+                              <label class="check check--start check--radio">
+                                <div class="check__box">
+                                  <input type="radio" name="payment" />
+
+                                  <span class="check__box-custom"></span>
+                                </div>
+
+                                <div class="check__content">
+                                  <div class="check__info">
+                                    <p class="p1">PayPal</p>
+
+                                    <p class="p1 text-gray-400 manrope-font">
+                                      The renter needs to be the card holder.
+                                    </p>
+                                  </div>
+
+                                  <div class="check__info no-wrap">
+                                    <div class="check__imgs">
+                                      <div class="check__img">
+                                        <span>
+                                          <svg>
+                                            <use
+                                              xlink:href="#paypal-icon"
+                                            ></use>
+                                          </svg>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="rental__item list-number__item">
+                      <div class="rental__item-head">
+                        <p class="h5 rental__item-title">
+                          <span
+                            class="list-number__number text-gray-400"
+                          ></span>
+                          What's Your Invoice Address?
+                        </p>
+                      </div>
+
+                      <div class="form__inputs">
+                        <div class="form__item-box">
+                          <div class="form__item">
+                            <div
+                              class="dropdown dropdown--big dropdown--select"
+                              data-placeholder="Choose a country"
+                              data-name="select"
+                            >
+                              <button class="dropdown__btn" type="button">
+                                <p class="p2 text-gray-400">Country *</p>
+
+                                <div class="dropdown__block">
+                                  <div
+                                    class="dropdown__active dropdown__text p2"
+                                  ></div>
+
+                                  <span class="icon icon--xs arrow">
+                                    <svg style="rotate: -90deg">
+                                      <use xlink:href="#arrow-angle-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+
+                                <div
+                                  class="form__errors dropdown__errors"
+                                ></div>
+                              </button>
+
+                              <div class="dropdown__content">
+                                <div class="dropdown__info">
+                                  <ul class="dropdown__list">
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="United States"
+                                    >
+                                      United States
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Канада"
+                                    >
+                                      Канада
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Мексика"
+                                    >
+                                      Мексика
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Бразилия"
+                                    >
+                                      Бразилия
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Аргентина"
+                                    >
+                                      Аргентина
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form__item-box">
+                          <label class="input-box form__item form__item-block">
+                            <div class="input-box__content">
+                              <p class="p2">Street address *</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="text"
+                                  name="address"
+                                  placeholder="Write our adress"
+                                  required
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+                        </div>
+
+                        <div class="form__item-box form__item-box--two">
+                          <label class="input-box form__item form__item-block">
+                            <div class="input-box__content">
+                              <p class="p2">Zip*</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="text"
+                                  name="zip"
+                                  placeholder="Write our zip"
+                                  required
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+
+                          <label class="input-box form__item form__item-block">
+                            <div class="input-box__content">
+                              <p class="p2">City *</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="text"
+                                  name="city"
+                                  placeholder="Write our city"
+                                  required
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+                        </div>
+
+                        <div class="form__item-box">
+                          <div class="form__item">
+                            <div
+                              class="dropdown dropdown--big dropdown--select"
+                              data-placeholder="Choose a state"
+                              data-name="select"
+                            >
+                              <button class="dropdown__btn" type="button">
+                                <p class="p2 text-gray-400">State *</p>
+
+                                <div class="dropdown__block">
+                                  <div
+                                    class="dropdown__active dropdown__text p2"
+                                  ></div>
+
+                                  <span class="icon icon--xs arrow">
+                                    <svg style="rotate: -90deg">
+                                      <use xlink:href="#arrow-angle-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+
+                                <div
+                                  class="form__errors dropdown__errors"
+                                ></div>
+                              </button>
+
+                              <div class="dropdown__content">
+                                <div class="dropdown__info">
+                                  <ul class="dropdown__list">
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="California"
+                                    >
+                                      California
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Texas"
+                                    >
+                                      Texas
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="New York"
+                                    >
+                                      New York
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Florida"
+                                    >
+                                      Florida
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Alaska"
+                                    >
+                                      Alaska
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Alaska"
+                                    >
+                                      Alaska
+                                    </li>
+
+                                    <li
+                                      class="dropdown__item dropdown-item-close"
+                                      data-value="Hawaii"
+                                    >
+                                      Hawaii
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="rental__item list-number__item">
+                      <div class="rental__item-head">
+                        <p class="h5 rental__item-title">
+                          <span
+                            class="list-number__number text-gray-400"
+                          ></span>
+                          Additional Information
+                        </p>
+                      </div>
+
+                      <div class="form__inputs">
+                        <div
+                          class="form__item-box form__item-box--two border-decor border-decor--top"
+                        >
+                          <label class="input-box form__item form__item-block">
+                            <div class="input-box__content">
+                              <p class="p2">Flight number</p>
+
+                              <div class="input-box__info">
+                                <input
+                                  type="text"
+                                  name="flight number"
+                                  placeholder="Write our flight number"
+                                />
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+
+                          <label class="input-box form__item-block">
+                            <p class="p1 manrope-font text-gray-400">
+                              * This is used to see whether your flight is
+                              delayed, so we can prepare a car for you.
+                            </p>
+                          </label>
+                        </div>
+
+                        <div class="form__item-box">
+                          <label class="input-box form__item form__item-block">
+                            <div class="input-box__content">
+                              <p class="p2">Message</p>
+
+                              <div class="input-box__info">
+                                <textarea
+                                  type="text"
+                                  name="message"
+                                  placeholder="Write our message"
+                                ></textarea>
+                              </div>
+                            </div>
+
+                            <p class="input-box__errors p4 form__errors"></p>
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="form__footer form__footer--column">
+                    <button
+                      class="button disabled modal-open"
+                      type="submit"
+                      data-modal="thxModal"
+                    >
+                      <p class="p1">Pay and Book</p>
+                    </button>
+
+                    <div class="decor-el text-gray-600 decor-el--center">
+                      <p class="p1 manrope-font">
+                        By clicking the “Send” button, I consent <br />
+                        to the processing of my personal data.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rental__banners">
+                  <div class="rental__banners-sticky">
+                    <div
+                      class="banner-good accordeon"
+                      data-width="767"
+                      style="--accordeon-init: 767px"
+                    >
+                      <div class="good-mini overlay overlay--gradient">
+                        <div class="good-mini__inner">
+                          <div class="good-mini__header">
+                            <div class="good-mini__info">
+                              <p class="h6 good-mini__title text-gray-200">
+                                Lamborghini
+                                <span class="text-gray-300">Urus</span>
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="good-mini__content">
+                            <div class="good-mini__items">
+                              <div class="good-mini__item">
+                                <p class="p1">1 200$ / day</p>
+                              </div>
+
+                              <div class="good-mini__item">
+                                <p class="p1">990 HP</p>
+                              </div>
+
+                              <div class="good-mini__item">
+                                <p class="p1">2024 year</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-mini__img-box">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/cars/one.webp   1x,
+                                /img/cars/one2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/cars/one.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+
+                      <div class="banner-good__content accordeon__item">
+                        <div class="accordeon__answer">
+                          <div class="banner-good__item banner-good__head">
+                            <div class="banner-good__head-item">
+                              <div class="banner-good__head-item-content">
+                                <time datetime="2025-12-25T14:00:00"
+                                  >25 December 2025, 14:00</time
+                                >
+
+                                <p class="p1 semibold-font lh1">
+                                  Sofia Airport - Terminal 2 (SOF)
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="banner-good__head-item">
+                              <div class="banner-good__head-item-content">
+                                <time datetime="2025-12-30T16:00:00"
+                                  >30 December 2025, 16:00</time
+                                >
+
+                                <p class="p1 semibold-font lh1">
+                                  Sofia Airport - Terminal 2 (SOF)
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="banner-good__item">
+                            <ul class="list-simple">
+                              <li class="list-simple__item">
+                                <div class="list-simple__mean">
+                                  <p>Booking option:</p>
+                                </div>
+
+                                <div class="list-simple__info">
+                                  <p class="p1">Best price</p>
+
+                                  <div class="badge badge--dark-bg-300">
+                                    <p class="p3">Included</p>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li class="list-simple__item">
+                                <div class="list-simple__mean">
+                                  <p>Mileage:</p>
+                                </div>
+
+                                <div class="list-simple__info">
+                                  <p class="p1">1,200 km</p>
+
+                                  <div class="badge badge--dark-bg-300">
+                                    <p class="p3">Included</p>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li class="list-simple__item">
+                                <div class="list-simple__mean">
+                                  <p>Protection package:</p>
+                                </div>
+
+                                <div class="list-simple__info">
+                                  <p class="p1">Basic Protection</p>
+
+                                  <div class="badge badge--dark-bg-300">
+                                    <p class="p3">+ 50$ / day</p>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li class="list-simple__item">
+                                <div class="list-simple__mean">
+                                  <p>Add-ons:</p>
+                                </div>
+
+                                <div class="list-simple__info">
+                                  <div class="list-simple__info-item">
+                                    <p class="p1">Additional driver</p>
+
+                                    <div class="badge badge--dark-bg-300">
+                                      <p class="p3">+ 200$ / day</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="list-simple__info-item">
+                                    <p class="p1">Mobility service</p>
+
+                                    <div class="badge badge--dark-bg-300">
+                                      <p class="p3">+ 30$ / day</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="banner-good__item">
+                            <ul class="list-simple list-simple--big">
+                              <li
+                                class="list-simple__item list-simple__item--space-between"
+                              >
+                                <div class="list-simple__mean">
+                                  <p>Full protection:</p>
+                                </div>
+
+                                <div class="list-simple__info">
+                                  <p class="p1 text-gray-400 tiktok-font">
+                                    1 200 $ / 5 days
+                                  </p>
+                                </div>
+                              </li>
+
+                              <li
+                                class="list-simple__item list-simple__item--space-between"
+                              >
+                                <div class="list-simple__mean">
+                                  <p>Total:</p>
+                                </div>
+
+                                <div class="list-simple__info">
+                                  <p class="h6 tiktok-font">8 400 $</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html')
+    </div>
+  </body>
+</html>

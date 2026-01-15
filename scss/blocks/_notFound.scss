@@ -1,0 +1,69 @@
+.notFound {
+  --notfound-height: 100%;
+  --notfound-content-gap: 60px;
+  --notfound-content-max-width: calc(100% / 3);
+  --notfound-info-gap: 0;
+  --notfound-details-gap: 80px;
+  --notfound-button-max-width: 57%;
+
+  display: flex;
+  height: var(--notfound-height);
+  position: relative;
+
+  &__inner {
+    height: var(--notfound-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--notfound-content-gap);
+    max-width: var(--notfound-content-max-width);
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--notfound-info-gap);
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--notfound-details-gap);
+
+    .button {
+      margin: 0 auto;
+      max-width: var(--notfound-button-max-width);
+      width: 100%;
+    }
+  }
+
+  &__img-box {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    top: calc((var(--page-padding-top)) * -1);
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: $xl-desktop-breakpoint) {
+    --notfound-content-gap: #{vw(60)};
+    --notfound-content-max-width: calc(100% / 3);
+    --notfound-details-gap: #{vw(80)};
+  }
+}

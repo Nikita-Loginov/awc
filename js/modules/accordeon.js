@@ -57,6 +57,24 @@ export function toggleAccordeonItems(e) {
   }
 }
 
+export function initAccordeonActiveItems() {
+  const accordeonItems = document.querySelectorAll(".accordeon__item");
+
+  accordeonItems.forEach((item) => {
+    const relative = item.closest(".accordeon");
+    const maxWidth = parseInt(relative.dataset.width) || 1023;
+
+    if (
+      item.classList.contains("active-first") &&
+      maxWidth > window.innerWidth
+    ) {
+      classAction(item, "active", "add");
+      setHeightAnswer(item);
+      prevActiveAccordeonItem = item;
+    }
+  });
+}
+
 function resetAccordeon() {
   const accordeonItems = document.querySelectorAll(".accordeon__item");
   prevActiveAccordeonItem = null;
@@ -109,15 +127,14 @@ export const renderItems = (items, types, allMinWidthInner) => {
       const relative = box.closest("section");
 
       const tabsBox = relative.querySelector(".tabs-box");
-      const swiper = tabsBox.closest('.swiper')
-    
+      const swiper = tabsBox.closest(".swiper");
 
       const tabs = renderTabs(types);
 
       const tabsSwiper = new Swiper(swiper, {
-        slidesPerView: 'auto',
+        slidesPerView: "auto",
         spaceBetween: 12,
-      })
+      });
 
       tabsBox.innerHTML = "";
 
@@ -166,9 +183,9 @@ const renderTabs = (types) => {
   const html = [];
 
   types.forEach((type, index) => {
-    const item = `<div class="swiper-slide"><div role="button" data-type=${type.name} class="button ${
-      index ? "button--gray" : ""
-    }">${type.text}</div></div>`;
+    const item = `<div class="swiper-slide"><div role="button" data-type=${
+      type.name
+    } class="button ${index ? "button--gray" : ""}">${type.text}</div></div>`;
 
     html.push(item);
   });
@@ -179,38 +196,37 @@ const renderTabs = (types) => {
 export const changeActiveTabs = (e, items) => {
   const { target } = e;
 
-  if (!target.closest('.tabs-box')) return;
+  if (!target.closest(".tabs-box")) return;
 
-  const btn = target.closest('.button');
-  const tabsBox = target.closest('.tabs-box');
-  const btns = tabsBox.querySelectorAll('.button')
+  const btn = target.closest(".button");
+  const tabsBox = target.closest(".tabs-box");
+  const btns = tabsBox.querySelectorAll(".button");
 
-  if (!btns.length || !btn) return
+  if (!btns.length || !btn) return;
 
   const type = btn.dataset.type;
 
-  if (!type) return
-  
-  const relative = target.closest('section');
+  if (!type) return;
 
-  const itemsBox = relative.querySelector('.accordeon--render');
+  const relative = target.closest("section");
+
+  const itemsBox = relative.querySelector(".accordeon--render");
 
   if (!itemsBox) return;
 
   const itemsFilter = items.filter((item) => item.type === type);
 
-  if (!itemsFilter.length) return
+  if (!itemsFilter.length) return;
 
-  itemsBox.innerHTML = '';
+  itemsBox.innerHTML = "";
 
   const accordeonItems = renderAccordeonItem(itemsFilter);
 
-
   btns.forEach((btn) => {
-    btn.classList.add('button--gray')
-  })
+    btn.classList.add("button--gray");
+  });
 
-  btn.classList.remove('button--gray');
+  btn.classList.remove("button--gray");
 
   itemsBox.innerHTML = accordeonItems;
 };

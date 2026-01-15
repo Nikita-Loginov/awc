@@ -1,3 +1,4 @@
+@@if (typeof hidden === 'undefined') {
 <footer class="footer">
   <div class="footer-top">
     <div class="marquee">
@@ -186,13 +187,11 @@
     </div>
   </div>
 </footer>
+}
 
-<div class="fixed-block">
-  @@include('../modules/cookies.html')
-</div>
+<div class="fixed-block">@@include('../modules/cookies.html')</div>
 
-@@include('../modals/connect.html')
-@@include('../modals/thx.html')
+@@include('../modals/connect.html') @@include('../modals/thx.html')
 
 <script src="/js/lib/imask.min.js" type="module"></script>
 <script

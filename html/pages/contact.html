@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Contact", "links" :
+  ["./css/contact.css", "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail">
+        <div class="top-detail">
+          <div class="container">
+            <div class="top-detail__inner">
+              <div class="top-detail__head">
+                <h1 class="h1">Contact</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="contact-info">
+            <div class="container">
+              <div class="contact-info__inner">
+                <ul class="contact-info__list">
+                  <li class="contact-info__link">
+                    <p class="p1 text-gray-400">Phone:</p>
+
+                    <ul class="contact-info__info">
+                      <li class="contact-info__info-link">
+                        <a
+                          href="tel:+11234567890"
+                          title="+1 (123) 456-7890"
+                          aria-label="Позвонить по номеру +1 (123) 456-7890"
+                          class="footer-top__item text-underline h6 link link--gray-200"
+                        >
+                          +1 (123) 456-7890
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="contact-info__link">
+                    <p class="p1 text-gray-400">Email:</p>
+
+                    <ul class="contact-info__info">
+                      <li class="contact-info__info-link">
+                        <a
+                          href="info@mail.com"
+                          title="info@mail.com"
+                          aria-label="Написать письмо по адресу info@mail.com"
+                          class="footer-top__item text-underline h6 link link--gray-200"
+                        >
+                          info@mail.com
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="contact-info__link">
+                    <p class="p1 text-gray-400">Massage:</p>
+
+                    <ul class="contact-info__info">
+                      <li class="contact-info__info-link">
+                        <a
+                          href="https://t.me/quelazex"
+                          aria-label="Написать нам в телеграмм"
+                          title="Написать в Telegram @quelazex"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="footer-top__item text-underline h6 link link--gray-200"
+                        >
+                          Telegram
+                        </a>
+                      </li>
+
+                      <li class="contact-info__info-link">
+                        <a
+                          href="https://wa.me/"
+                          aria-label="Написать нам в вацап"
+                          title="Написать в WhatsApp"
+                          class="footer-top__item text-underline h6 link link--gray-200"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          WhatsApp
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="map gap-none">
+            <div class="container--big">
+              <div class="map__inner topBox">
+                <div class="container__inner">
+                  <div class="topBox__header">
+                    <p class="h6 manrope-font medium-font text-gray-300">
+                      19 Jumeirah Beach Road, Umm Suqeim, UAE.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="map__box">
+                  <div class="map" id="map"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- prettier-ignore -->
+
+          @@include('../modules/contact.html', {"classAdd" : "border-decor--top"})
+        </div>
+      </main>
+
+      @@include('../modules/footer.html')
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    
+    <script src="/js/contact.js" type="module"></script>
+  </body>
+</html>
