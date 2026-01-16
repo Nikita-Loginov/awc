@@ -7,13 +7,19 @@ export const MOUSE_WHEEL_CONFIG = {
 
 const CARDS_CONFIG = {
   options: {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 4,
-    mousewheel: MOUSE_WHEEL_CONFIG
+    mousewheel: MOUSE_WHEEL_CONFIG,
   },
   breakpoints: {
-
-  }
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 4,
+    },
+    600: {
+      slidesPerView: 1.7,
+    }
+  },
 };
 
 export const SWIPERS = {
@@ -29,7 +35,7 @@ export const SWIPERS = {
       },
       breakpoints: {
         ...CARDS_CONFIG.breakpoints,
-      }
+      },
     },
   },
   HOUSES: {
@@ -38,14 +44,14 @@ export const SWIPERS = {
 
     options: {
       ...CARDS_CONFIG.options,
-     
+
       navigation: {
         nextEl: ".houses .arrow-swiper.next",
         prevEl: ".houses .arrow-swiper.prev",
       },
       breakpoints: {
         ...CARDS_CONFIG.breakpoints,
-      }
+      },
     },
   },
   HISTORY: {
@@ -57,7 +63,7 @@ export const SWIPERS = {
       spaceBetween: 40,
       breakpoints: {
         ...CARDS_CONFIG.breakpoints,
-      }
+      },
     },
   },
   TEAM: {
@@ -73,7 +79,7 @@ export const SWIPERS = {
       },
       breakpoints: {
         ...CARDS_CONFIG.breakpoints,
-      }
+      },
     },
   },
 };

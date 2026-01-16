@@ -1,12 +1,19 @@
 .good-item {
-  aspect-ratio: 8 / 5;
+  --padding-block-good-item: #{calculate-clamp(24px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint)};
+  --padding-inline: #{calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint)};
+
+  aspect-ratio: 15 / 10;
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 300px;
-  padding: 40px 0 0 0;
+  min-height: calculate-clamp(220px, 300px, $tablet-breakpoint, $mobile-breakpoint);
+  padding: var(--padding-block-good-item) 0 0 0;
   color: var(--gray-color-200);
+
+  @media (min-width: $md-desktop-breakpoint) {
+    aspect-ratio: 8 / 5;
+  }
 
   &:hover {
     .link-decor {
@@ -29,7 +36,7 @@
   }
 
   &__head {
-    padding-inline: 24px;
+    padding-inline: var(--padding-inline);
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -69,7 +76,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: calculate-clamp(16px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint);
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(40)};
@@ -80,7 +87,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: calculate-clamp(4px, 8px, $xl-desktop-breakpoint, $tablet-breakpoint);
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(8)};
@@ -113,4 +120,28 @@
   @media (min-width: $xl-desktop-breakpoint) {
     // padding: #{vw(40)} 0 0 0;
   } 
+
+  @media (max-width: $lg-breakpoint) {
+    padding: var(--padding-block-good-item) var(--padding-inline);
+    aspect-ratio:unset;
+
+    &__footer {
+      display: none;
+    }
+
+    &__content {
+      margin: 0;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .icon {
+        color: var(--gray-color-300);
+      }
+    }
+
+    &__head {
+      padding: 0;
+      justify-content: space-between;
+    }
+  }
 }

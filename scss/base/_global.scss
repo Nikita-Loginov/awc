@@ -153,7 +153,7 @@ body {
 .topBox {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: calculate-clamp(40px, 80px, $xl-desktop-breakpoint, $tablet-breakpoint);
 
   &--small {
     gap: 40px;
@@ -178,7 +178,7 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    gap: 40px;
+    gap: calculate-clamp(20px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint);
     max-width: 48%;
     margin: 0 auto;
 
@@ -189,7 +189,12 @@ body {
     &:before,
     &:after {
       width: 1px;
-      height: 140px;
+      height: calculate-clamp(
+        80px,
+        140px,
+        $xl-desktop-breakpoint,
+        $tablet-breakpoint
+      );
       background-color: var(--gray-color-500);
     }
 
@@ -228,21 +233,45 @@ body {
   }
 
   &__decors {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  &__decors-text {
+    @media (min-width: 360px) {
+      width: 40%;
+      float: left;
+      shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
   }
 
   &__decors-title {
-    text-indent: 624px;
+    // text-align: justify;
+
     // transform: translateY(-15px);
 
     @media (min-width: $xl-desktop-breakpoint) {
-      text-indent: #{vw(624)};
+      // text-indent: #{vw(624)};
     }
   }
 
   @media (min-width: $xl-desktop-breakpoint) {
     gap: #{vw(80)};
+  }
+
+  @media (max-width: 767px) {
+    &__content {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__decors {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: justify;
+    }
   }
 }
 
@@ -368,11 +397,17 @@ body .wrapper {
   &--bottom {
     border-bottom: var(--border-decor-width) solid var(--border-decor-color);
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    &--media-none {
+      border: none;
+    }
+  }
 }
 
 .goods {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
 
   &--gap {
     gap: 4px;
@@ -402,6 +437,11 @@ body .wrapper {
     &--gap {
       gap: #{vw(4)};
     }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -471,7 +511,12 @@ body .wrapper {
   &:before {
     content: "";
     width: 1px;
-    height: 140px;
+    height: calculate-clamp(
+      80px,
+      140px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
     background-color: var(--gray-color-500);
 
     @media (min-width: $xl-desktop-breakpoint) {
@@ -511,24 +556,34 @@ body .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 96px;
-  height: 96px;
+  width: calculate-clamp(80px, 96px, $xl-desktop-breakpoint, $tablet-breakpoint);
+  height: calculate-clamp(80px, 96px, $xl-desktop-breakpoint, $tablet-breakpoint);
   background-color: var(--dark-color-600);
   flex-shrink: 0;
   color: var(--gray-color-200);
 
+  .icon {
+    width: 28px;
+    height: 20px;
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
     width: #{vw(96)};
     height: #{vw(96)};
+
+    .icon {
+      width: #{vw(28)};
+      height: #{vw(20)}
+    }
   }
 }
 
 .fixed-block {
   position: fixed;
   z-index: 100;
-  left: 24px;
+  left: var(--container-inline-padding);
   bottom: 24px;
-  right: 24px;
+  right: var(--container-inline-padding);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -552,7 +607,7 @@ body .wrapper {
   border: 1px solid var(--gray-color-400);
   border-radius: 50%;
   color: var(--gray-color-300);
-  
+
   img,
   svg {
     width: var(--width-icon-info-icon);

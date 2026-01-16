@@ -1,5 +1,5 @@
 .marquee {
-  --gap-items: 80px;
+  --gap-items: #{calculate-clamp(40px, 80px, $xl-desktop-breakpoint, $tablet-breakpoint)};
 
   display: flex;
   overflow: hidden;
@@ -32,10 +32,11 @@
     &:after {
       content: "";
       right: 0;
-      width: 120px;
-      height: 120px;
+      width: calculate-clamp(60px, 120px, $xl-desktop-breakpoint, $tablet-breakpoint);
+      height: calculate-clamp(60px, 120px, $xl-desktop-breakpoint, $tablet-breakpoint);
       background-repeat: no-repeat;
       background-image: url(/img/icons/decors/star.svg);
+      background-size: contain;
     }
   }
 }

@@ -37,12 +37,12 @@ html {
   --font-size-2xs: 14px;
   --font-size-xs: #{calculate-clamp(12px, 16px, 1023px, 480px)};
   --font-size-sm: #{calculate-clamp(16px, 18px, 1023px, 480px)};
-  --font-size-base: #{calculate-clamp(22px, 28px, 1023px, 480px)};
-  --font-size-md: #{calculate-clamp(24px, 36px, 1023px, 480px)};
+  --font-size-base: #{calculate-clamp(24px, 28px, 1800px, 1479px)};
+  --font-size-md: #{calculate-clamp(30px, 36px, 1800px, 1479px)};
   --font-size-lg: #{calculate-clamp(28px, 48px, 1023px, 480px)};
-  --font-size-xl: #{calculate-clamp(32px, 64px, 1023px, 480px)};
-  --font-size-2xl: #{calculate-clamp(40px, 96px, 1023px, 480px)};
-  --font-size-3xl: #{calculate-clamp(40px, 120px, 1023px, 480px)};
+  --font-size-xl: #{calculate-clamp(46px, 64px, 1800px, 1479px)};
+  --font-size-2xl: #{calculate-clamp(60px, 96px, 1800px, 1479px)};
+  --font-size-3xl: #{calculate-clamp(70px, 120px, 1800px, 480px)};
   --font-size-4xl: #{calculate-clamp(108px, 180px, 1023px, 480px)};
 
   --line-height-tighter: 1;
@@ -119,4 +119,15 @@ html {
 
     --page-padding-top: calc(#{vw(90)} + #{vw(72)});
   }
+}
+
+@media (max-width: $lg-breakpoint) {
+  html {
+    --font-size-md: #{calculate-clamp(24px, 30px, 1023px, 480px)};
+    --font-size-base: #{calculate-clamp(22px, 24px, 1023px, 480px)};
+    --font-size-xl: #{calculate-clamp(32px, 46px, 1023px, 480px)};
+    --font-size-2xl: #{calculate-clamp(40px, 60px, 1023px, 480px)};
+    --font-size-3xl: #{calculate-clamp(40px, 70px, 1023px, 480px)};
+  }
+  // --font-size-3xl: #{calculate-clamp(40px, 120px, 1023px, 480px)};
 }

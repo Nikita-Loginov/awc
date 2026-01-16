@@ -1,7 +1,7 @@
 .logo {
   &__img {
-    max-width: 200px;
-    height: 40px;
+    max-width: calculate-clamp(140px, 200px, $xl-desktop-breakpoint, $tablet-breakpoint);;
+    height: calculate-clamp(30px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint);
 
     img,
     svg {

@@ -16,7 +16,7 @@
   }
 
   &--primary-100 {
-    color: var(--primary-color-100)
+    color: var(--primary-color-100);
   }
 
   &:hover,
@@ -28,19 +28,27 @@
 .link-decor {
   --border-width: 1px;
   --paddint-top-item: 40px;
+  --border-color: var(--gray-color-115);
 
-  padding: var(--paddint-top-item) 24px 40px;
+  padding: var(--paddint-top-item)
+    calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $lg-breakpoint)
+    calculate-clamp(25px, 40px, $xl-desktop-breakpoint, $lg-breakpoint);
   background-color: transparent;
   display: flex;
   flex-direction: column;
   color: var(--gray-color-300);
-  border-bottom: var(--border-width) solid var(--gray-color-115);
+  border-bottom: var(--border-width) solid var(--border-color);
   transition: all 0.3s;
   cursor: pointer;
   box-sizing: content-box;
 
   &--big {
-    --paddint-top-item: 80px;
+    --paddint-top-item: #{calculate-clamp(
+        40px,
+        80px,
+        $xl-desktop-breakpoint,
+        $lg-breakpoint
+      )};
 
     @media (min-width: $xl-desktop-breakpoint) {
       --paddint-top-item: #{vw(80)};
@@ -48,8 +56,11 @@
   }
 
   &--border-no-cvet {
-    border-color: transparent;
+    @media (min-width: $tablet-breakpoint) {
+      --border-color: transparent;
+    }
   }
+  
 
   &__content {
     display: flex;
@@ -57,6 +68,8 @@
     justify-content: space-between;
     gap: 20px;
     transition: all 0.3s;
+    flex:1;
+    width: 100%;
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(20)};
@@ -67,25 +80,32 @@
     width: 100%;
   }
 
-
-
   &:hover {
     @include hover-link-decor;
   }
 
   &--dark-300 {
+    --border-color: var(--dark-color-300);
     color: var(--dark-color-300);
-    border-color: var(--dark-color-300);
 
     &:hover {
+      --border-color: var(--dark-color-300);
+
       color: var(--dark-color-300);
-      border-color: var(--dark-color-300);
     }
   }
 
   @media (min-width: $xl-desktop-breakpoint) {
     --paddint-top-item: #{vw(40)};
     padding: var(--paddint-top-item) #{vw(24)} #{vw(40)};
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    border-bottom: 1px solid var(--border-color);
+
+    &--border-no-cvet--media {
+      border-bottom: none;
+    }
   }
 }
 

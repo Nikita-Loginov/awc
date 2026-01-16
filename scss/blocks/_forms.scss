@@ -1,5 +1,15 @@
 .form {
-  --padding-item: 40px 24px;
+  --padding-item: #{calculate-clamp(
+      24px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )} #{calculate-clamp(
+      16px,
+      24px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
   --border-color: var(--gray-color-500);
   --checks-items: 24px;
   --info-form: 24px;
@@ -25,8 +35,10 @@
   &__item-block {
     padding: var(--padding-item);
 
-    &:not(:last-child) {
-      border-right: 1px solid var(--border-color);
+    @media (min-width: $tablet-breakpoint) {
+      &:not(:last-child) {
+        border-right: 1px solid var(--border-color);
+      }
     }
 
     &:has(.dropdown) {
@@ -37,7 +49,12 @@
   &__footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
+    gap: calculate-clamp(
+      20px,
+      48px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
     padding: var(--padding-item);
     align-items: center;
     margin-top: auto;
@@ -99,9 +116,36 @@
     --checks-items: #{vw(24)};
     --info-form: #{vw(24)};
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+    }
+
+    &__item-box {
+      display: flex;
+      flex-direction: column;
+      
+      & > *:not(:last-child) {
+        border-bottom: 1px solid var(--border-color);
+      }
+    }
+  }
 }
 
 .contact-form {
-  border-left: 1px solid var(--border-color);
-  // border-right: 1px solid var(--border-color);
+  @media (min-width: $desktop-breakpoint) {
+    border-left: 1px solid var(--border-color);
+    // border-right: 1px solid var(--border-color);
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    .form__item-box {
+      &:first-child {
+        border-top: 1px solid var(--border-color);
+      }
+    }
+  }
 }

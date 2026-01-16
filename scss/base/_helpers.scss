@@ -10,7 +10,7 @@
   $intercept: $min - $slope * $min-width;
   @return clamp(#{$min}, calc(#{$intercept} + #{$slope * 100}vw), #{$max});
 }
-// calculate-clamp(200px, 300px, 1500px, 767px)
+// calculate-clamp(24px, 48px, $xl-desktop-breakpoint, $lg-breakpoint)
 
 @mixin visually-hidden {
   position: absolute;
@@ -38,11 +38,14 @@ $tablet-breakpoint: 767px;
 $mobile-breakpoint: 479px;
 
 @mixin hover-link-decor {
-  --border-width: 24px;
-
   border-color: var(--primary-color-100);
   color: var(--primary-color-100);
-  padding-top: calc((var(--paddint-top-item) - var(--border-width)));
+
+  @media (min-width: $tablet-breakpoint) {
+    --border-width: 24px;
+   
+    padding-top: calc((var(--paddint-top-item) - var(--border-width)));
+  }
 
   @media (min-width: $xl-desktop-breakpoint) {
     --border-width: #{vw(24)};
@@ -62,7 +65,6 @@ $mobile-breakpoint: 479px;
   }
 
   &::-webkit-scrollbar-thumb {
-    
     background-color: var(--primary-color-100);
   }
 

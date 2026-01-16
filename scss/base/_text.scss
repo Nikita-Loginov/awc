@@ -154,3 +154,11 @@ h6 {
 .tiktok-font {
   font-family: var(--font-main);
 }
+
+.fz64-28 {
+  font-size: #{calculate-clamp(46px, 64px, 1800px, 1479px)};
+
+  @media (max-width: $lg-breakpoint) {
+    font-size: #{calculate-clamp(28px, 46px, 1023px, 480px)};
+  }
+}

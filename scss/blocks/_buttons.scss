@@ -4,8 +4,8 @@
   justify-content: center;
   gap: 16px;
   border-radius: 244px;
-  min-height: 88px;
-  padding: 16px 40px;
+  min-height: calculate-clamp(76px, 88px, $xl-desktop-breakpoint, $tablet-breakpoint);
+  padding: 16px calculate-clamp(20px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint);
   background-color: var(--primary-color-100);
   font-weight: 600;
   color: var(--dark-color-300);
@@ -20,7 +20,7 @@
   &--noBg {
     background-color: transparent;
     color: var(--gray-color-300);
-    padding-inline: 75px;
+    padding-inline: calculate-clamp(40px, 75px, $xl-desktop-breakpoint, $tablet-breakpoint);
 
     &:hover {
       color: var(--dark-color-200);

@@ -1,7 +1,21 @@
 <div class="modalBlock connectModal">
   <div class="modalBlock__inner">
     <div class="modalBlock__header">
-      <p class="h4">Let’s Connect</p>
+      <div class="modalBlock__header-block">
+        <p class="h4">Let’s Connect</p>
+
+        <button
+          type="button"
+          class="modalBlock__close modal-close"
+          aria-label="Закрыть мдальное окно"
+        >
+          <span class="icon icon--xs">
+            <svg>
+              <use xlink:href="#close-icon"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
 
       <div class="textbox">
         <p class="p1 text-gray-400">
@@ -15,7 +29,9 @@
     <form class="form" novalidate>
       <div class="form__items">
         <div class="form__item-box">
-          <label class="input-box form__item form__item-block border-decor border-decor--top border-decor--gray-500">
+          <label
+            class="input-box form__item form__item-block border-decor border-decor--top border-decor--gray-500"
+          >
             <div class="input-box__content">
               <p class="p2">Name</p>
 
@@ -50,9 +66,7 @@
         </div>
 
         <div class="form__item-box">
-          <label
-            class="input-box form__item form__item-block"
-          >
+          <label class="input-box form__item form__item-block">
             <div class="input-box__content">
               <p class="p2">E-mail</p>
 
@@ -66,9 +80,7 @@
         </div>
 
         <div class="form__item-box">
-          <label
-            class="input-box form__item form__item-block"
-          >
+          <label class="input-box form__item form__item-block">
             <div class="input-box__content">
               <p class="p2">Message</p>
 
@@ -99,7 +111,8 @@
           </span>
 
           <p class="p1 manrope-font">
-            By clicking the “Send” button, I consent <br> to the processing of my personal data.
+            By clicking the “Send” button, I consent <br />
+            to the processing of my personal data.
           </p>
         </div>
       </div>

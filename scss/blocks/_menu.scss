@@ -12,7 +12,7 @@
   }
 
   &__burger-box {
-    width: 96px;
+    width: calculate-clamp(48px, 96px, $xl-desktop-breakpoint, $tablet-breakpoint);
     height: 12px;
     flex-shrink: 0;
     position: relative;
@@ -62,17 +62,50 @@
     transition: all 0.3s;
   }
 
-  &__content-inner {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 96px var(--container-inline-padding) 0;
+  &__langs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+  }
+
+  &__lang-btn {
+    width: fit-content;
+    background-color: transparent;
+    color: var(--gray-color-200);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--gray-color-500);
+
+    &.active {
+      color: var(--gray-color-400);
+      border-color: transparent;
+    }
+  }
+
+  &__content-inner-box {
+    gap: 40px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
 
     & > *:not(:first-child) {
       border-top: 1px solid var(--gray-color-500);
     }
+
+    @media (min-width: $xl-desktop-breakpoint) {
+      gap: #{vw(40)};
+    }
+  }
+
+  &__content-inner {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: calculate-clamp(36px, 96px, $xl-desktop-breakpoint, $lg-breakpoint) var(--container-inline-padding) 0;
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(40px, 80px, $xl-desktop-breakpoint, $lg-breakpoint);
+
+   
 
     @media (min-width: $xl-desktop-breakpoint) {
       padding: #{vw(96)} var(--container-inline-padding) 0;
@@ -128,6 +161,17 @@
       }
     }
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__content {
+      height: 100%;
+    }
+
+    &__content-inner {
+      height: 100%;
+      justify-content: space-between;
+    }
+  }
 }
 
 .menu-top {
@@ -152,7 +196,7 @@
   &__list-box {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: calculate-clamp(24px, 40px, $xl-desktop-breakpoint, $lg-breakpoint);
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(40)};
@@ -162,10 +206,24 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $lg-breakpoint);
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(24)};
+    }
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    &__lists {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__lists {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
     }
   }
 }

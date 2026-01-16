@@ -1,8 +1,9 @@
 .modalBlock {
-  --padding-inner: 40px 24px;
-  --gap-inner: 40px;
+  --padding-inner: #{calculate-clamp(24px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint)} #{calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint)};
+  --gap-inner: #{calculate-clamp(24px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint)};
   --gap-header: 16px;
   --close-width-btn: 24px;
+  --max-width-inner: 36%;
 
   position: fixed;
   inset: 0;
@@ -27,7 +28,7 @@
   }
 
   &__inner {
-    max-width: 36%;
+    max-width: var(--max-width-inner);
     width: 100%;
     background-color: var(--dark-color-400);
     transform: translateX(100%);
@@ -72,11 +73,60 @@
     height: 100%;
   }
 
+  &:has(.form__footer) {
+    .modalBlock__inner {
+      padding-bottom: 0;
+    }
+   
+  }
+
+  .form {
+    &__footer {
+      // padding: 0;
+    }
+  }
+
+  &__header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    .modalBlock {
+      &__close {
+        display: none;
+      }
+    }
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
     --padding-inner: #{vw(40)} #{vw(24)};
     --gap-inner: #{vw(40)};
     --gap-header: #{vw(16)};
     --close-width-btn: #{vw(24)};
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    --max-width-inner: 65%;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --max-width-inner: 100%;
+
+    &__close {
+      display: none;
+      position: static;
+    }
+
+    &__header-block {
+
+  
+      .modalBlock {
+        &__close {
+          display: flex;
+        }
+      }
+    }
   }
 }
 

@@ -1,12 +1,23 @@
 .footer {
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  padding: var(--gap-blocks) 0 36px;
+  gap:  calculate-clamp(24px, 36px, $xl-desktop-breakpoint, $tablet-breakpoint);
+  padding: calculate-clamp(
+      90px,
+      160px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )
+    0 calculate-clamp(24px, 36px, $xl-desktop-breakpoint, $tablet-breakpoint);
 
   & > *:not(:last-child) {
     border-bottom: 1px solid var(--gray-color-500);
-    padding-bottom: 36px;
+    padding-bottom: calculate-clamp(
+      24px,
+      36px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
 
     @media (min-width: $xl-desktop-breakpoint) {
       padding-bottom: #{vw(36)};
@@ -15,21 +26,26 @@
 
   @media (min-width: $xl-desktop-breakpoint) {
     gap: #{vw(36)};
-    padding: var(--gap-blocks) 0 vw(36);
+    padding: #{vw(160)} 0 vw(36);
   }
 }
 
 .footer-top {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: calculate-clamp(90px, 160px, $xl-desktop-breakpoint, $tablet-breakpoint);
   font-family: var(--font-second);
   color: var(--gray-color-300);
 
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: calculate-clamp(
+      60px,
+      120px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
   }
 
   &__content {
@@ -48,7 +64,7 @@
 
   &__list {
     display: flex;
-    gap: 8px;
+    gap: 15px;
     align-items: center;
   }
 
@@ -83,8 +99,15 @@
     }
   }
 
+  &__lists-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
-    gap: #{vw(120)};
+    gap: #{vw(160)};
 
     &__inner {
       gap: #{vw(120)};
@@ -99,7 +122,11 @@
     }
 
     &__list {
-      gap: #{vw(8)};
+      gap: #{vw(15)};
+    }
+
+    &__lists-box {
+      gap: #{vw(20)};
     }
 
     .content-line {
@@ -110,19 +137,73 @@
       width: #{vw(180)};
       height: #{vw(88)};
     }
+  }
 
-  
+  @media (max-width: $tablet-breakpoint) {
+    &__lists {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      .content-line {
+        &:before {
+          position: static;
+          transform: translate(0);
+        }
+      }
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      @media (min-width: 360px) and (max-width: $tablet-breakpoint) {
+        & > *:not(:nth-child(even)) {
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          &:before {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 48px;
+            background-color: var(--gray-color-500);
+            right: -5px;
+          }
+        }
+      }
+
+      @media (max-width: 360px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+
+    &__item {
+      &--column {
+        gap: 40px;
+      }
+    }
   }
 }
 
 .footer-copy {
   color: var(--gray-color-400);
+  font-family: var(--font-second);
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: calculate-clamp(8px, 20px, $xl-desktop-breakpoint, $tablet-breakpoint);
   }
 
   &__info,
@@ -130,5 +211,12 @@
     display: flex;
     align-items: center;
     gap: 20px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }

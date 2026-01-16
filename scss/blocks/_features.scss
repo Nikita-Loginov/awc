@@ -12,7 +12,12 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 64px;
+    gap: calculate-clamp(
+      24px,
+      64px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(64)};
@@ -20,27 +25,56 @@
   }
 
   &__item {
-    &:nth-child(4n + 2) {
-      padding-top: 160px;
+    @media (min-width: $md-desktop-breakpoint) {
+      &:nth-child(4n + 2) {
+        padding-top: 160px;
 
-      @media (min-width: $xl-desktop-breakpoint) {
-        padding-top: #{vw(160)};
+        @media (min-width: $xl-desktop-breakpoint) {
+          padding-top: #{vw(160)};
+        }
+      }
+
+      &:nth-child(4n + 3) {
+        padding-top: 40px;
+
+        @media (min-width: $xl-desktop-breakpoint) {
+          padding-top: #{vw(40)};
+        }
+      }
+
+      &:nth-child(4n + 4) {
+        padding-top: 100px;
+
+        @media (min-width: $xl-desktop-breakpoint) {
+          padding-top: #{vw(100)};
+        }
       }
     }
+  }
 
-    &:nth-child(4n + 3) {
-      padding-top: 40px;
+  @media (max-width: $md-desktop-breakpoint) {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
-      @media (min-width: $xl-desktop-breakpoint) {
-        padding-top: #{vw(40)};
-      }
+  @media (max-width: $lg-breakpoint) {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__items {
+      display: flex;
+      flex-direction: column;
     }
 
-    &:nth-child(4n + 4) {
-      padding-top: 100px;
+    &__item {
+      max-width: calc(100% - 40px);
 
-      @media (min-width: $xl-desktop-breakpoint) {
-        padding-top: #{vw(100)};
+      &:nth-child(even) {
+        margin-left: auto;
       }
     }
   }

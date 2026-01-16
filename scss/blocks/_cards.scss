@@ -1,17 +1,13 @@
 .card-box {
-  --padding-block: 40px;
-  --padding-inline: 24px;
-  --padding-head-inline: 24px;
+  --padding-block: #{calculate-clamp(24px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint)};
+  --padding-inline: #{calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint)};
+  --padding-head-inline: #{calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint)};
 
   padding: var(--padding-block) var(--padding-inline);
-
-  
 
   &__head {
     padding-inline: var(--padding-head-inline);
   }
-
-  
 
   @media (min-width: $xl-desktop-breakpoint) {
     --padding-block: #{vw(40)};
@@ -115,7 +111,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint);
     flex: 1;
 
     @media (min-width: $xl-desktop-breakpoint) {
@@ -133,9 +129,9 @@
     z-index: 3;
 
     &--center {
-     align-items: center;
-     text-align: center;
-     margin: 0 auto;
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
     }
 
     &--max-width {
@@ -313,6 +309,10 @@
       object-fit: cover;
     }
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    aspect-ratio: unset;
+  }
 }
 
 .card-icon {
@@ -320,7 +320,6 @@
   display: flex;
   align-items: flex-start;
   gap: 40px;
-
 
   &__content {
     display: flex;

@@ -1,5 +1,5 @@
 .cookies {
-  --padding-cookies: 40px 24px;
+  --padding-cookies: #{calculate-clamp(24px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint)} #{calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint)};
   --gap-box-cookies: 24px;
   --proccent-content-cookies: 70%;
 
@@ -35,11 +35,22 @@
 
     .button {
       width: 100%;
+      min-height: calculate-clamp(66px, 88px, $xl-desktop-breakpoint, $tablet-breakpoint);
     }
   }
 
   @media (min-width: $xl-desktop-breakpoint) {
     --padding-cookies: #{vw(40)} #{vw(24)};
     --gap-box-cookies: #{vw(24)};
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    max-width: 100%;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+    }
   }
 }

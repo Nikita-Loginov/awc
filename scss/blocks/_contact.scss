@@ -21,10 +21,27 @@
   }
 
   &__info {
-    padding-top: 40px;
+    padding-top: calculate-clamp(24px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint);
 
     @media (min-width: $xl-desktop-breakpoint) {
       padding-top: #{vw(40)};
+    }
+  }
+
+
+  @media (max-width: $desktop-breakpoint) {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &__info {
+      padding: 24px var(--container-inline-padding);
+    }
+
+    .container {
+      padding: 0;
     }
   }
 }

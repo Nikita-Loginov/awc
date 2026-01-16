@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   transition: all 0.3s;
-  padding: 24px 0;
+  padding: calculate-clamp(20px, 24px, $xl-desktop-breakpoint, $lg-breakpoint) 0;
   color: var(--gray-color-400);
 
   &.scrollBottom {
@@ -32,9 +32,11 @@
     align-items: center;
     gap: var(--gap-info);
 
-    & > *:not(:last-child) {
-      padding-right: var(--gap-info);
-      border-right: 1px solid var(--gray-color-115);
+    @media (min-width: $tablet-breakpoint) {
+      & > *:not(:last-child) {
+        padding-right: var(--gap-info);
+        border-right: 1px solid var(--gray-color-115);
+      }
     }
 
     @media (min-width: $xl-desktop-breakpoint) {
@@ -45,7 +47,7 @@
   &__details {
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: calculate-clamp(40px, 100px, $xl-desktop-breakpoint, $lg-breakpoint);
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(100)};
