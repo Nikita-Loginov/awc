@@ -1,7 +1,22 @@
 .card-box {
-  --padding-block: #{calculate-clamp(24px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint)};
-  --padding-inline: #{calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint)};
-  --padding-head-inline: #{calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint)};
+  --padding-block: #{calculate-clamp(
+      24px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --padding-inline: #{calculate-clamp(
+      16px,
+      24px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --padding-head-inline: #{calculate-clamp(
+      16px,
+      24px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
 
   padding: var(--padding-block) var(--padding-inline);
 
@@ -34,6 +49,11 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $tablet-breakpoint) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__header,
@@ -68,7 +88,12 @@
 
   &--auto {
     aspect-ratio: unset;
-    min-height: 580px;
+    min-height: calculate-clamp(
+      280px,
+      580px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
 
     @media (min-width: $xl-desktop-breakpoint) {
       min-height: #{vw(580)};
@@ -111,7 +136,12 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $tablet-breakpoint);
+    gap: calculate-clamp(
+      16px,
+      24px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
     flex: 1;
 
     @media (min-width: $xl-desktop-breakpoint) {
@@ -233,12 +263,14 @@
 
   &--row {
     .card-detail {
-      &__info {
-        max-width: 50%;
-      }
+      @media (min-width: $lg-breakpoint) {
+        &__info {
+          max-width: 50%;
+        }
 
-      &__inner {
-        flex-direction: row;
+        &__inner {
+          flex-direction: row;
+        }
       }
     }
   }
@@ -246,7 +278,12 @@
   &--full {
     aspect-ratio: unset;
     width: 100%;
-    min-height: 480px;
+    min-height: calculate-clamp(
+      240px,
+      480px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
 
     @media (min-width: $xl-desktop-breakpoint) {
       min-height: #{vw(480)};
@@ -290,7 +327,12 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 46px;
+    gap: calculate-clamp(
+      16px,
+      46px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(46)};
@@ -312,6 +354,7 @@
 
   @media (max-width: $tablet-breakpoint) {
     aspect-ratio: unset;
+    min-height: calculate-clamp(0px, 300px, $tablet-breakpoint, 400px);
   }
 }
 
@@ -319,7 +362,7 @@
   background-color: var(--dark-color-400);
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  gap: calculate-clamp(20px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint);
 
   &__content {
     display: flex;
@@ -331,18 +374,49 @@
     }
   }
 
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .icon-decor {
+    width: calculate-clamp(
+      60px,
+      96px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
+    height: calculate-clamp(
+      60px,
+      96px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
     gap: #{vw(40)};
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .card-text {
   padding-bottom: 0;
   background-color: var(--primary-color-100);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__content {
     display: flex;
     flex-direction: column;
+
     gap: 2px;
     color: var(--dark-color-300);
   }

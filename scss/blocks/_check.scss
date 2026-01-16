@@ -2,8 +2,13 @@
   --gap-box-inner: 16px;
   --width-decor-check: 16px;
   --width-check: 28px;
-  --gap-content-check: 8px;
-  --gap-info-check: 8px;
+  --gap-content-check: 16px;
+  --gap-info-check: #{calculate-clamp(
+    4px,
+    8px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
   --gap-block-check: 8px;
   --gap-imgs-check: 8px;
   --check-img-width: 80px;
@@ -74,6 +79,11 @@
     justify-content: space-between;
     width: 100%;
     gap: var(--gap-content-check);
+
+    @media (max-width: $tablet-breakpoint) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__info {
@@ -84,6 +94,10 @@
 
     &--end {
       align-items: flex-end;
+
+      @media (max-width: $tablet-breakpoint) {
+        align-items: flex-start;
+      }
     }
   }
 

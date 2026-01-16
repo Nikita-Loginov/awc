@@ -2,7 +2,12 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 96px;
+    gap: calculate-clamp(
+      40px,
+      96px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(96)};
@@ -23,6 +28,7 @@
     display: grid;
     grid-template-columns: 24% calc(100% * 2 / 3);
     justify-content: space-between;
+    gap: 40px;
   }
 
   &__info {
@@ -40,27 +46,38 @@
     flex-direction: column;
 
     .card-info {
-      min-height: 190px;
+      min-height: calculate-clamp(
+        100px,
+        190px,
+        $xl-desktop-breakpoint,
+        $lg-breakpoint
+      );
 
       @media (min-width: $xl-desktop-breakpoint) {
         min-height: #{vw(190)};
       }
 
-      &:nth-child(odd) {
-        padding-right: 24px;
-        border-right: 1px solid var(--gray-color-120);
+      @media (min-width: $tablet-breakpoint) {
+        &:nth-child(odd) {
+          padding-right: 24px;
+          border-right: 1px solid var(--gray-color-120);
 
-        @media (min-width: $xl-desktop-breakpoint) {
-          padding-right: #{vw(24)};
+          @media (min-width: $xl-desktop-breakpoint) {
+            padding-right: #{vw(24)};
+          }
+        }
+
+        &:nth-child(even) {
+          padding-left: 24px;
+
+          @media (min-width: $xl-desktop-breakpoint) {
+            padding-left: #{vw(24)};
+          }
         }
       }
 
-      &:nth-child(even) {
-        padding-left: 24px;
-
-        @media (min-width: $xl-desktop-breakpoint) {
-          padding-left: #{vw(24)};
-        }
+      @media (max-width: $tablet-breakpoint) {
+        min-height: 0;
       }
     }
   }
@@ -69,10 +86,29 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    &:not(:last-child) {
-      .card-info {
-        border-bottom: 1px solid var(--gray-color-120);
+    @media (min-width: $tablet-breakpoint) {
+      &:not(:last-child) {
+        .card-info {
+          border-bottom: 1px solid var(--gray-color-120);
+        }
       }
+    }
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__items-box {
+      gap: 4px;
+    }
+
+    &__items {
+     gap: 40px;
     }
   }
 }

@@ -42,6 +42,7 @@
   cursor: pointer;
   box-sizing: content-box;
 
+
   &--big {
     --paddint-top-item: #{calculate-clamp(
         40px,
@@ -81,6 +82,7 @@
   }
 
   &:hover {
+    --border-color: var(--primary-color-100);
     @include hover-link-decor;
   }
 
@@ -113,6 +115,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 4px;
+  width: 100%;
 
   @media (min-width: $xl-desktop-breakpoint) {
     gap: #{vw(4)};

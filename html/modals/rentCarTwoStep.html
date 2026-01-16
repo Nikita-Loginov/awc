@@ -2,7 +2,21 @@
   <form class="modalBlock__inner form">
     <div class="modalBlock__inner-box">
       <div class="modalBlock__header">
-        <p class="h4">Rent a Car</p>
+        <div class="modalBlock__header-block">
+          <p class="h4">Rent a Car</p>
+
+          <button
+            type="button"
+            class="modalBlock__close modal-close"
+            aria-label="Закрыть мдальное окно"
+          >
+            <span class="icon icon--xs">
+              <svg>
+                <use xlink:href="#close-icon"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
       </div>
 
       <div class="rentBoxModal__content">
@@ -14,6 +28,15 @@
                   <p class="h6 good-mini__title text-gray-200">
                     Lamborghini <span class="text-gray-300">Urus</span>
                   </p>
+                </div>
+
+                 <div class="good-mini__info">
+                  <button
+                    class="link link--primary-100 text-underline p1 modal-close"
+                    type="button"
+                  >
+                    Сhange car
+                  </button>
                 </div>
               </div>
 
@@ -32,11 +55,7 @@
                   </div>
                 </div>
 
-                <div class="good-mini__info">
-                  <button class="link link--primary-100 text-underline p1 modal-close" type="button">
-                    Сhange car
-                  </button>
-                </div>
+               
               </div>
             </div>
 
@@ -289,9 +308,7 @@
                                   </svg>
                                 </span>
 
-                                <p class="p2 text-gray-300">
-                                  Mobility service
-                                </p>
+                                <p class="p2 text-gray-300">Mobility service</p>
                               </li>
                             </ul>
                           </div>
@@ -299,7 +316,9 @@
                       </div>
                     </div>
 
-                    <p class="p1 text-gray-400 manrope-font">Deductible: up to €1,400.00</p>
+                    <p class="p1 text-gray-400 manrope-font">
+                      Deductible: up to €1,400.00
+                    </p>
                   </div>
 
                   <div class="check__info check__info--end no-wrap">
@@ -359,7 +378,6 @@
                             </p>
 
                             <ul class="list-icons">
-
                               <li class="list-icons__link">
                                 <span class="icon icon--sm text-gray-300">
                                   <svg>
@@ -379,9 +397,7 @@
                                   </svg>
                                 </span>
 
-                                <p class="p2 text-gray-300">
-                                  Mobility service
-                                </p>
+                                <p class="p2 text-gray-300">Mobility service</p>
                               </li>
                             </ul>
                           </div>
@@ -428,20 +444,10 @@
                         <div class="list-popup__content">
                           <div class="list-popup__info">
                             <p class="p2 text-gray-400 medium-font">
-                              Included in basic protection:
-                            </p>
-
-                            <ul class="list-icons">
-                            </ul>
-                          </div>
-
-                          <div class="list-popup__info">
-                            <p class="p2 text-gray-400 medium-font">
                               But not included:
                             </p>
 
                             <ul class="list-icons">
-
                               <li class="list-icons__link">
                                 <span class="icon icon--sm text-gray-300">
                                   <svg>
@@ -461,9 +467,7 @@
                                   </svg>
                                 </span>
 
-                                <p class="p2 text-gray-300">
-                                  Mobility service
-                                </p>
+                                <p class="p2 text-gray-300">Mobility service</p>
                               </li>
                             </ul>
                           </div>
@@ -491,15 +495,36 @@
 
     <div class="rentBoxModal__footer">
       <div class="rentBoxModal__btns">
-        <button
-          class="button button--noBg button--border button--border-gray-500 modal-open"
-          data-modal="rentCarOneStepModal"
-          type="button"
-        >
-          <p class="p1">Previous Step</p>
-        </button>
+        <div class="lg-none">
+          <button
+            class="button button--noBg button--border button--border-gray-500 modal-open"
+            data-modal="rentCarOneStepModal"
+            type="button"
+            style="width: 100%"
+          >
+            <p class="p1">Previous Step</p>
+          </button>
+        </div>
 
-        <button class="button modal-open" type="submit" data-modal="rentCarThreeStepModal">
+        <div class="lg-show">
+          <button
+            class="button button--circle button--noBg button--border button--border-gray-500 modal-open"
+            data-modal="rentCarOneStepModal"
+            type="button"
+          >
+            <span class="icon" style="rotate: -135deg">
+              <svg>
+                <use xlink:href="#arrow-line-icon"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <button
+          class="button modal-open"
+          type="submit"
+          data-modal="rentCarThreeStepModal"
+        >
           <p class="p1">Next Step</p>
         </button>
       </div>
@@ -508,7 +533,7 @@
 
   <button
     type="button"
-    class="modalBlock__close modal-close "
+    class="modalBlock__close modal-close"
     aria-label="Закрыть мдальное окно"
   >
     <span class="icon icon--xs">

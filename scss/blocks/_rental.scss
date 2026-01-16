@@ -2,15 +2,42 @@
   --rental-grid-column-main: 58%;
   --rental-grid-column-side: 35%;
   --rental-grid-gap: 20px;
-  --rental-info-gap: 80px;
-  --rental-list-gap: 80px;
-  --rental-item-gap: 40px;
-  --rental-item-head-gap: 20px;
-  --rental-item-head-padding-left: 24px;
+  --rental-info-gap: #{calculate-clamp(
+      40px,
+      80px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --rental-list-gap: #{calculate-clamp(
+      40px,
+      80px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --rental-item-gap: #{calculate-clamp(
+      24px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --rental-item-head-gap: #{calculate-clamp(
+      16px,
+      20px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --rental-item-head-padding-left: #{calculate-clamp(
+      0px,
+      24px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
   --rental-item-title-gap: 16px;
   --rental-banners-gap: 32px;
   --rental-banners-sticky-top: 10px;
-  --rental-banners-sticky-top-scroll: calc(var(--header-height, 80px) + 10px);
+  --rental-banners-sticky-top-scroll: calc(
+    var(--header-height, var(--calback-header-height)) + 10px
+  );
 
   &__inner {
     display: grid;
@@ -59,13 +86,18 @@
   }
 
   &__banners-sticky {
-    
-    
     transition: all 0.3s;
 
-    @media (min-height: 700px) {
+    @media (min-height: 700px) and (min-width:  $md-desktop-breakpoint) {
       position: sticky;
       top: var(--rental-banners-sticky-top);
+    }
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    &__inner {
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 

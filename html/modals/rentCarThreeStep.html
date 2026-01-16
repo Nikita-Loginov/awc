@@ -2,7 +2,21 @@
   <form class="modalBlock__inner form">
     <div class="modalBlock__inner-box">
       <div class="modalBlock__header">
-        <p class="h4">Rent a Car</p>
+        <div class="modalBlock__header-block">
+          <p class="h4">Rent a Car</p>
+
+          <button
+            type="button"
+            class="modalBlock__close modal-close"
+            aria-label="Закрыть мдальное окно"
+          >
+            <span class="icon icon--xs">
+              <svg>
+                <use xlink:href="#close-icon"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
       </div>
 
       <div class="rentBoxModal__content">
@@ -33,7 +47,10 @@
                 </div>
 
                 <div class="good-mini__info">
-                  <button class="link link--primary-100 text-underline p1 modal-close" type="button">
+                  <button
+                    class="link link--primary-100 text-underline p1 modal-close"
+                    type="button"
+                  >
                     Сhange car
                   </button>
                 </div>
@@ -121,9 +138,9 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="switch__box">
-                <input type="checkbox" name="add-services" checked/>
+                <input type="checkbox" name="add-services" checked />
 
                 <div class="switch__box-block"></div>
               </div>
@@ -199,9 +216,9 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="switch__box">
-                <input type="checkbox" name="add-services" checked/>
+                <input type="checkbox" name="add-services" checked />
 
                 <div class="switch__box-block"></div>
               </div>
@@ -277,9 +294,9 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="switch__box">
-                <input type="checkbox" name="add-services" checked/>
+                <input type="checkbox" name="add-services" checked />
 
                 <div class="switch__box-block"></div>
               </div>
@@ -343,12 +360,29 @@
 
     <div class="rentBoxModal__footer">
       <div class="rentBoxModal__btns">
-        <button
-          class="button button--noBg button--border button--border-gray-500 modal-open"
-          data-modal="rentCarTwoStepModal"
-        >
-          <p class="p1">Previous Step</p>
-        </button>
+        <div class="lg-none">
+          <button
+            class="button button--noBg button--border button--border-gray-500 modal-open"
+            data-modal="rentCarTwoStepModal"
+            style="width: 100%"
+          >
+            <p class="p1">Previous Step</p>
+          </button>
+        </div>
+
+        <div class="lg-show">
+          <button
+            class="button button--circle button--noBg button--border button--border-gray-500 modal-open"
+            data-modal="rentCarTwoStepModal"
+            type="button"
+          >
+            <span class="icon" style="rotate: -135deg">
+              <svg>
+                <use xlink:href="#arrow-line-icon"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
 
         <a
           href="/rental.html"

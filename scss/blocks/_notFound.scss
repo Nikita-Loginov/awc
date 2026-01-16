@@ -1,9 +1,19 @@
 .notFound {
   --notfound-height: 100%;
-  --notfound-content-gap: 60px;
+  --notfound-content-gap: #{calculate-clamp(
+    20px,
+    60px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
   --notfound-content-max-width: calc(100% / 3);
   --notfound-info-gap: 0;
-  --notfound-details-gap: 80px;
+  --notfound-details-gap: #{calculate-clamp(
+    40px,
+    80px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
   --notfound-button-max-width: 57%;
 
   display: flex;
@@ -65,5 +75,14 @@
     --notfound-content-gap: #{vw(60)};
     --notfound-content-max-width: calc(100% / 3);
     --notfound-details-gap: #{vw(80)};
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    --notfound-button-max-width: 100%;
+    --notfound-content-max-width: 80%;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --notfound-content-max-width: 100%;
   }
 }

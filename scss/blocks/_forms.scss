@@ -71,6 +71,10 @@
       }
     }
 
+    &--noPadding {
+      padding: 0;
+    }
+
     &--column {
       display: flex;
       flex-direction: column;

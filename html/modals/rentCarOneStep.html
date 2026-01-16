@@ -2,7 +2,21 @@
   <form class="modalBlock__inner form">
     <div class="modalBlock__inner-box">
       <div class="modalBlock__header">
-        <p class="h4">Rent a Car</p>
+        <div class="modalBlock__header-block">
+          <p class="h4">Rent a Car</p>
+
+          <button
+            type="button"
+            class="modalBlock__close modal-close"
+            aria-label="Закрыть мдальное окно"
+          >
+            <span class="icon icon--xs">
+              <svg>
+                <use xlink:href="#close-icon"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
       </div>
 
       <div class="rentBoxModal__content">
@@ -14,6 +28,17 @@
                   <p class="h6 good-mini__title text-gray-200">
                     Lamborghini <span class="text-gray-300">Urus</span>
                   </p>
+
+                  
+                </div>
+
+                <div class="good-mini__info">
+                  <button
+                    class="link link--primary-100 text-underline p1 modal-close"
+                    type="button"
+                  >
+                    Сhange car
+                  </button>
                 </div>
               </div>
 
@@ -32,11 +57,7 @@
                   </div>
                 </div>
 
-                <div class="good-mini__info">
-                  <button class="link link--primary-100 text-underline p1 modal-close" type="button">
-                    Сhange car
-                  </button>
-                </div>
+               
               </div>
             </div>
 
@@ -293,12 +314,29 @@
 
     <div class="rentBoxModal__footer">
       <div class="rentBoxModal__btns">
-        <button
-          class="button button--noBg button--border button--border-gray-500 modal-close"
-          type="button"
-        >
-          <p class="p1">Previous Step</p>
-        </button>
+        <div class="lg-none">
+          <button
+            class="button button--noBg button--border button--border-gray-500 modal-close"
+            type="button"
+            style="width: 100%;"
+          >
+            <p class="p1">Previous Step</p>
+          </button>
+        </div>
+
+        <div class="lg-show">
+          <button
+            class="button button--circle button--noBg button--border button--border-gray-500 modal-close"
+            type="button"
+          >
+          <span class="icon" style="rotate:-135deg">
+            <svg>
+              <use xlink:href="#arrow-line-icon"></use>
+            </svg>
+          </span>
+          
+          </button>
+        </div>
 
         <button
           class="button modal-open"

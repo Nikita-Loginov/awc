@@ -1,6 +1,11 @@
 .info {
   --gap-item: 24px;
-  --padding-block-item: 40px;
+  --padding-block-item: #{calculate-clamp(
+      24px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
   --padding-inline-item: 24px;
 
   &__items {
@@ -9,20 +14,31 @@
   }
 
   &__item {
-    aspect-ratio: 163 / 100;
+    min-height: calculate-clamp(
+      400px,
+      600px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
     display: flex;
     flex-direction: column;
     padding-block: var(--padding-block-item);
 
-    &:nth-child(odd) {
-      padding-inline-end: var(--padding-inline-item);
-      border-right: 1px solid var(--gray-color-500);
+    @media (min-width: $lg-breakpoint) {
+      &:nth-child(odd) {
+        padding-inline-end: var(--padding-inline-item);
+        border-right: 1px solid var(--gray-color-500);
+      }
+
+      &:nth-child(even) {
+        padding-inline-start: var(--padding-inline-item);
+        align-items: flex-end;
+        text-align: right;
+      }
     }
 
-    &:nth-child(even) {
-      padding-inline-start: var(--padding-inline-item);
-      align-items: flex-end;
-      text-align: right;
+    @media (min-width: $xl-desktop-breakpoint) {
+      min-height: #{vw(600)};
     }
   }
 
@@ -39,5 +55,28 @@
     --gap-item: #{vw(24)};
     --padding-block-item: #{vw(40)};
     --padding-inline-item: #{vw(24)};
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item-content {
+      max-width: 100%;
+    }
+
+    &__item {
+      padding-inline: var(--container-inline-padding);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--gray-color-500);
+      }
+    }
+
+    .container {
+      padding: 0;
+    }
   }
 }

@@ -1,9 +1,29 @@
 .switch {
-  --switch-gap: 20px;
-  --switch-box-width: 60px;
-  --switch-box-height: 32px;
-  --switch-block-size: 24px;
-  --switch-padding: 4px;
+  --switch-gap: 16px;
+  --switch-box-width: #{calculate-clamp(
+    40px,
+    60px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
+  --switch-box-height: #{calculate-clamp(
+    20px,
+    32px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
+  --switch-block-size: #{calculate-clamp(
+    16px,
+    24px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
+  --switch-padding: #{calculate-clamp(
+    2px,
+    4px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
   --switch-content-gap: 16px;
   --switch-info-gap: 8px;
   --switch-box-block-gap: 8px;
@@ -55,6 +75,12 @@
     display: flex;
     align-items: center;
     gap: var(--switch-box-block-gap);
+    flex-wrap: wrap;
+
+    @media (max-width: $tablet-breakpoint) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__box {

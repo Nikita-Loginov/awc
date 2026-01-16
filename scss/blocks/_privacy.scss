@@ -1,6 +1,16 @@
 .privacy {
-  --privacy-list-gap: 80px;
-  --privacy-list-item-gap: 24px;
+  --privacy-list-gap: #{calculate-clamp(
+    40px,
+    80px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
+  --privacy-list-item-gap: #{calculate-clamp(
+    16px,
+    24px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
 
   &__list {
     display: flex;

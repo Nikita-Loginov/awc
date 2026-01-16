@@ -3,7 +3,7 @@ import { classAction } from "./classActions.js";
 let prevActiveAccordeonItem;
 let currentResizeHandler = null;
 
-export function toggleAccordeonItems(e) {
+export const toggleAccordeonItems = (e) => {
   const { target } = e;
 
   if (target.closest(".accordeon__question")) {
@@ -19,6 +19,7 @@ export function toggleAccordeonItems(e) {
       classAction(relativeItem, "active", "toggle");
 
       setHeightAnswer(relativeItem);
+      setQuestionText(relativeItem);
 
       currentResizeHandler = () => setHeightAnswer(relativeItem);
       window.addEventListener("resize", currentResizeHandler);
@@ -28,6 +29,7 @@ export function toggleAccordeonItems(e) {
           classAction(prevActiveAccordeonItem, "active", "remove");
         }
         setHeightAnswer(prevActiveAccordeonItem);
+        setQuestionText(prevActiveAccordeonItem);
       }
 
       prevActiveAccordeonItem = relativeItem;
@@ -57,7 +59,7 @@ export function toggleAccordeonItems(e) {
   }
 }
 
-export function initAccordeonActiveItems() {
+export const initAccordeonActiveItems = () => {
   const accordeonItems = document.querySelectorAll(".accordeon__item");
 
   accordeonItems.forEach((item) => {
@@ -70,17 +72,20 @@ export function initAccordeonActiveItems() {
     ) {
       classAction(item, "active", "add");
       setHeightAnswer(item);
+      setQuestionText(item);
+
       prevActiveAccordeonItem = item;
     }
   });
 }
 
-function resetAccordeon() {
+const resetAccordeon = () => {
   const accordeonItems = document.querySelectorAll(".accordeon__item");
   prevActiveAccordeonItem = null;
 
   accordeonItems.forEach((item) => {
     classAction(item, "active", "remove");
+    setQuestionText(item);
 
     const itemAnswer = item.querySelector(".accordeon__answer");
 
@@ -229,4 +234,17 @@ export const changeActiveTabs = (e, items) => {
   btn.classList.remove("button--gray");
 
   itemsBox.innerHTML = accordeonItems;
+};
+
+const setQuestionText = (item) => {
+  const textEl = item.querySelector(".accordeon__question-text");
+
+  if (!textEl) return;
+
+  const openText = textEl.dataset.openText;
+  const closeText = textEl.dataset.closeText;
+
+  if (!openText || !closeText) return;
+
+  textEl.textContent = item.classList.contains("active") ? openText : closeText;
 };

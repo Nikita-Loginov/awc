@@ -1,0 +1,38 @@
+@mixin accordeonInit {
+  .accordeon {
+    &__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .arrow {
+      transition: all 0.3s;
+    }
+
+    &__item {
+      &.active {
+        .arrow {
+          rotate: -180deg;
+        }
+      }
+    }
+  }
+}
+
+.accordeon {
+  &--md-init {
+    @media (max-width: $md-desktop-breakpoint) {
+      @include accordeonInit;
+    }
+  }
+
+  &__question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+}

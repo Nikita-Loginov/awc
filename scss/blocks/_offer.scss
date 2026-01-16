@@ -21,7 +21,20 @@
 
   &__item {
     &--big {
-        grid-row: span 2;
+      grid-row: span 2;
+    }
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__items {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

@@ -14,6 +14,23 @@ const handleGlobalEvents = (e) => {
   toggleLocation(e);
 };
 
+const setVarModalFooterHeight = () => {
+  const modals = document.querySelectorAll(".rentBoxModal");
+
+  modals.forEach((modal) => {
+    const footer = modal.querySelector(".rentBoxModal__footer");
+
+    if (footer) {
+      const footerHeight = footer.offsetHeight;
+
+      modal.style.setProperty(
+        `--rentBoxModal-footer-height`,
+        `${footerHeight}px`
+      );
+    }
+  });
+};
+
 const initStatusSwipers = () => {
   const statusSwipers = document.querySelectorAll(".swiper--status");
 
@@ -34,6 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
   initChecksDropdownText();
   initStatusSwipers();
   initDatePickers();
+  setVarModalFooterHeight();
 
   document.addEventListener("click", handleGlobalEvents);
 });
+
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    setVarModalFooterHeight();
+  }, 200);
+});
+

@@ -121,13 +121,26 @@ html {
   }
 }
 
-@media (max-width: $lg-breakpoint) {
+@media (max-width: calc($lg-breakpoint + 1px)) {
   html {
     --font-size-md: #{calculate-clamp(24px, 30px, 1023px, 480px)};
     --font-size-base: #{calculate-clamp(22px, 24px, 1023px, 480px)};
     --font-size-xl: #{calculate-clamp(32px, 46px, 1023px, 480px)};
     --font-size-2xl: #{calculate-clamp(40px, 60px, 1023px, 480px)};
     --font-size-3xl: #{calculate-clamp(40px, 70px, 1023px, 480px)};
+
+    --calback-header-height: 80px;
   }
-  // --font-size-3xl: #{calculate-clamp(40px, 120px, 1023px, 480px)};
+}
+
+@media (max-width: calc($tablet-breakpoint + 1px)) {
+  html {
+    --calback-header-height: 80px;
+  }
+}
+
+@media (max-width: calc($mobile-breakpoint + 1px)) {
+  html {
+    --calback-header-height: 70px;
+  }
 }

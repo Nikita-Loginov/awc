@@ -1,6 +1,6 @@
 .privacy {
-  --privacy-list-gap: 80px;
-  --privacy-list-item-gap: 24px;
+  --privacy-list-gap: clamp(40px, 13.3911535126px + 3.4692107546vw, 80px);
+  --privacy-list-item-gap: clamp(16px, 10.6782307025px + 0.6938421509vw, 24px);
 }
 .privacy__list {
   display: -webkit-box;

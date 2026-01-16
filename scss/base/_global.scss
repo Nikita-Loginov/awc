@@ -72,7 +72,12 @@ body {
   &--detail {
     display: flex;
     flex-direction: column;
-    gap: 96px;
+    gap: calculate-clamp(
+      40px,
+      96px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
 
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(96)};
@@ -238,10 +243,17 @@ body {
   }
 
   &__decors-text {
+    
+
     @media (min-width: 360px) {
-      width: 40%;
+      width: 50%;
       float: left;
+      padding-right: 10px;
       shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @media (min-width: $tablet-breakpoint) {
+      width: 40%;
     }
   }
 
@@ -259,9 +271,13 @@ body {
     gap: #{vw(80)};
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-breakpoint) {
     &__content {
       max-width: 100%;
+    }
+
+    &__decors {
+      text-align: justify;
     }
   }
 

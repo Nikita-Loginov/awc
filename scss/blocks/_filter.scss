@@ -13,4 +13,10 @@
   &--three {
     --grid-template-columns-filter: repeat(3, 1fr);
   }
+
+  &--column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 }

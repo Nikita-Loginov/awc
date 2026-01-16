@@ -4,8 +4,13 @@
   --contact-info-list-border-width: 1px;
   --contact-info-list-columns: 3;
   --contact-info-link-gap: 16px;
-  --contact-info-link-padding: 10px;
-  --contact-info-link-min-height: 160px;
+  --contact-info-link-padding: 24px;
+  --contact-info-link-min-height: #{calculate-clamp(
+      0px,
+      160px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
   --contact-info-info-gap: 40px;
 
   &__inner {
@@ -34,9 +39,11 @@
     text-align: center;
     min-height: var(--contact-info-link-min-height);
 
-    &:not(:last-child) {
-      border-right: var(--contact-info-list-border-width) solid
-        var(--gray-color-500);
+    @media (min-width: $md-desktop-breakpoint) {
+      &:not(:last-child) {
+        border-right: var(--contact-info-list-border-width) solid
+          var(--gray-color-500);
+      }
     }
   }
 
@@ -53,5 +60,43 @@
     --contact-info-link-padding: #{vw(10)};
     --contact-info-link-min-height: #{vw(160)};
     --contact-info-info-gap: #{vw(40)};
+  }
+
+  @media (max-width: $md-desktop-breakpoint) and (min-width: $tablet-breakpoint) {
+    --contact-info-list-columns: 2;
+
+    &__link {
+      &:nth-child(n + 3) {
+        grid-column: 1 / -1;
+      }
+
+      &:nth-child(even) {
+        border-left: var(--contact-info-list-border-width) solid
+          var(--gray-color-500);
+      }
+
+      &:not(:last-child) {
+        border-bottom: var(--contact-info-list-border-width) solid
+          var(--gray-color-500);
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --contact-info-list-columns: 1;
+
+    &__list {
+      border: none;
+    }
+
+    &__link {
+      border-bottom: var(--contact-info-list-border-width) solid
+        var(--gray-color-500);
+
+      &:first-child {
+        border-top: var(--contact-info-list-border-width) solid
+          var(--gray-color-500);
+      }
+    }
   }
 }

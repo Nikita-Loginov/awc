@@ -15,4 +15,11 @@
         height: 100%;
     }
   }
+
+  @media (max-width: $lg-breakpoint) {
+    .topBox__header {
+      max-width: 100%;
+      justify-content: center;
+    }
+  }
 }

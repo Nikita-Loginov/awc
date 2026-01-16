@@ -23,174 +23,199 @@
             <div class="container">
               <div class="catalogy__inner">
                 <div class="catalogy__content">
-                  <div class="filter filter--three">
-                    <div class="filter__item">
-                      <div
-                        class="dropdown dropdown--price"
-                        data-price-template="from {min} to {max} $"
-                      >
-                        <button class="dropdown__btn" type="button">
-                          <p class="p1">Price</p>
-
-                          <div class="dropdown__block">
-                            <div
-                              class="dropdown__active dropdown__text p2"
-                            ></div>
-
-                            <span class="icon icon--xs arrow">
-                              <svg style="rotate: -90deg">
-                                <use xlink:href="#arrow-angle-icon"></use>
-                              </svg>
-                            </span>
-                          </div>
-                        </button>
-
-                        <div class="dropdown__content price-popup">
-                          <div class="price-popup__content">
-                            <div class="price-popup__items">
-                              <div class="input-box input-box--border">
-                                <label class="input-box__content">
-                                  <p class="p3">from</p>
-
-                                  <div class="input-box__info">
-                                    <input
-                                      placeholder="0"
-                                      type="text"
-                                      name="price_min"
-                                      min="0"
-                                      value="43"
-                                      max="10000"
-                                      data-type="price_min"
-                                      data-input-number
-                                    />
-
-                                    <p class="p1">$</p>
-                                  </div>
-                                </label>
-                              </div>
-
-                              <div class="input-box input-box--border">
-                                <label class="input-box__content">
-                                  <p class="p3">to</p>
-
-                                  <div class="input-box__info">
-                                    <input
-                                      placeholder="1 600 $"
-                                      type="text"
-                                      name="price_max"
-                                      min="0"
-                                      value="100"
-                                      max="10000"
-                                      data-type="price_max"
-                                      data-input-number
-                                    />
-
-                                    <p class="p1">$</p>
-                                  </div>
-                                </label>
+                  <div class="lg-none">
+                    <div class="filter filter--three">
+                      <div class="filter__item">
+                        <div
+                          class="dropdown dropdown--price"
+                          data-price-template="from {min} to {max} $"
+                        >
+                          <button class="dropdown__btn" type="button">
+                            <p class="p1">Price</p>
+  
+                            <div class="dropdown__block">
+                              <div
+                                class="dropdown__active dropdown__text p2"
+                              ></div>
+  
+                              <span class="icon icon--xs arrow">
+                                <svg style="rotate: -90deg">
+                                  <use xlink:href="#arrow-angle-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </button>
+  
+                          <div class="dropdown__content price-popup">
+                            <div class="price-popup__content">
+                              <div class="price-popup__items">
+                                <div class="input-box input-box--border">
+                                  <label class="input-box__content">
+                                    <p class="p3">from</p>
+  
+                                    <div class="input-box__info">
+                                      <input
+                                        placeholder="0"
+                                        type="text"
+                                        name="price_min"
+                                        min="0"
+                                        value="43"
+                                        max="10000"
+                                        data-type="price_min"
+                                        data-input-number
+                                      />
+  
+                                      <p class="p1">$</p>
+                                    </div>
+                                  </label>
+                                </div>
+  
+                                <div class="input-box input-box--border">
+                                  <label class="input-box__content">
+                                    <p class="p3">to</p>
+  
+                                    <div class="input-box__info">
+                                      <input
+                                        placeholder="1 600 $"
+                                        type="text"
+                                        name="price_max"
+                                        min="0"
+                                        value="100"
+                                        max="10000"
+                                        data-type="price_max"
+                                        data-input-number
+                                      />
+  
+                                      <p class="p1">$</p>
+                                    </div>
+                                  </label>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div class="filter__item">
-                      <div class="dropdown dropdown--select">
-                        <button class="dropdown__btn" type="button">
-                          <p class="p1">Country</p>
-
-                          <div class="dropdown__block">
-                            <div
-                              class="dropdown__active dropdown__text p2"
-                            ></div>
-
-                            <span class="icon icon--xs arrow">
-                              <svg style="rotate: -90deg">
-                                <use xlink:href="#arrow-angle-icon"></use>
-                              </svg>
-                            </span>
-                          </div>
-                        </button>
-
-                        <div class="dropdown__content">
-                          <div class="dropdown__info">
-                            <ul class="dropdown__list">
-                              <li
-                                class="dropdown__item dropdown-item-close"
-                                data-value="All"
-                                data-active
-                              >
-                                All
-                              </li>
-
-                              <li
-                                class="dropdown__item dropdown-item-close"
-                                data-value="Spain"
-                              >
-                                Spain
-                              </li>
-
-                              <li
-                                class="dropdown__item dropdown-item-close"
-                                data-value="Russia"
-                              >
-                                Russia
-                              </li>
-                            </ul>
+  
+                      <div class="filter__item">
+                        <div class="dropdown dropdown--select">
+                          <button class="dropdown__btn" type="button">
+                            <p class="p1">Country</p>
+  
+                            <div class="dropdown__block">
+                              <div
+                                class="dropdown__active dropdown__text p2"
+                              ></div>
+  
+                              <span class="icon icon--xs arrow">
+                                <svg style="rotate: -90deg">
+                                  <use xlink:href="#arrow-angle-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </button>
+  
+                          <div class="dropdown__content">
+                            <div class="dropdown__info">
+                              <ul class="dropdown__list">
+                                <li
+                                  class="dropdown__item dropdown-item-close"
+                                  data-value="All"
+                                  data-active
+                                >
+                                  All
+                                </li>
+  
+                                <li
+                                  class="dropdown__item dropdown-item-close"
+                                  data-value="Spain"
+                                >
+                                  Spain
+                                </li>
+  
+                                <li
+                                  class="dropdown__item dropdown-item-close"
+                                  data-value="Russia"
+                                >
+                                  Russia
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div class="filter__item">
-                      <div class="dropdown dropdown--select">
-                        <button class="dropdown__btn" type="button">
-                          <p class="p1">Type</p>
-
-                          <div class="dropdown__block">
-                            <div
-                              class="dropdown__active dropdown__text p2"
-                            ></div>
-
-                            <span class="icon icon--xs arrow">
-                              <svg style="rotate: -90deg">
-                                <use xlink:href="#arrow-angle-icon"></use>
-                              </svg>
-                            </span>
-                          </div>
-                        </button>
-
-                        <div class="dropdown__content">
-                          <div class="dropdown__info">
-                            <ul class="dropdown__list">
-                              <li
-                                class="dropdown__item dropdown-item-close"
-                                data-value="All"
-                                data-active
-                              >
-                                All
-                              </li>
-
-                              <li
-                                class="dropdown__item dropdown-item-close"
-                                data-value="Villa"
-                              >
-                                Villa
-                              </li>
-
-                              <li
-                                class="dropdown__item dropdown-item-close"
-                                data-value="Penthouse"
-                              >
-                                Penthouse
-                              </li>
-                            </ul>
+  
+                      <div class="filter__item">
+                        <div class="dropdown dropdown--select">
+                          <button class="dropdown__btn" type="button">
+                            <p class="p1">Type</p>
+  
+                            <div class="dropdown__block">
+                              <div
+                                class="dropdown__active dropdown__text p2"
+                              ></div>
+  
+                              <span class="icon icon--xs arrow">
+                                <svg style="rotate: -90deg">
+                                  <use xlink:href="#arrow-angle-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </button>
+  
+                          <div class="dropdown__content">
+                            <div class="dropdown__info">
+                              <ul class="dropdown__list">
+                                <li
+                                  class="dropdown__item dropdown-item-close"
+                                  data-value="All"
+                                  data-active
+                                >
+                                  All
+                                </li>
+  
+                                <li
+                                  class="dropdown__item dropdown-item-close"
+                                  data-value="Villa"
+                                >
+                                  Villa
+                                </li>
+  
+                                <li
+                                  class="dropdown__item dropdown-item-close"
+                                  data-value="Penthouse"
+                                >
+                                  Penthouse
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  <div class="lg-show border-decor border-decor--top">
+                    <div class="links-decor">
+                      <button
+                        type="button"
+                        aria-label="Open Filter"
+                        class="link-decor  link-decor--border-no-cvet link-decor--border-no-cvet--media  modal-open"
+                        data-modal="filterModal"
+
+                      >
+                        <div class="link-decor__content">
+                          <p class="p1">Open Filter</p>
+
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#filter-icon"></use>
+                            </svg>
+                          </span>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                 
 
                   <div class="goods goods--gap goods--two">
                     <button
@@ -715,6 +740,7 @@
 
       @@include('../modules/footer.html')
       @@include('../modals/rentEstateOneStep.html')
+      @@include('../modals/filter.html')
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>

@@ -107,10 +107,10 @@
   }
 
   @media (max-width: $desktop-breakpoint) {
-    --max-width-inner: 65%;
+    --max-width-inner: 100%;
   }
 
-  @media (max-width: $tablet-breakpoint) {
+  @media (max-width: $desktop-breakpoint) {
     --max-width-inner: 100%;
 
     &__close {
@@ -154,6 +154,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-btns);
+
+    
   }
 
   @media (min-width: $xl-desktop-breakpoint) {
@@ -164,19 +166,60 @@
 }
 
 .rentBoxModal {
-  --padding-inline-rent-inner: 24px;
-  --padding-block-footer: 40px;
+  --padding-inline-rent-inner: #{calculate-clamp(
+    16px,
+    24px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
+  --padding-block-footer: #{calculate-clamp(
+    24px,
+    40px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
   --padding-rent-footer: var(--padding-block-footer)
     var(--padding-inline-rent-inner);
   --gap-rent-footer: 24px;
-  --gap-rent-btns: 24px;
+  --gap-rent-btns: #{calculate-clamp(
+    16px,
+    24px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
+  --padding-block-footer: #{calculate-clamp(
+    24px,
+    40px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
   --gap-rent-item: 24px;
-  --padding-rent-item: 40px 24px;
+  --padding-rent-item: #{calculate-clamp(
+    24px,
+    40px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )} #{calculate-clamp(
+    16px,
+    24px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
   --gap-rent-items: 24px;
   --gap-rent-checks: 16px;
 
   &__status {
-    padding: 40px 20px;
+    padding: calculate-clamp(
+      24px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    ) calculate-clamp(
+      0px,
+      20px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
     margin: 0 auto;
     color: var(--gray-color-400);
 
@@ -219,9 +262,7 @@
     }
 
     &__inner-box {
-      height: calc(
-        100% - (var(--gap-inner) * 2) - (var(--padding-block-footer) * 2)
-      );
+      padding-bottom: var(--rentBoxModal-footer-height, 200px);
       padding-inline: var(--padding-inline-rent-inner);
     }
   }
@@ -231,6 +272,16 @@
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
   }
 
   &__footer {
@@ -241,6 +292,11 @@
     border-top: 1px solid var(--gray-color-500);
     background-color: var(--dark-color-400);
     margin-top: auto;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &__item {
@@ -249,6 +305,10 @@
     gap: var(--gap-rent-item);
     padding: var(--padding-rent-item);
     border-bottom: 1px solid var(--gray-color-500);
+
+    &:first-child {
+      border-top: 1px solid var(--gray-color-500);
+    }
   }
 
   &__items {
@@ -284,7 +344,18 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-rent-btns);
+
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
   }
+
+
+    .good-mini {
+      min-height: 0;
+    }
+  
 
   @media (min-width: $xl-desktop-breakpoint) {
     --padding-inline-rent-inner: #{vw(24)};
@@ -296,4 +367,34 @@
     --gap-rent-items: #{vw(24)};
     --gap-rent-checks: #{vw(16)};
   }
+
+  @media (max-width: $lg-breakpoint) {
+    &__btns {
+      display: grid;
+      grid-template-columns: 76px auto;
+
+      &--column {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.filterModal {
+  
+
+  // .modalBlock {
+  //   &__inner {
+  //     padding-inline: 0;
+  //   }
+
+  //   &__header {
+  //     padding-inline: var(--container-inline-padding);
+  //   }
+
+  //   .form__footer  {
+  //     border-top: 1px solid var(--gray-color-500);
+  //   }
+  // }
 }

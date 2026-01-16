@@ -4,8 +4,14 @@
   justify-content: center;
   gap: 16px;
   border-radius: 244px;
-  min-height: calculate-clamp(76px, 88px, $xl-desktop-breakpoint, $tablet-breakpoint);
-  padding: 16px calculate-clamp(20px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint);
+  min-height: calculate-clamp(
+    76px,
+    88px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  );
+  padding: 16px
+    calculate-clamp(20px, 40px, $xl-desktop-breakpoint, $tablet-breakpoint);
   background-color: var(--primary-color-100);
   font-weight: 600;
   color: var(--dark-color-300);
@@ -20,7 +26,12 @@
   &--noBg {
     background-color: transparent;
     color: var(--gray-color-300);
-    padding-inline: calculate-clamp(40px, 75px, $xl-desktop-breakpoint, $tablet-breakpoint);
+    padding-inline: calculate-clamp(
+      40px,
+      75px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    );
 
     &:hover {
       color: var(--dark-color-200);
@@ -33,6 +44,19 @@
     &-gray-500 {
       border-color: var(--gray-color-500);
     }
+  }
+
+  &--circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    flex-shrink: 0;
+    min-height: 0;
+    padding: 0;
   }
 
   &.disabled {

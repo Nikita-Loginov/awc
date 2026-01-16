@@ -2,7 +2,22 @@
   <form class="modalBlock__inner form">
     <div class="modalBlock__inner-box">
       <div class="modalBlock__header">
-        <p class="h4">Rent a Real Estate</p>
+        <div class="modalBlock__header-block">
+          <p class="h4">Rent a Real Estate</p>
+
+          <button
+            type="button"
+            class="modalBlock__close modal-close"
+            aria-label="Закрыть мдальное окно"
+          >
+            <span class="icon icon--xs">
+              <svg>
+                <use xlink:href="#close-icon"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+       
 
         <div class="textbox">
           <p class="p1 manrope-font">
@@ -169,7 +184,7 @@
     </div>
 
     <div class="rentBoxModal__footer">
-      <div class="form__footer form__footer--column">
+      <div class="form__footer form__footer--column form__footer--noPadding">
         <button class="button modal-open" type="submit" data-modal="thxModal">
           <p class="p1">View Now</p>
         </button>

@@ -32,3 +32,13 @@
 .filter--three {
   --grid-template-columns-filter: repeat(3, 1fr);
 }
+.filter--column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0;
+}

@@ -183,6 +183,14 @@
       </g>
     </g>
   </symbol>
+
+  <symbol id="filter-icon" viewBox="0 0 18 18">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M5.75 11.4375L7.25 12.3438V7.65625L7.6875 7.21875L10.375 4.5H2.59375L5.75 7.65625V11.4375ZM1 3H12V5L8.75 8.25V15L7.25 14.0938L4.25 12.25V8.25L1 5V3ZM13 3.25H17V4.75H13V3.25ZM17 8.25V9.75H11V8.25H17ZM17 13.25V14.75H11V13.25H17Z"
+      fill="currentCOlor"
+    />
+  </symbol>
 </svg>
 
 
@@ -921,7 +929,39 @@
                     </li>
                   </ul>
 
-                  <div class="form__footer form__footer--column">
+                  <div class="banner-good__item md-desktop-show">
+                    <ul class="list-simple list-simple--big">
+                      <li
+                        class="list-simple__item list-simple__item--space-between"
+                      >
+                        <div class="list-simple__mean">
+                          <p>Full protection:</p>
+                        </div>
+
+                        <div class="list-simple__info">
+                          <p class="p1 text-gray-400 tiktok-font">
+                            1 200 $ / 5 days
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="list-simple__item list-simple__item--space-between"
+                      >
+                        <div class="list-simple__mean">
+                          <p>Total:</p>
+                        </div>
+
+                        <div class="list-simple__info">
+                          <p class="h6 tiktok-font">8 400 $</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="form__footer form__footer--noPadding form__footer--column"
+                  >
                     <button
                       class="button disabled modal-open"
                       type="submit"
@@ -942,9 +982,8 @@
                 <div class="rental__banners">
                   <div class="rental__banners-sticky">
                     <div
-                      class="banner-good accordeon"
-                      data-width="767"
-                      style="--accordeon-init: 767px"
+                      class="banner-good accordeon accordeon--md-init"
+                      data-width="1279"
                     >
                       <div class="good-mini overlay overlay--gradient">
                         <div class="good-mini__inner">
@@ -1089,7 +1128,7 @@
                             </ul>
                           </div>
 
-                          <div class="banner-good__item">
+                          <div class="banner-good__item md-desktop-none">
                             <ul class="list-simple list-simple--big">
                               <li
                                 class="list-simple__item list-simple__item--space-between"
@@ -1117,6 +1156,24 @@
                                 </div>
                               </li>
                             </ul>
+                          </div>
+                        </div>
+
+                        <div class="md-desktop-show" style="width: 100%">
+                          <div class="accordeon__question">
+                            <p
+                              class="p1 semibold-font text-gray-300 accordeon__question-text"
+                              data-open-text="Hide Part Order"
+                              data-close-text="Show Part Order"
+                            >
+                              Show Part Order
+                            </p>
+
+                            <span class="icon arrow">
+                              <svg style="rotate: -90deg">
+                                <use xlink:href="#arrow-angle-icon"></use>
+                              </svg>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -1326,7 +1383,7 @@
         <ul class="footer-copy__list">
           <li class="footer-copy__link">
             <a
-              href="#"
+              href="/policy.html"
               aria-label="Перейти на страницу Privacy Policy"
               class="footer-copy__item text-underline p2 link link--gray-400"
               title="Privacy Policy"

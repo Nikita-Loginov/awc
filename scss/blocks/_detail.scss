@@ -1,5 +1,10 @@
 .detail {
-  --inner-gap: 96px;
+  --inner-gap: #{calculate-clamp(
+    40px,
+    96px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
   --content-gap: 40px;
   --info-gap: 24px;
 
@@ -34,5 +39,17 @@
     --inner-gap: #{vw(96)};
     --content-gap: #{vw(40)};
     --info-gap: #{vw(24)};
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__items,
+    &__info {
+      max-width: 100%;
+    }
   }
 }

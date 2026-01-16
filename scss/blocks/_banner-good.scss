@@ -1,11 +1,36 @@
 .banner-good {
-  --banner-content-padding-x: 24px;
-  --banner-content-padding-y: 40px;
-  --banner-item-padding-y: 40px;
+  --banner-content-padding-x: #{calculate-clamp(
+      16px,
+      24px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --banner-content-padding-y: #{calculate-clamp(
+      24px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --banner-item-padding-y: #{calculate-clamp(
+      24px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
   --banner-head-gap: 24px;
   --banner-head-item-gap: 24px;
-  --banner-head-item-separator-width: 30px;
-  --banner-head-item-separator-height: 81px;
+  --banner-head-item-separator-width: #{calculate-clamp(
+      16px,
+      30px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --banner-head-item-separator-height: #{calculate-clamp(
+      54px,
+      81px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
   --banner-head-item-content-gap: 16px;
   --banner-border-width: 1px;
 
@@ -34,24 +59,31 @@
   &__head {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: var(--banner-head-gap);
   }
 
   &__head-item {
     display: flex;
-    align-items: center;
     gap: var(--banner-head-item-gap);
 
     &:not(:last-child) {
+      padding-right: calc(
+        var(--banner-head-item-gap) + var(--banner-head-item-separator-width)
+      );
+      position: relative;
+
       &:after {
         content: "";
         width: var(--banner-head-item-separator-width);
         height: var(--banner-head-item-separator-height);
         flex-shrink: 0;
+        position: absolute;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='81' viewBox='0 0 26 81' fill='none'%3E%3Cpath d='M0.429688 0.257263L24.4297 40.2573L0.429688 80.2573' stroke='%23EBC246'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-size: contain;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
@@ -72,5 +104,28 @@
     --banner-head-item-separator-height: #{vw(81)};
     --banner-head-item-content-gap: #{vw(16)};
     --banner-border-width: #{vw(1)};
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    &__content {
+      padding: 0;
+    }
+
+    .accordeon {
+      &__question {
+        padding: var(--banner-content-padding-y) var(--banner-content-padding-x);
+      }
+
+      &__item {
+        &.active {
+          .accordeon {
+            &__answer {
+              padding: var(--banner-content-padding-y)
+                var(--banner-content-padding-x) 0;
+            }
+          }
+        }
+      }
+    }
   }
 }

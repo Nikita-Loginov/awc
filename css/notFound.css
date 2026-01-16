@@ -1,9 +1,9 @@
 .notFound {
   --notfound-height: 100%;
-  --notfound-content-gap: 60px;
+  --notfound-content-gap: clamp(20px, -6.6088464874px + 3.4692107546vw, 60px);
   --notfound-content-max-width: calc(100% / 3);
   --notfound-info-gap: 0;
-  --notfound-details-gap: 80px;
+  --notfound-details-gap: clamp(40px, 13.3911535126px + 3.4692107546vw, 80px);
   --notfound-button-max-width: 57%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,5 +83,16 @@
     --notfound-content-gap: 3.125vw;
     --notfound-content-max-width: calc(100% / 3);
     --notfound-details-gap: 4.1666666667vw;
+  }
+}
+@media (max-width: 1279px) {
+  .notFound {
+    --notfound-button-max-width: 100%;
+    --notfound-content-max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .notFound {
+    --notfound-content-max-width: 100%;
   }
 }

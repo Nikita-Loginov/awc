@@ -59,10 +59,22 @@ export const SWIPERS = {
     breakpoint: 122300000000,
 
     options: {
-      slidesPerView: 3,
-      spaceBetween: 40,
+      slidesPerView: 1.08,
+      spaceBetween: 4,
+      mousewheel: MOUSE_WHEEL_CONFIG,
       breakpoints: {
-        ...CARDS_CONFIG.breakpoints,
+        1500: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2.2,
+          spaceBetween: 20,
+        },
+        600: {
+          slidesPerView: 1.7,
+          spaceBetween: 10,
+        }
       },
     },
   },
@@ -72,13 +84,24 @@ export const SWIPERS = {
 
     options: {
       ...CARDS_CONFIG.options,
-      slidesPerView: 4,
       navigation: {
         nextEl: ".team .arrow-swiper.next",
         prevEl: ".team .arrow-swiper.prev",
       },
       breakpoints: {
-        ...CARDS_CONFIG.breakpoints,
+        1279: {
+          slidesPerView: 4,
+        },
+        
+        1024: {
+          slidesPerView: 3,
+        },
+
+        600 : {
+          slidesPerView: 2,
+        },
+
+
       },
     },
   },

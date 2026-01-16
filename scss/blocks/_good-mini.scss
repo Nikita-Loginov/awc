@@ -1,13 +1,30 @@
 .good-mini {
-  --padding-box-good-mini: 24px;
-  --gap-box-good-mini: 24px;
-  --gap-items-good-mini: 40px;
+  --padding-box-good-mini: #{calculate-clamp(
+      16px,
+      24px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --gap-box-good-mini: #{calculate-clamp(
+      16px,
+      24px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
+  --gap-items-good-mini: #{calculate-clamp(
+      16px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )};
   --gap-item-good-mini: 8px;
 
   position: relative;
   padding: var(--padding-box-good-mini);
   overflow: hidden;
   color: var(--gray-color-400);
+  display: flex;
+  flex-direction: column;
 
   &__inner {
     display: flex;
@@ -15,6 +32,8 @@
     gap: var(--gap-box-good-mini);
     position: relative;
     z-index: 2;
+    justify-content: space-between;
+    flex:1;
   }
 
   &__header {
@@ -71,5 +90,9 @@
     --gap-box-good-mini: #{vw(24)};
     --gap-items-good-mini: #{vw(40)};
     --gap-item-good-mini: #{vw(8)};
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    min-height: calculate-clamp(0px, 400px, $lg-breakpoint, 400px);
   }
 }
