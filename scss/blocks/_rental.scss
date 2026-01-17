@@ -86,7 +86,7 @@
   }
 
   &__banners-sticky {
-    transition: all 0.3s;
+    transition: all 0.5s;
 
     @media (min-height: 700px) and (min-width:  $md-desktop-breakpoint) {
       position: sticky;

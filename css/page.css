@@ -414,8 +414,8 @@ body:before {
   backdrop-filter: blur(10px);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
@@ -1111,8 +1111,8 @@ body .wrapper .br-el--rounded-3xl {
   width: 100%;
   left: 0;
   right: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   padding: clamp(20px, 15.4381270903px + 0.4459308807vw, 24px) 0;
   color: var(--gray-color-400);
 }
@@ -1281,8 +1281,8 @@ body.scrollTop:not(.scrollVisible) .header {
 
 .link {
   color: var(--gray-color-200);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   background-color: transparent;
 }
 .link--gray-200 {
@@ -1316,8 +1316,8 @@ body.scrollTop:not(.scrollVisible) .header {
           flex-direction: column;
   color: var(--gray-color-300);
   border-bottom: var(--border-width) solid var(--border-color);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -1346,8 +1346,8 @@ body.scrollTop:not(.scrollVisible) .header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1647,8 +1647,8 @@ body.scrollTop:not(.scrollVisible) .header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .card-item__img-decor {
   width: 100%;
@@ -2070,8 +2070,8 @@ body.scrollTop:not(.scrollVisible) .header {
           transform: translateX(-50%);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .list-popup__content::after {
   content: "";
@@ -2686,6 +2686,7 @@ body.scrollTop:not(.scrollVisible) .header {
   }
 }
 .good-item:hover .link-decor {
+  --border-color: var(--primary-color-100);
   border-color: var(--border-color);
   color: var(--primary-color-100);
 }
@@ -2958,8 +2959,8 @@ body.scrollTop:not(.scrollVisible) .header {
   width: 100%;
   border-top: 1px solid var(--gray-color-500);
   background-color: var(--bg-dropdown-inner);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .dropdown.active {
   --bg-dropdown-inner: var(--dark-color-400);
@@ -3005,8 +3006,8 @@ body.scrollTop:not(.scrollVisible) .header {
   color: var(--gray-color-200);
 }
 .dropdown__btn .arrow {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .dropdown__block {
   display: -webkit-box;
@@ -3023,8 +3024,8 @@ body.scrollTop:not(.scrollVisible) .header {
 .dropdown__item {
   cursor: pointer;
   color: var(--gray-color-200);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .dropdown__item.active {
   color: var(--gray-color-400);
@@ -3077,8 +3078,8 @@ body.scrollTop:not(.scrollVisible) .header {
   right: 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .dropdown__content:before {
   position: absolute;
@@ -3661,8 +3662,8 @@ body.scrollTop:not(.scrollVisible) .header {
       flex-shrink: 0;
   background-color: var(--dark-color-300);
   margin-right: auto;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (min-width: 1920px) {
   .switch {
@@ -3735,12 +3736,12 @@ body.scrollTop:not(.scrollVisible) .header {
   .accordeon--md-init .accordeon__answer {
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   .accordeon--md-init .accordeon .arrow {
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   .accordeon--md-init .accordeon__item.active .arrow {
     rotate: -180deg;
@@ -3778,8 +3779,8 @@ body.scrollTop:not(.scrollVisible) .header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   background-color: var(--dark-color-275);
   backdrop-filter: blur(10px);
 }
@@ -3810,8 +3811,8 @@ body.scrollTop:not(.scrollVisible) .header {
   overflow-x: hidden;
   overflow-y: auto;
   max-height: auto;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .modalBlock__header {
   display: -webkit-box;
@@ -4226,8 +4227,8 @@ body.scrollTop:not(.scrollVisible) .header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .menu__burger-box:after, .menu__burger-box:before {
   position: absolute;
@@ -4267,8 +4268,8 @@ body.scrollTop:not(.scrollVisible) .header {
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .menu__langs {
   display: -webkit-box;

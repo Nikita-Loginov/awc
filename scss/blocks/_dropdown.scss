@@ -13,7 +13,7 @@
   width: 100%;
   border-top: 1px solid var(--gray-color-500);
   background-color: var(--bg-dropdown-inner);
-  transition: all 0.3s;
+  transition: all 0.5s;
 
   &.active {
     --bg-dropdown-inner: var(--dark-color-400);
@@ -69,7 +69,7 @@
     color: var(--gray-color-200);
 
     .arrow {
-      transition: all 0.3s;
+      transition: all 0.5s;
     }
   }
 
@@ -83,7 +83,7 @@
   &__item {
     cursor: pointer;
     color: var(--gray-color-200);
-    transition: all 0.3s;
+    transition: all 0.5s;
 
     &.active {
       color: var(--gray-color-400);
@@ -127,7 +127,7 @@
     right: 0;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s;
+    transition: all 0.5s;
 
     &:before {
       position: absolute;

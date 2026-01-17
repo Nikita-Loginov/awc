@@ -17,6 +17,8 @@
 
   &:hover {
     .link-decor {
+      --border-color: var(--primary-color-100);
+      
       @include hover-link-decor;
     }
   }
