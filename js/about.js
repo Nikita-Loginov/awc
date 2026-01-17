@@ -1,5 +1,6 @@
 import { SWIPERS } from "./swiper/index.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
+import { animateGlobal } from "./globe/index.js";
 
 const swipers = [
   {
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   handleAllSliders();
+  animateGlobal()
 
   document.addEventListener("click", handleGlobalClick);
 });
