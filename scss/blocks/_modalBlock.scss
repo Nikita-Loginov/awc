@@ -234,6 +234,11 @@
     color: var(--gray-color-400);
 
     .swiper {
+      .swiper-wrapper {
+        margin: 0 auto;
+        width: fit-content;
+      }
+
       .swiper-slide {
         width: fit-content;
 
@@ -303,7 +308,7 @@
     background-color: var(--dark-color-400);
     margin-top: auto;
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     left: 0;
     right: 0;
     bottom: 0;

@@ -145,9 +145,23 @@
     // border-right: 1px solid var(--border-color);
   }
 
+ 
+
   @media (max-width: $desktop-breakpoint) {
     .form__item-box {
       &:first-child {
+        border-top: 1px solid var(--border-color);
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .form__item-box {
+      &:first-child {
+        display: none;
+      }
+
+      &:nth-child(2) {
         border-top: 1px solid var(--border-color);
       }
     }

@@ -25,6 +25,7 @@ export const validators = {
   },
 
   dropdown(field) {
+    
     const value = field.dataset.value || field.dataset.selected;
 
     if (!value) return false;
@@ -32,12 +33,21 @@ export const validators = {
     try {
       const parsed = JSON.parse(value);
 
+     
+
       if (Array.isArray(parsed)) {
         return parsed.length > 0;
       }
 
       if (typeof parsed === "object") {
-        return Object.values(parsed).some(Boolean);
+        const { min, max } = parsed;
+  
+        return (
+          min !== null &&
+          min !== "" &&
+          max !== null &&
+          max !== ""
+        );
       }
 
       return Boolean(parsed);

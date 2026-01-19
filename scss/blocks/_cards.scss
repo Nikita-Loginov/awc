@@ -191,6 +191,12 @@
   &__footer {
     gap: 24px;
 
+    &--max {
+      @media (min-width: $desktop-breakpoint) {
+        max-width: 78%;
+      }
+    }
+
     @media (min-width: $xl-desktop-breakpoint) {
       gap: #{vw(24)};
     }
@@ -412,6 +418,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: var(--dark-color-300);
 
   &__content {
     display: flex;

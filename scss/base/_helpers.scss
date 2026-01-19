@@ -43,14 +43,16 @@ $mobile-breakpoint: 479px;
   color: var(--primary-color-100);
 
   @media (min-width: $tablet-breakpoint) {
-    --border-width: 24px;
+
+    // padding-bottom: calc(40px - 24px);
    
-    padding-top: calc((var(--paddint-top-item) - var(--border-width)));
+    // padding-top: calc((var(--paddint-top-item) - var(--border-width)));
+    // padding-bottom: calc(40px - var(--border-width));
   }
 
-  @media (min-width: $xl-desktop-breakpoint) {
-    --border-width: #{vw(24)};
-  }
+  // @media (min-width: $xl-desktop-breakpoint) {
+  //   --border-width: #{vw(24)};
+  // }
 }
 
 @mixin custom-scrolbar {

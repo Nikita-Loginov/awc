@@ -1,6 +1,16 @@
 .dropdown {
-  --padding-dropdown-inline: 24px;
-  --padding-dropdown-inner: 24px var(--padding-dropdown-inline);
+  --padding-dropdown-inline: #{calculate-clamp(
+    16px,
+    24px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )};
+  --padding-dropdown-inner: #{calculate-clamp(
+    16px,
+    24px,
+    $xl-desktop-breakpoint,
+    $tablet-breakpoint
+  )} var(--padding-dropdown-inline);
   --gap-btn-dropdown: 16px;
   --gap-items-dropdown: 16px;
   --gap-list-dropdown: 12px;
@@ -47,7 +57,12 @@
   }
 
   &--big {
-    --padding-dropdown-inner: 40px var(--padding-dropdown-inline);
+    --padding-dropdown-inner: #{calculate-clamp(
+      24px,
+      40px,
+      $xl-desktop-breakpoint,
+      $tablet-breakpoint
+    )} var(--padding-dropdown-inline);
   }
 
   &--dark-bg-200 {

@@ -23,7 +23,7 @@
 }
 .allPages__link {
   counter-increment: list;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   font-weight: 800;
   line-height: line-height(16px, 16px);
   display: -webkit-box;

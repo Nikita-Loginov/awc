@@ -158,7 +158,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
 
-      @media (min-width: 360px) and (max-width: $tablet-breakpoint) {
+      @media (max-width: $tablet-breakpoint) {
         & > *:not(:nth-child(even)) {
           position: relative;
           display: flex;
@@ -170,21 +170,21 @@
             width: 1px;
             height: 48px;
             background-color: var(--gray-color-500);
-            right: -5px;
+            right: -10px;
           }
         }
       }
 
-      @media (max-width: 360px) {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 30px;
+      // @media (max-width: 339px) {
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: flex-start;
+      //   gap: 30px;
 
-        p {
-          text-align: left;
-        }
-      }
+      //   p {
+      //     text-align: left;
+      //   }
+      // }
     }
 
     &__item {

@@ -32,6 +32,8 @@ const openLocationReturn = (relative, btn) => {
     '[data-block="location-rent__box"]'
   );
 
+  locationRentBox.classList.add('form__item-box--two')
+
   locationRentBox.insertAdjacentHTML("beforeend", htmlLocationReturn);
 
   btn.textContent = "Close return";
@@ -54,6 +56,14 @@ const hiddenLocationReturn = (relative, btn) => {
   relative.classList.remove("location-open");
 
   const locationReturn = relative.querySelector('[data-block="location-rent"]');
+
+  const locationRentBox = relative.querySelector(
+    '[data-block="location-rent__box"]'
+  );
+
+  console.log(locationRentBox)
+
+  locationRentBox.classList.remove('form__item-box--two')
 
   if (locationReturn) locationReturn.remove();
 

@@ -335,7 +335,7 @@
 
 .planet-orbit {
   --planet-orbit-stroke-color: rgba(230, 232, 235, 0.55);
-  --planet-orbit-stroke-width: 1px;
+  --planet-orbit-stroke-width:1px;
   fill: none;
   stroke: var(--planet-orbit-stroke-color);
   stroke-width: var(--planet-orbit-stroke-width);

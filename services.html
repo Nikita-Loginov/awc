@@ -48,6 +48,14 @@
     />
   </symbol>
 
+  <symbol id="shield-empty-icon" viewBox="0 0 26 28">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M13.0011 0C13.2178 0 13.4886 0.054902 13.7052 0.164706L23.8877 4.55686C25.0792 5.10588 26 6.25882 26 7.68627C25.9458 13.1765 23.7252 23.1137 14.4093 27.6706C13.4886 28.1098 12.4595 28.1098 11.5388 27.6706C2.22291 23.1137 0.00227207 13.1765 0.00227207 7.68627C-0.0518899 6.25882 0.868863 5.10588 2.06043 4.55686L12.2429 0.164706C12.4595 0.054902 12.7303 0 13.0011 0Z"
+      fill="currentColor"
+    />
+  </symbol>
+
   <symbol id="telegram-icon" viewBox="0 0 18 15">
     <path
       xmlns="http://www.w3.org/2000/svg"
@@ -451,7 +459,7 @@
                           <p class="h3">Legal Services</p>
                         </div>
 
-                        <div class="card-item__footer">
+                        <div class="card-item__footer card-item__footer--max">
                           <p class="p1 manrope-font text-gray-300">
                             Our key competencies encompass world-class
                             expertise, and we manage premium assets and
@@ -492,7 +500,7 @@
                           <p class="h3">Financial Consulting</p>
                         </div>
 
-                        <div class="card-item__footer">
+                        <div class="card-item__footer card-item__footer--max">
                           <p class="p1 manrope-font text-gray-300">
                             Strategic financial insight designed to optimize
                             wealth, manage risk, and support confident,
@@ -527,14 +535,14 @@
                     ></a>
                   </div>
 
-                  <div class="card-item card-item--auto overlay card-box">
+                  <div class="card-item card-item--auto overlay card-box ">
                     <div class="card-item__inner">
                       <div class="card-item__inner-info">
                         <div class="card-item__header">
                           <p class="h3">Transaction Advisory</p>
                         </div>
 
-                        <div class="card-item__footer">
+                        <div class="card-item__footer card-item__footer--max">
                           <p class="p1 manrope-font text-gray-300">
                             Expert guidance throughout every stage of the
                             transaction, delivering clarity, risk control, and
@@ -785,7 +793,9 @@
 </section>
 
 
-          <section class="contact border-decor border-decor--bottom ">
+          <section
+  class="contact border-decor border-decor--bottom "
+>
   <div class="container container--big container--paddig-start-only">
     <div class="contact__inner">
       <div class="contact__info">
@@ -798,8 +808,8 @@
             <div class="form__item-box">
               <div class="form__item-block">
                 <p class="h6 text-gray-400">
-                  Leave a request, our manager will contact you shortly and
-                  answer all your questions
+                  <span class="accent-color">Leave a request,</span> our manager
+                  will contact you shortly and answer all your questions
                 </p>
               </div>
             </div>
@@ -879,7 +889,11 @@
           </div>
 
           <div class="form__footer">
-            <button class="button disabled modal-open" type="submit" data-modal="thxModal">
+            <button
+              class="button disabled modal-open"
+              type="submit"
+              data-modal="thxModal"
+            >
               <p class="p1">Send</p>
             </button>
 

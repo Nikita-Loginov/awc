@@ -152,6 +152,10 @@ body {
 
   @media (min-width: $xl-desktop-breakpoint) {
     gap: #{vw(14)};
+
+    &--noGap {
+      gap: 0;
+    }
   }
 }
 
@@ -253,7 +257,7 @@ body {
     }
 
     @media (min-width: $tablet-breakpoint) {
-      width: 40%;
+      width: calc(100% / 3);
     }
   }
 

@@ -28,8 +28,6 @@
                   <p class="h6 good-mini__title text-gray-200">
                     Lamborghini <span class="text-gray-300">Urus</span>
                   </p>
-
-                  
                 </div>
 
                 <div class="good-mini__info">
@@ -56,8 +54,6 @@
                     <p class="p1">2024 year</p>
                   </div>
                 </div>
-
-               
               </div>
             </div>
 
@@ -242,9 +238,10 @@
             <div class="form__item-box form__item-box--two">
               <div class="form__item">
                 <div
-                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  class="dropdown dropdown--price  dropdown--dark-bg-200"
+                  data-price-template="{min}h : {max}m"
                   data-placeholder="Choose time"
-                  data-name="date"
+                  data-name="select"
                 >
                   <button class="dropdown__btn" type="button">
                     <p class="p1">Pick up time</p>
@@ -259,25 +256,67 @@
                       </span>
                     </div>
 
-                    <div class="form__errors dropdown__errors"></div>
+                    <div class="dropdown__errors form__errors p4"></div>
                   </button>
 
-                  <div class="dropdown__content date-popup">
-                    <div
-                      class="date-popup__content date-calendar"
-                      data-calendar
-                      data-inline="true"
-                      data-time="true"
-                    ></div>
+                 
+
+                  <div class="dropdown__content price-popup">
+                    <div class="price-popup__content">
+                      <div class="price-popup__items">
+                        <div class="input-box input-box--border">
+                          <label class="input-box__content">
+                            <p class="p3">hours</p>
+
+                            <div class="input-box__info">
+                              <input
+                                placeholder="0"
+                                type="text"
+                                name="price_min"
+                                min="0"
+                                value="23"
+                                max="23"
+                                data-type="price_min"
+                                data-input-number
+                              />
+
+                              <p class="p1">h</p>
+                            </div>
+                          </label>
+                        </div>
+
+                        <div class="input-box input-box--border">
+                          <label class="input-box__content">
+                            <p class="p3">min</p>
+
+                            <div class="input-box__info">
+                              <input
+                                placeholder="59"
+                                type="text"
+                                name="price_max"
+                                min="0"
+                                value="59"
+                                max="59"
+                                data-type="price_max"
+                                data-input-number
+                              />
+
+                              <p class="p1">m</p>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div class="form__item">
                 <div
-                  class="dropdown dropdown--date dropdown--dark-bg-200"
+                  class="dropdown dropdown--price dropdown--dark-bg-200"
+                  data-price-template="{min}h : {max}m"
                   data-placeholder="Choose time"
-                  data-name="date"
+                  data-name="select"
                 >
                   <button class="dropdown__btn" type="button">
                     <p class="p1">Return time</p>
@@ -292,17 +331,57 @@
                       </span>
                     </div>
 
-                    <div class="form__errors dropdown__errors"></div>
+                    <div class="dropdown__errors form__errors p4"></div>
                   </button>
 
-                  <div class="dropdown__content date-popup">
-                    <div
-                      class="date-popup__content date-calendar"
-                      data-calendar
-                      data-inline="true"
-                      data-time="true"
-                      data-min-date="true"
-                    ></div>
+                 
+
+                  <div class="dropdown__content price-popup">
+                    <div class="price-popup__content">
+                      <div class="price-popup__items">
+                        <div class="input-box input-box--border">
+                          <label class="input-box__content">
+                            <p class="p3">hours</p>
+
+                            <div class="input-box__info">
+                              <input
+                                placeholder="0"
+                                type="text"
+                                name="price_min"
+                                min="0"
+                                value="23"
+                                max="23"
+                                data-type="price_min"
+                                data-input-number
+                              />
+
+                              <p class="p1">h</p>
+                            </div>
+                          </label>
+                        </div>
+
+                        <div class="input-box input-box--border">
+                          <label class="input-box__content">
+                            <p class="p3">min</p>
+
+                            <div class="input-box__info">
+                              <input
+                                placeholder="59"
+                                type="text"
+                                name="price_max"
+                                min="0"
+                                value="59"
+                                max="59"
+                                data-type="price_max"
+                                data-input-number
+                              />
+
+                              <p class="p1">m</p>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -318,7 +397,7 @@
           <button
             class="button button--noBg button--border button--border-gray-500 modal-close"
             type="button"
-            style="width: 100%;"
+            style="width: 100%"
           >
             <p class="p1">Previous Step</p>
           </button>
@@ -329,12 +408,11 @@
             class="button button--circle button--noBg button--border button--border-gray-500 modal-close"
             type="button"
           >
-          <span class="icon" style="rotate:-135deg">
-            <svg>
-              <use xlink:href="#arrow-line-icon"></use>
-            </svg>
-          </span>
-          
+            <span class="icon" style="rotate: -135deg">
+              <svg>
+                <use xlink:href="#arrow-line-icon"></use>
+              </svg>
+            </span>
           </button>
         </div>
 

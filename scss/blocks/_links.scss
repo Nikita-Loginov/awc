@@ -26,13 +26,14 @@
 }
 
 .link-decor {
-  --border-width: 1px;
+  --border-width: 24px;
   --paddint-top-item: 40px;
   --border-color: var(--gray-color-115);
+  --icon-base: 13px;
 
   padding: var(--paddint-top-item)
     calculate-clamp(16px, 24px, $xl-desktop-breakpoint, $lg-breakpoint)
-    calculate-clamp(25px, 40px, $xl-desktop-breakpoint, $lg-breakpoint);
+    calc(calculate-clamp(25px, 40px, $xl-desktop-breakpoint, $lg-breakpoint) - var(--border-width));
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -83,6 +84,7 @@
 
   &:hover {
     --border-color: var(--primary-color-100);
+   
     @include hover-link-decor;
   }
 
@@ -98,12 +100,15 @@
   }
 
   @media (min-width: $xl-desktop-breakpoint) {
+    --icon-base: #{vw(13)};
     --paddint-top-item: #{vw(40)};
-    padding: var(--paddint-top-item) #{vw(24)} #{vw(40)};
+    --border-width: #{vw(24)};
+    padding: var(--paddint-top-item) #{vw(24)} calc(#{vw(40)} - var(--border-width));
   }
 
   @media (max-width: $tablet-breakpoint) {
     border-bottom: 1px solid var(--border-color);
+    padding-bottom:  calc(calculate-clamp(25px, 40px, $xl-desktop-breakpoint, $lg-breakpoint));;
 
     &--border-no-cvet--media {
       border-bottom: none;

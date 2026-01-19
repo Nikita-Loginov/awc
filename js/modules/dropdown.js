@@ -8,6 +8,11 @@ export const toggleDropdown = (e) => {
   const target = e.target;
 
   if (activeDropdown && activeDropdown.contains(target)) {
+    if (target.closest(".dropdown__btn, .dropdown__toggle")) {
+      closeDropdown(activeDropdown);
+      return;
+    }
+  
     if (!target.closest(".dropdown-item-close")) {
       return;
     }

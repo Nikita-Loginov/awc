@@ -101,6 +101,14 @@
     }
   }
 
+  @media (max-width: $tablet-breakpoint) {
+    .list-simple__item {
+      flex-direction: row;
+      align-items: center;
+    }
+   
+  }
+
   @media (min-width: $xl-desktop-breakpoint) {
     --rental-grid-gap: #{vw(20)};
     --rental-info-gap: #{vw(80)};
