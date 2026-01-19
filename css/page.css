@@ -3884,12 +3884,7 @@ body.scrollTop:not(.scrollVisible) .header {
 }
 @media (max-width: 1439px) {
   .modalBlock {
-    --max-width-inner: 100%;
-  }
-}
-@media (max-width: 1439px) {
-  .modalBlock {
-    --max-width-inner: 100%;
+    --max-width-inner: 50%;
   }
   .modalBlock__close {
     display: none;
@@ -3899,6 +3894,16 @@ body.scrollTop:not(.scrollVisible) .header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media (max-width: 1023px) {
+  .modalBlock {
+    --max-width-inner: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .modalBlock {
+    --max-width-inner: 100%;
   }
 }
 

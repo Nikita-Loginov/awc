@@ -107,11 +107,12 @@
   }
 
   @media (max-width: $desktop-breakpoint) {
-    --max-width-inner: 100%;
+    
   }
 
+
   @media (max-width: $desktop-breakpoint) {
-    --max-width-inner: 100%;
+    --max-width-inner: 50%;
 
     &__close {
       display: none;
@@ -127,6 +128,15 @@
         }
       }
     }
+  }
+
+
+  @media (max-width: $lg-breakpoint) {
+    --max-width-inner: 80%;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --max-width-inner: 100%;
   }
 }
 
