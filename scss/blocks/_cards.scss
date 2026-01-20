@@ -191,10 +191,8 @@
   &__footer {
     gap: 24px;
 
-    &--max {
-      @media (min-width: $desktop-breakpoint) {
-        max-width: 78%;
-      }
+    @media (min-width: $desktop-breakpoint) {
+      max-width: 78%;
     }
 
     @media (min-width: $xl-desktop-breakpoint) {

@@ -77,7 +77,7 @@ const hiddenLocationReturn = (relative, btn) => {
 const getHtmlLocationReturn = () => {
   return ` <div class="form__item" data-block="location-rent">
                 <div
-                  class="dropdown dropdown--select dropdown--dark-bg-200"
+                  class="dropdown dropdown--noBorder dropdown--select dropdown--dark-bg-200"
                   data-name="select"
                   data-placeholder="Choose place of return"
                 >

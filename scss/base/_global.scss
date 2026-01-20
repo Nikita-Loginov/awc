@@ -87,7 +87,7 @@ body {
 
 .container {
   max-width: var(--container-width);
-  margin: 0 auto;
+  // margin: 0 auto;
   padding-inline: var(--container-inline-padding);
   width: 100%;
 
@@ -667,3 +667,14 @@ body .wrapper {
     }
   }
 }
+
+::-moz-selection {
+  color: var(--dark-color-200);
+  background-color: var(--primary-color-100);
+}
+
+::selection {
+  color: var(--dark-color-200);
+  background-color: var(--primary-color-100);
+}
+
