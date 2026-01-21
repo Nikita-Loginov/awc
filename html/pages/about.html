@@ -285,9 +285,11 @@
           </div>
         </section>
 
-        <section class="global">
+        <section
+          class="global-solutions section-padding-bottom border-decor border-decor--bottom"
+        >
           <div class="container">
-            <div class="global__inner topBox topBox--small">
+            <div class="global-solutions__inner topBox">
               <div class="topBox__content">
                 <h2 class="h3">Global Solutions Without Borders</h2>
 
@@ -300,9 +302,96 @@
                 </div>
               </div>
 
-              <div class="global__content">
-                <div id="globe-wrap">
-                  <div id="globe"></div>
+              <div class="global-solutions__content">
+                <div class="global-solutions__box">
+                  <div class="global-solutions__img">
+                    <picture>
+                      <source
+                        srcset="
+                          /img/global/one.png   1x,
+                          /img/global/one2x.png 2x
+                        "
+                      />
+                      <img
+                        src="/img/global/one.png"
+                        alt="фотография"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
+
+                  <div class="global-solutions__line">
+                    <svg
+                    class="global-solutions__orbit"
+                    viewBox="0 0 1065 320"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <defs>
+                      <linearGradient id="orbit-gradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="rgba(18,20,26,0)" />
+                        <stop offset="100%" stop-color="#e6e8eb" />
+                      </linearGradient>
+                    </defs>
+                
+                    <ellipse
+                      id="orbit-path"
+                      cx="532.5"
+                      cy="160"
+                      rx="532.5"
+                      ry="160"
+                      fill="none"
+                      stroke="url(#orbit-gradient)"
+                      stroke-width="2"
+                    />
+                  </svg>
+
+                    <div class="global-solutions__items">
+                      <div class="global-solutions__item">
+                        <p class="p1 medium-font">Germany1</p>
+
+                        <p class="p1 global-solutions__item-desc">
+                          We provide legal services and a fleet of 8 vehicles in
+                          Berlin
+                        </p>
+                      </div>
+
+                      <div class="global-solutions__item">
+                        <p class="p1 medium-font">Germany2</p>
+
+                        <p class="p1 global-solutions__item-desc">
+                          We provide legal services and a fleet of 8 vehicles in
+                          Berlin
+                        </p>
+                      </div>
+
+                      <div class="global-solutions__item">
+                        <p class="p1 medium-font">Germany3</p>
+
+                        <p class="p1 global-solutions__item-desc">
+                          We provide legal services and a fleet of 8 vehicles in
+                          Berlin
+                        </p>
+                      </div>
+
+                      <div class="global-solutions__item">
+                        <p class="p1 medium-font">Germany4</p>
+
+                        <p class="p1 global-solutions__item-desc">
+                          We provide legal services and a fleet of 8 vehicles in
+                          Berlin
+                        </p>
+                      </div>
+
+                      <div class="global-solutions__item">
+                        <p class="p1 medium-font">Germany5</p>
+
+                        <p class="p1 global-solutions__item-desc">
+                          We provide legal services and a fleet of 8 vehicles in
+                          Berlin
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -564,16 +653,6 @@
     </div>
 
     <script src="/js/lib/swiper.min.js" defer></script>
-    <script
-      src="https://unpkg.com/three@0.158.0/build/three.min.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script
-      src="https://unpkg.com/globe.gl"
-      crossorigin="anonymous"
-      defer
-    ></script>
 
     <script src="/js/about.js" type="module"></script>
   </body>
