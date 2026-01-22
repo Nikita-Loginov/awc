@@ -1091,8 +1091,8 @@
             <div class="form__item-box">
               <div class="form__item-block">
                 <p class="h6 text-gray-400">
-                  Leave a request, our manager
-                  will contact you shortly and answer all your questions
+                  Leave a request, our manager will contact you shortly and
+                  answer all your questions
                 </p>
               </div>
             </div>
@@ -1100,7 +1100,11 @@
             <div class="form__item-box">
               <label class="input-box form__item form__item-block">
                 <div class="input-box__content">
-                  <p class="p2">Name</p>
+                  <div class="input-box__head">
+                    <p>Name</p>
+
+                    <p class="input-box__errors form__errors"></p>
+                  </div>
 
                   <div class="input-box__info">
                     <input
@@ -1110,8 +1114,6 @@
                     />
                   </div>
                 </div>
-
-                <p class="input-box__errors p4 form__errors"></p>
               </label>
             </div>
 
@@ -1120,7 +1122,11 @@
                 class="input-box form__item form__item-block input-tel-wrapper"
               >
                 <div class="input-box__content">
-                  <p class="p2">Phone *</p>
+                  <div class="input-box__head">
+                    <p>Phone *</p>
+
+                    <p class="input-box__errors form__errors"></p>
+                  </div>
 
                   <div class="input-box__info">
                     <input
@@ -1131,22 +1137,22 @@
                     />
                   </div>
                 </div>
-
-                <p class="input-box__errors p4 form__errors"></p>
               </label>
 
               <label
                 class="input-box form__item form__item-block input-tel-wrapper"
               >
                 <div class="input-box__content">
-                  <p class="p2">E-mail</p>
+                  <div class="input-box__head">
+                    <p>E-mail</p>
+
+                    <p class="input-box__errors form__errors"></p>
+                  </div>
 
                   <div class="input-box__info">
                     <input type="email" name="email" placeholder="_@_._" />
                   </div>
                 </div>
-
-                <p class="input-box__errors p4 form__errors"></p>
               </label>
             </div>
 
@@ -1155,7 +1161,11 @@
                 class="input-box form__item form__item-block input-tel-wrapper"
               >
                 <div class="input-box__content">
-                  <p class="p2">Massage</p>
+                  <div class="input-box__head">
+                    <p>Massage</p>
+
+                    <p class="input-box__errors form__errors"></p>
+                  </div>
 
                   <div class="input-box__info">
                     <textarea
@@ -1165,8 +1175,6 @@
                     ></textarea>
                   </div>
                 </div>
-
-                <p class="input-box__errors p4 form__errors"></p>
               </label>
             </div>
           </div>
@@ -1482,14 +1490,17 @@
             class="input-box form__item form__item-block border-decor border-decor--top border-decor--gray-500"
           >
             <div class="input-box__content">
-              <p class="p2">Name</p>
+              <div class="input-box__head">
+                <p class="p2">Name</p>
+
+                <p class="input-box__errors form__errors"></p>
+              </div>
+              
 
               <div class="input-box__info">
                 <input type="text" name="name" placeholder="Write our name" />
               </div>
             </div>
-
-            <p class="input-box__errors p4 form__errors"></p>
           </label>
         </div>
 
@@ -1498,7 +1509,12 @@
             class="input-box form__item form__item-block input-tel-wrapper"
           >
             <div class="input-box__content">
-              <p class="p2">Phone *</p>
+              <div class="input-box__head">
+                <p class="p2">Phone *</p>
+
+                <p class="input-box__errors form__errors"></p>
+              </div>
+             
 
               <div class="input-box__info">
                 <input
@@ -1509,29 +1525,35 @@
                 />
               </div>
             </div>
-
-            <p class="input-box__errors p4 form__errors"></p>
           </label>
         </div>
 
         <div class="form__item-box">
           <label class="input-box form__item form__item-block">
             <div class="input-box__content">
-              <p class="p2">E-mail</p>
+              <div class="input-box__head">
+                <p class="p2">E-mail</p>
+                
+                <p class="input-box__errors form__errors"></p>
+              </div>
+              
 
               <div class="input-box__info">
                 <input type="email" name="email" placeholder="_@_._" />
               </div>
             </div>
-
-            <p class="input-box__errors p4 form__errors"></p>
           </label>
         </div>
 
         <div class="form__item-box">
           <label class="input-box form__item form__item-block">
             <div class="input-box__content">
-              <p class="p2">Message</p>
+              <div class="input-box__head">
+                <p class="p2">Message</p>
+
+                <p class="input-box__errors form__errors"></p>
+              </div>
+             
 
               <div class="input-box__info">
                 <textarea
@@ -1541,8 +1563,6 @@
                 ></textarea>
               </div>
             </div>
-
-            <p class="input-box__errors p4 form__errors"></p>
           </label>
         </div>
       </div>

@@ -114,9 +114,11 @@
                 >
                   <button class="dropdown__btn" type="button">
                     <div class="dropdown__block">
-                      <p class="p2 manrope-font text-gray-400">
+                      <p class="manrope-font text-gray-400">
                         Place of rent and return
                       </p>
+
+                      <div class="form__errors dropdown__errors"></div>
                     </div>
 
                     <div class="dropdown__block">
@@ -128,8 +130,6 @@
                         </svg>
                       </span>
                     </div>
-
-                    <div class="form__errors dropdown__errors"></div>
                   </button>
 
                   <div class="dropdown__content">
@@ -177,7 +177,11 @@
                   data-name="date"
                 >
                   <button class="dropdown__btn" type="button">
-                    <p class="p1">Pick up date</p>
+                    <div class="dropdown__block">
+                      <p class="text-gray-400">Pick up date</p>
+
+                      <div class="form__errors dropdown__errors"></div>
+                    </div>
 
                     <div class="dropdown__block">
                       <div class="dropdown__active dropdown__text p2"></div>
@@ -188,8 +192,6 @@
                         </svg>
                       </span>
                     </div>
-
-                    <div class="form__errors dropdown__errors"></div>
                   </button>
 
                   <div class="dropdown__content date-popup">
@@ -209,7 +211,11 @@
                   data-name="date"
                 >
                   <button class="dropdown__btn" type="button">
-                    <p class="p1">Return date</p>
+                    <div class="dropdown__block">
+                      <p class="text-gray-400">Return date</p>
+
+                      <div class="form__errors dropdown__errors"></div>
+                    </div>
 
                     <div class="dropdown__block">
                       <div class="dropdown__active dropdown__text p2"></div>
@@ -220,8 +226,6 @@
                         </svg>
                       </span>
                     </div>
-
-                    <div class="form__errors dropdown__errors"></div>
                   </button>
 
                   <div class="dropdown__content date-popup">
@@ -238,13 +242,17 @@
             <div class="form__item-box form__item-box--two">
               <div class="form__item">
                 <div
-                  class="dropdown dropdown--noBorder dropdown--price  dropdown--dark-bg-200"
+                  class="dropdown dropdown--noBorder dropdown--price dropdown--dark-bg-200"
                   data-price-template="{min}h : {max}m"
                   data-placeholder="Choose time"
                   data-name="select"
                 >
                   <button class="dropdown__btn" type="button">
-                    <p class="p1">Pick up time</p>
+                    <div class="dropdown__block">
+                      <p class="text-gray-400">Pick up time</p>
+
+                      <div class="form__errors dropdown__errors"></div>
+                    </div>
 
                     <div class="dropdown__block">
                       <div class="dropdown__active dropdown__text p2"></div>
@@ -255,11 +263,7 @@
                         </svg>
                       </span>
                     </div>
-
-                    <div class="dropdown__errors form__errors p4"></div>
                   </button>
-
-                 
 
                   <div class="dropdown__content price-popup">
                     <div class="price-popup__content">
@@ -319,7 +323,12 @@
                   data-name="select"
                 >
                   <button class="dropdown__btn" type="button">
-                    <p class="p1">Return time</p>
+                    <div class="dropdown__block">
+                      <p class="text-gray-400">Return time</p>
+
+                      <div class="dropdown__errors form__errors p4"></div>
+                    </div>
+                    
 
                     <div class="dropdown__block">
                       <div class="dropdown__active dropdown__text p2"></div>
@@ -331,10 +340,8 @@
                       </span>
                     </div>
 
-                    <div class="dropdown__errors form__errors p4"></div>
+                   
                   </button>
-
-                 
 
                   <div class="dropdown__content price-popup">
                     <div class="price-popup__content">

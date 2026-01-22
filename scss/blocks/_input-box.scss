@@ -32,12 +32,13 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    font-size: calculate-clamp(16px, 18px,$lg-breakpoint, $tablet-breakpoint);
 
     input,
     textarea {
       background-color: transparent;
       color: var(--gray-color-400);
-      font-size: var(--font-size-sm);
+      font-size: 100%;
       color: var(--gray-color-200);
       cursor: pointer;
       width: 100%;
@@ -45,7 +46,7 @@
 
       &::placeholder {
         color: var(--gray-color-200);
-        font-size: var(--font-size-sm);
+        font-size: 100%;
         opacity: 0;
         transition: all .3s;
       }
@@ -60,16 +61,12 @@
       }
     }
   }
+  
 
   &__errors {
-    font-size: var(--font-size-sm);
+    font-size: calculate-clamp(14px, 16px,$lg-breakpoint, $tablet-breakpoint);
     color: var(--red-100-color);
-    padding: 10px 0 0 ;
     display: none;
-
-    @media (min-width: $xl-desktop-breakpoint) {
-      padding: #{vw(10)} 0 0 0;
-    }
   }
 
   &__block {
@@ -84,6 +81,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    font-size: calculate-clamp(14px, 16px,$lg-breakpoint, $tablet-breakpoint);
   }
 
   &:hover {
@@ -102,7 +100,7 @@
   &.error {
     .input-box {
       &__errors {
-        display: flex;
+        display: -webkit-box;
       }
     }
   }

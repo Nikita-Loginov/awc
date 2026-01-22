@@ -19,38 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleAllSliders();
 
-  if (window.innerWidth >= 768) {
-    initAnim();
-  }
+  initAnim();
 
   document.addEventListener("click", handleGlobalClick);
 });
 
 let resizeTimeout;
 let orbitAnimationId = null;
-let orbitRunning = false;
 
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
     handleAllSliders();
-
-    if (window.innerWidth >= 768 && !orbitRunning) {
-      initAnim();
-    }
-
-    if (window.innerWidth < 768 && orbitRunning) {
-      cancelAnimationFrame(orbitAnimationId);
-      orbitAnimationId = null;
-      orbitRunning = false;
-
-      const items = document.querySelectorAll(".global-solutions__item");
-      items.forEach((item) => {
-        item.classList.remove("active", "back", "middle");
-        item.style.left = "";
-        item.style.top = "";
-      });
-    }
   }, 100);
 });
 
@@ -63,7 +43,29 @@ const initAnim = () => {
   const speed = 0.1;
   const threshold = 10;
 
+  let isPaused = false;
+  let resumeTimer = null;
+  let lastPauseTime = 0;
+
+  const minPauseInterval = 4000;
+
   function animateOrbit() {
+    const isMobile = window.innerWidth <= 767;
+
+    if (isPaused && !isMobile) {
+      isPaused = false;
+      line.classList.remove("pause");
+      if (resumeTimer) {
+        clearTimeout(resumeTimer);
+        resumeTimer = null;
+      }
+    }
+
+    if (isPaused) {
+      orbitAnimationId = requestAnimationFrame(animateOrbit);
+      return;
+    }
+
     const rect = line.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
@@ -86,8 +88,10 @@ const initAnim = () => {
     let activeItem = null;
 
     items.forEach((item, i) => {
-      angleOffsets[i] += speed;
-      if (angleOffsets[i] >= 360) angleOffsets[i] -= 360;
+      if (!isPaused) {
+        angleOffsets[i] += speed;
+        if (angleOffsets[i] >= 360) angleOffsets[i] -= 360;
+      }
 
       const theta = (angleOffsets[i] * Math.PI) / 180;
       const x = cx + rx * Math.cos(theta) - item.offsetWidth / 2;
@@ -117,11 +121,45 @@ const initAnim = () => {
       }
     });
 
+    if (isMobile && !isPaused) {
+      const now = Date.now();
+
+      let lowestItemIndex = -1;
+      let lowestY = -Infinity;
+
+      items.forEach((item, i) => {
+        const y = parseFloat(item.style.top);
+        if (y > lowestY) {
+          lowestY = y;
+          lowestItemIndex = i;
+        }
+      });
+
+      if (lowestItemIndex >= 0 && now - lastPauseTime > minPauseInterval) {
+        const normalizedAngle = angleOffsets[lowestItemIndex] % 360;
+        const angleDiff = Math.min(
+          Math.abs(normalizedAngle - 90),
+          Math.abs(normalizedAngle - 450)
+        );
+
+        if (angleDiff < 3) {
+          isPaused = true;
+          lastPauseTime = now;
+
+          line.classList.add("pause");
+
+          resumeTimer = setTimeout(() => {
+            isPaused = false;
+
+            line.classList.remove("pause");
+          }, 2000);
+        }
+      }
+    }
+
     orbitAnimationId = requestAnimationFrame(animateOrbit);
   }
 
-  if (!orbitRunning) {
-    orbitRunning = true;
-    animateOrbit();
-  }
+  // orbitRunning = true;
+  animateOrbit();
 };

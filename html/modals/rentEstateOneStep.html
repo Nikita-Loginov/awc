@@ -17,7 +17,6 @@
             </span>
           </button>
         </div>
-       
 
         <div class="textbox">
           <p class="p1 manrope-font">
@@ -67,7 +66,11 @@
             <div class="form__item-box">
               <label class="input-box form__item form__item-block">
                 <div class="input-box__content">
-                  <p class="p2">Name</p>
+                  <div class="input-box__head">
+                    <p>Name</p>
+
+                    <p class="input-box__errors form__errors"></p>
+                  </div>
 
                   <div class="input-box__info">
                     <input
@@ -77,8 +80,6 @@
                     />
                   </div>
                 </div>
-
-                <p class="input-box__errors p4 form__errors"></p>
               </label>
             </div>
 
@@ -90,7 +91,11 @@
                   data-name="select"
                 >
                   <button class="dropdown__btn" type="button">
-                    <p class="p2 text-gray-400">Region *</p>
+                    <div class="dropdown__block">
+                      <p class="p2 text-gray-400">Region *</p>
+
+                      <div class="form__errors dropdown__errors"></div>
+                    </div>
 
                     <div class="dropdown__block">
                       <div class="dropdown__active dropdown__text p2"></div>
@@ -101,8 +106,6 @@
                         </svg>
                       </span>
                     </div>
-
-                    <div class="form__errors dropdown__errors"></div>
                   </button>
 
                   <div class="dropdown__content">
@@ -150,21 +153,27 @@
 
               <label class="input-box form__item form__item-block">
                 <div class="input-box__content">
-                  <p class="p2">E-mail</p>
+                  <div class="input-box__head">
+                    <p>E-mail</p>
+
+                    <p class="input-box__errors form__errors"></p>
+                  </div>
 
                   <div class="input-box__info">
                     <input type="email" name="email" placeholder="_@_._" />
                   </div>
                 </div>
-
-                <p class="input-box__errors p4 form__errors"></p>
               </label>
             </div>
 
             <div class="form__item-box">
               <label class="input-box form__item form__item-block">
                 <div class="input-box__content">
-                  <p class="p2">Message</p>
+                  <div class="input-box__head">
+                    <p>Message</p>
+
+                    <p class="input-box__errors form__errors"></p>
+                  </div>
 
                   <div class="input-box__info">
                     <textarea
@@ -174,8 +183,6 @@
                     ></textarea>
                   </div>
                 </div>
-
-                <p class="input-box__errors p4 form__errors"></p>
               </label>
             </div>
           </div>

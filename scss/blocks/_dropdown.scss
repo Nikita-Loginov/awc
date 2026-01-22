@@ -117,19 +117,15 @@
   }
 
   &__errors {
-    font-size: var(--font-size-sm);
+    font-size: calculate-clamp(14px, 16px,$lg-breakpoint, $tablet-breakpoint);
     color: var(--red-100-color);
-    padding: 10px 0 0;
     display: none;
-
-    @media (min-width: $xl-desktop-breakpoint) {
-      padding: #{vw(10)} 0 0 0;
-    }
   }
 
   &__block {
     color: var(--gray-color-300);
     gap: 10px;
+    font-size: calculate-clamp(14px, 16px,$lg-breakpoint, $tablet-breakpoint);
   }
 
   &__content {
@@ -168,6 +164,8 @@
     box-orient: vertical;
     width: 100%;
     text-align: left;
+    font-size: calculate-clamp(16px, 18px,$lg-breakpoint, $tablet-breakpoint);
+    color: var(--gray-color-200);
   }
 
   &__list {
